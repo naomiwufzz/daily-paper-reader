@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.09619v1/fig-001.webp",
+      "caption": "Fig. 1. Cumulative four-level pyramid maturity model of agent engineering.",
+      "page": 13,
+      "index": 1,
+      "width": 1052,
+      "height": 734
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.14248v1/fig-001.webp",
+      "caption": "Figure 1: Overview of the hierarchical planning evaluation framework we propose. The pipeline consists of 3 stages: 1) High-level Planning: The LLM proposes high-level subgoals, 2) Low-level Execution: each high-level subgoal is translated",
+      "page": 2,
+      "index": 1,
+      "width": 910,
+      "height": 279
+    },
+    {
+      "url": "assets/figures/arxiv/2603.14248v1/fig-002.webp",
+      "caption": "Figure 4: Examples of the high-level step annotation process We begin by prompting gpt-5-nano to produce a high-level step based on the evaluation key-node object and correct issues such overspecification and steps framed as evaluation functions manually.",
+      "page": 23,
+      "index": 2,
+      "width": 891,
+      "height": 419
+    },
+    {
+      "url": "assets/figures/arxiv/2603.14248v1/fig-003.webp",
+      "caption": "Figure 8: Examples of some of the most common errors encountered by the model (gpt-5-nano)",
+      "page": 23,
+      "index": 3,
+      "width": 883,
+      "height": 529
+    },
+    {
+      "url": "assets/figures/arxiv/2603.14248v1/fig-004.webp",
+      "caption": "Table 1: Examples of annotated NL and PDDL steps with reference to human steps. Blue = Decomposed alignment, Green = Perfect Match, Purple = Partial alignment, Gray = Unmatched or extra steps.",
+      "page": 4,
+      "index": 4,
+      "width": 898,
+      "height": 374
+    },
+    {
+      "url": "assets/figures/arxiv/2603.14248v1/fig-005.webp",
+      "caption": "Figure 13: Example of our hierarchical evaluation pipeline for a single task, showing high-level planning (Human vs. NL vs. PDDL), low-level execution behavior, postcondition checking, and the resulting evaluation signal (gpt-5-nano).",
+      "page": 24,
+      "index": 5,
+      "width": 950,
+      "height": 1367
+    },
+    {
+      "url": "assets/figures/arxiv/2603.14248v1/fig-006.webp",
+      "caption": "Figure 6: Motivating example highlighting the importance of high-level representation.",
+      "page": 20,
+      "index": 6,
+      "width": 454,
+      "height": 861
+    },
+    {
+      "url": "assets/figures/arxiv/2603.14248v1/fig-007.webp",
+      "caption": "Figure 7: Distribution of actions in the expanded action space across different LLMs.",
+      "page": 20,
+      "index": 7,
+      "width": 442,
+      "height": 991
+    }
+  ]
+}

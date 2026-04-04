@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.25243v1/fig-001.webp",
+      "caption": "Figure 1: Comparison between traditional EDA workflows and the proposed unified FluxEDA, highlighting the shift from fragmented scripting and tool-specific orchestration to a cohesive, standardized framework for EDA tool integration.",
+      "page": 1,
+      "index": 1,
+      "width": 514,
+      "height": 239
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25243v1/fig-002.webp",
+      "caption": "Figure 2: Overall software architecture of FluxEDA. The system organizes heterogeneous EDA environments into a five-layer stack that provides unified access, controlled capability exposure, and persistent tool execution for agentic and programmable workflows.",
+      "page": 2,
+      "index": 2,
+      "width": 740,
+      "height": 400
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25243v1/fig-003.webp",
+      "caption": "Figure 3: Execution signal flow in FluxEDA. Agent requests are issued through task logic, forwarded by the RPC client and session manager to the Tcl gateway, resolved through registered api_*methods, and executed on managed EDA runtimes. Capability discovery, method metadata, typed results, artifacts, and execution status traverse the same structured path.",
+      "page": 3,
+      "index": 3,
+      "width": 948,
+      "height": 377
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25243v1/fig-004.webp",
+      "caption": "Figure 5: Search trajectory for Pareto-driven standard-cell sub-library selection. Blue arrows denote the area-driven exploration stage (A-Runs) from the minimal library toward low-area operating points. Red arrows denote the subsequent timing-recovery stage (T-Runs), where the agent first performs local probing around T-Run04 and then transitions to structure-guided restoration, eventually reaching T-Run11. Gray dashed arrows indicate alternative local probes.",
+      "page": 4,
+      "index": 4,
+      "width": 514,
+      "height": 313
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25243v1/fig-005.webp",
+      "caption": "Table 2: Key milestones in Pareto-driven standard-cell sub-library selection. The last two columns report the number of exact cell references and cell families used in each synthesized implementation.",
+      "page": 5,
+      "index": 5,
+      "width": 1022,
+      "height": 181
+    }
+  ]
+}

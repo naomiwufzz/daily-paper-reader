@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.07360v1/fig-001.webp",
+      "caption": "Figure 1: The Yerkes-Dodson curve for LLM agent cooperation. Left axis: successful trades (blue circles). Right axis: game duration in turns (red squares). The green shaded region marks the “edge of viability” where cooperation peaks. At upkeep = 7, the game collapses to 20 turns as agents die rapidly, eliminating opportunities for social interaction. Note: upkeep = 2 has two replicates (11 and 12 trades); the figure shows one representative point.",
+      "page": 6,
+      "index": 1,
+      "width": 882,
+      "height": 526
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07360v1/fig-002.webp",
+      "caption": "Table 1: Phase P2b results. All experiments use v6.1 engine (9×9 grid), 16 agents, constant resource nodes (nf = 8, nt = 5), seed = 42. Upkeep = 2 has two replicates (EXP-020b and EXP-020a). Bold: peak values.",
+      "page": 7,
+      "index": 2,
+      "width": 682,
+      "height": 225
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07360v1/fig-003.webp",
+      "caption": "Figure 2: Multi-metric analysis of P2b experiments. Top-left: Trades show inverted-U (peak at upkeep = 5). Top-right: Attacks decrease monotonically with pressure as agents die before fighting. Bottom-left: Average agents alive per turn decreases with pressure. Bottom-right: Shannon entropy increases monotonically—a misleading artifact of small-sample bias (see Section 5.4).",
+      "page": 8,
+      "index": 3,
+      "width": 882,
+      "height": 656
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07360v1/fig-004.webp",
+      "caption": "Table 3: Complete experiment results across all phases. P2 varies both upkeep and node counts (confounded). P2b varies only upkeep with constant nodes. V7 uses sexual selection. †EXP-020a ran at upkeep=2 (not 3 as originally intended).",
+      "page": 12,
+      "index": 4,
+      "width": 786,
+      "height": 634
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.07496v1/fig-001.webp",
+      "caption": "Fig. 2. Agent architecture showing perception, brain, memory, and action modules with security risks.",
+      "page": 6,
+      "index": 1,
+      "width": 793,
+      "height": 335
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07496v1/fig-002.webp",
+      "caption": "Fig. 5. L3 Collective Autonomy Architecture and Threat Landscape. Manager-Worker hierarchical structure where L3 agents achieve decentralized collaboration via A2A communication protocols and capability evolution. These coordination mechanisms open channels for three categories of systemic risk: malicious collusion, viral infection, and systemic collapse.",
+      "page": 25,
+      "index": 2,
+      "width": 886,
+      "height": 511
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07496v1/fig-003.webp",
+      "caption": "Table 1. Comparison between HAE Framework and Existing Papers",
+      "page": 3,
+      "index": 3,
+      "width": 898,
+      "height": 853
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07496v1/fig-004.webp",
+      "caption": "Fig. 1. Illustration of the HAE Framework. This framework delineates the co-evolution of agent capabilities and emergent threats across three distinct levels. Specifically, L1 (Cognitive Autonomy) is associated with internal risks targeting the Brain and Memory, such as Cognitive Hijacking and Memory Corruption (Section 3). L2 (Executional Autonomy) is linked to external risks arising from Tool use and Environment interactions, including Confused Deputy attacks and Unsafe Action Chains (Section 4). L3 (Collective Autonomy) concerns systemic threats in Multi-Agent Systems (MAS), such as Malicious Collusion and Viral Infection (Section 5).",
+      "page": 4,
+      "index": 4,
+      "width": 795,
+      "height": 433
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07496v1/fig-005.webp",
+      "caption": "Fig. 4. L2 Executional Autonomy Architecture and Threat Landscape. This figure demonstrates how agents function as executors that engage in substantive interactions with external digital and physical environments through tool interfaces, thereby introducing emerging threats with real-world kinetic consequences including confused deputy, tool abuse, environmental damage, and unsafe action chains.",
+      "page": 19,
+      "index": 5,
+      "width": 876,
+      "height": 513
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07496v1/fig-006.webp",
+      "caption": "Fig. 3. L1 Cognitive Autonomy Architecture and Threat Landscape. This depicts the internal cognitive loop of an intelligent agent as a thinker, encompassing perception, reasoning, and memory retrieval processes. Its security boundaries are primarily constrained by attacks targeting cognitive integrity, such as command hijacking, cognitive hijacking, and memory poisoning.",
+      "page": 12,
+      "index": 6,
+      "width": 876,
+      "height": 541
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07496v1/fig-007.webp",
+      "caption": "Table 2. The HAE Impact Scale",
+      "page": 9,
+      "index": 7,
+      "width": 819,
+      "height": 1034
+    }
+  ]
+}

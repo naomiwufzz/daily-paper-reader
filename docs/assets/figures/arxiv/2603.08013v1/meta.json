@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.08013v1/fig-001.webp",
+      "caption": "Fig. 1: A comparison between the traditional reactive GUI agent paradigm and the proposed proactive intent recommendation agent. Reactive agents (left) function as passive executors, remaining idle until they receive instructions to initiate device control. In contrast, a proactive agent (right) continuously monitors the visual context to autonomously infer the user’s latent goals before the user even formulates a command.",
+      "page": 2,
+      "index": 1,
+      "width": 710,
+      "height": 373
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08013v1/fig-002.webp",
+      "caption": "Fig. 2: The overall architecture of the Proactive Intent Recommendation Framework (PIRF). The system processes continuous visual inputs sequentially by integrating a sliding window of historical context with a dynamic Memory Module that maintains both static user profiles and a continuously updated intent bank. Driven by a Multimodal Large Language Model, the framework evaluates the current state against a structured action space (i.e., Create, Resume, Update, or IDLE) to autonomously refine its memory and generate a final set of actionable, proactive intents.",
+      "page": 10,
+      "index": 2,
+      "width": 710,
+      "height": 373
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08013v1/fig-003.webp",
+      "caption": "Table 1: Main results on PIRA-Bench. We report the average Precision, average Recall, and average F1 (F1avg) for intent detection, alongside the Normalized False Positive Score (FPSnorm) for noise robustness. The Final Score (Sfinal) is the product of F1avg and FPSnorm. All values are reported as percentages (%).",
+      "page": 12,
+      "index": 3,
+      "width": 704,
+      "height": 268
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08013v1/fig-004.webp",
+      "caption": "Table 2: Ablation study on the impact of noise injection using the PIRF framework. We compare performance on Clean trajectories (noise frames removed) versus Noised trajectories (standard PIRA-Bench). All values are reported as percentages (%).",
+      "page": 14,
+      "index": 4,
+      "width": 595,
+      "height": 244
+    }
+  ]
+}

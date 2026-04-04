@@ -1,0 +1,174 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-001.webp",
+      "caption": "Table 6",
+      "page": 26,
+      "index": 1,
+      "width": 819,
+      "height": 1018
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-002.webp",
+      "caption": "Figure 8: Workflow of the Data Leader. The three-stage process—data discovery, evidence-based query planning, and",
+      "page": 15,
+      "index": 2,
+      "width": 877,
+      "height": 875
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-003.webp",
+      "caption": "Table 3",
+      "page": 21,
+      "index": 3,
+      "width": 977,
+      "height": 323
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-004.webp",
+      "caption": "Figure 13: Database Team Q&A Interface: Users propose multi-region monthly revenue trend analysis requests through",
+      "page": 30,
+      "index": 4,
+      "width": 879,
+      "height": 552
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-005.webp",
+      "caption": "Figure 2: Workflow of the Database Information Processing Agent. The automated pipeline combines rule-based operations",
+      "page": 7,
+      "index": 5,
+      "width": 975,
+      "height": 221
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-006.webp",
+      "caption": "Table 4",
+      "page": 22,
+      "index": 6,
+      "width": 659,
+      "height": 252
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-007.webp",
+      "caption": "Table 5",
+      "page": 22,
+      "index": 7,
+      "width": 977,
+      "height": 510
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-008.webp",
+      "caption": "Figure 7: Architecture of the Knowledge Graph Information Analysis and Visualization Agents. The Analysis Agent explains",
+      "page": 14,
+      "index": 8,
+      "width": 975,
+      "height": 550
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-009.webp",
+      "caption": "Figure 1: Overview of the LLM-based multi-agent DataFactory framework for TableQA. The system consists of a Database",
+      "page": 3,
+      "index": 9,
+      "width": 975,
+      "height": 521
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-010.webp",
+      "caption": "Figure 12: Performance heatmaps showing model accuracy across different team collaboration call frequencies. The color",
+      "page": 28,
+      "index": 10,
+      "width": 973,
+      "height": 364
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-011.webp",
+      "caption": "Figure 11: Model average performance across different team call frequencies. Error bars represent standard deviation across",
+      "page": 28,
+      "index": 11,
+      "width": 819,
+      "height": 489
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-012.webp",
+      "caption": "Figure 6: Architecture of the Knowledge Graph Information Retrieval Agent. The agent generates Cypher queries by",
+      "page": 13,
+      "index": 12,
+      "width": 975,
+      "height": 479
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-013.webp",
+      "caption": "Figure 3: Architecture of the Database Information Retrieval Agent. The agent integrates table schema and DDL",
+      "page": 8,
+      "index": 13,
+      "width": 977,
+      "height": 406
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-014.webp",
+      "caption": "Table 1",
+      "page": 19,
+      "index": 14,
+      "width": 977,
+      "height": 212
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-015.webp",
+      "caption": "Table 2",
+      "page": 19,
+      "index": 15,
+      "width": 977,
+      "height": 1071
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-016.webp",
+      "caption": "Figure 9: Prompt template for the Data Leader agent. It encodes the three-stage exploration principle, coordination rules",
+      "page": 17,
+      "index": 16,
+      "width": 585,
+      "height": 842
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-017.webp",
+      "caption": "Figure 5: Workflow of the Knowledge Graph Information Processing Agent. The agent follows a three-stage process of",
+      "page": 12,
+      "index": 17,
+      "width": 975,
+      "height": 675
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-018.webp",
+      "caption": "Figure 10: Team invocation patterns across different models and datasets. The visualization demonstrates how task",
+      "page": 24,
+      "index": 18,
+      "width": 829,
+      "height": 1149
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-019.webp",
+      "caption": "Figure 4: Database Information Analysis and Visualization Agents. (a) The Analysis Agent transforms retrieved tables",
+      "page": 9,
+      "index": 19,
+      "width": 733,
+      "height": 550
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-020.webp",
+      "caption": "Figure 15: DataFactory Decision Analysis Interface: Under multi-agent collaboration, the Leader coordinates Database and",
+      "page": 31,
+      "index": 20,
+      "width": 879,
+      "height": 552
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09152v1/fig-021.webp",
+      "caption": "Figure 14: Knowledge Graph Team Q&A Interface: Users propose technology stack relationship and skill dependency",
+      "page": 31,
+      "index": 21,
+      "width": 879,
+      "height": 552
+    }
+  ]
+}

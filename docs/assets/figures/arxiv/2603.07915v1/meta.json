@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.07915v1/fig-001.webp",
+      "caption": "Table 6. Dataset statistics of reasoning-effort labels across benchmarks.",
+      "page": 15,
+      "index": 1,
+      "width": 1017,
+      "height": 1151
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07915v1/fig-002.webp",
+      "caption": "Figure 1. Overview of the Adaptive Reasoning Effort Selection (ARES) Framework. Left: Traditional Model Routing which often incurs extra inference costs without KV cache reuse. Middle: Our proposed ARES framework, dynamically allocates reasoning effort at each step. Right: ARES (red star) achieves the optimal balance between performance and cost compared to baselines.",
+      "page": 2,
+      "index": 2,
+      "width": 1013,
+      "height": 262
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07915v1/fig-003.webp",
+      "caption": "Table 1. Main evaluation results in TAU-Bench, BrowserComp-Plus, and WebArena, using gpt-oss-20b as the backbone LLM. Arrows (↑ / ↓) indicating an increase or decrease in absolute value. Orange and blue indicate beneficial and detrimental changes.",
+      "page": 7,
+      "index": 3,
+      "width": 958,
+      "height": 865
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07915v1/fig-004.webp",
+      "caption": "Table 2. RL results in TAU-Bench using gpt-oss-20b as the backbone LLM. Arrows (↑ / ↓) indicating an increase or decrease in absolute value. Orange and blue indicate beneficial and detrimental changes.",
+      "page": 8,
+      "index": 4,
+      "width": 956,
+      "height": 442
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07915v1/fig-005.webp",
+      "caption": "Figure 2. Overview of the ARES training pipeline. (1) Trajectory Collection: Optimal ground-truth paths are defined by filtering successful trajectories with minimal steps. (2) Effort Annotation: The minimum sufficient reasoning effort for each step is identified via sampling and LLM verification. (3) Rationale Generation: A teacher LLM generates semantic justifications based on task observations and complexity. (4) Supervised Fine-tuning: The ARES router is fine-tuned to jointly predict rationales and effort labels. (5) Reinforcement Learning: The fine-tuned ARES router will be further trained using GRPO with outcome, reasoning cost, and format reward.",
+      "page": 4,
+      "index": 5,
+      "width": 1013,
+      "height": 721
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07915v1/fig-006.webp",
+      "caption": "Figure 3. Selection of reasoning effort by ARES on the WebArena benchmark. Left: Percentage distribution of low, medium, and high effort levels across task step indices. Right: Distribution of effort levels categorized by specific action types.",
+      "page": 9,
+      "index": 6,
+      "width": 1010,
+      "height": 296
+    }
+  ]
+}

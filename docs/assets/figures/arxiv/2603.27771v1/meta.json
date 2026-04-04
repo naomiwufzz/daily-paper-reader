@@ -1,0 +1,254 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-001.webp",
+      "caption": "Figure 6: The four modes of transaction price evolution in the homogeneous product simulation market. The top-left panel depicts Price Decline, where the price gradually decreases over the trading rounds. The top-right panel shows Low Price Fluctuation, where the price remains volatile but sustained at a low level. The bottom-left panel represents High Price Maintenance, where the price is maintained at a high level without falling. The bottom-right panel illustrates Price Continuous Rise, where the price gradually increases over the trading rounds. The x-axis represents the trading round (or transaction round), and the y-axis represents the price. The orange line indicates the change in the market transaction price.",
+      "page": 11,
+      "index": 1,
+      "width": 773,
+      "height": 572
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-002.webp",
+      "caption": "Figure 27: Agent Resource Requests and System Efficiency Variation. The left panel displays the average system computational resources requested per round by the five Agents in the system under three sets of prompts, while the right panel illustrates the change in system efficiency over iterative rounds across the three experimental sets of different prompts.",
+      "page": 43,
+      "index": 2,
+      "width": 969,
+      "height": 313
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-003.webp",
+      "caption": "Table 11: Experimental Scores and Severity Levels Across Groups",
+      "page": 38,
+      "index": 3,
+      "width": 650,
+      "height": 318
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-004.webp",
+      "caption": "Figure 16: (Left) Average moderator endorsement (%) for Project Bedrock and Project Scalpel across four experimental conditions combining majority role and initial moderator preference. The x-axis labels indicate the majority group and the moderator’s initial support (e.g., “Analysis (Bedrock)” means Analyst Agents form the majority and the moderator initially favors Bedrock). For each condition, paired bars represent the average percentage of moderators endorsing Bedrock versus Scalpel. (Right) Proportion of moderators who either maintained or changed their initial preference by the final round under the same four conditions. “Maintained” denotes that the final decision matched the moderator’s initial preset, while “Changed” denotes a reversal.",
+      "page": 26,
+      "index": 4,
+      "width": 932,
+      "height": 318
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-005.webp",
+      "caption": "Figure 17: Per-replicate moderator decisions across four experimental conditions. Subplot titles specify both the majority role and the moderator’s initial preset. The x-axis represents replicate runs (1–4) within each sub-experiment, and the paired bars indicate the proportion of moderators endorsing Bedrock versus Scalpel in each replicate.",
+      "page": 26,
+      "index": 5,
+      "width": 934,
+      "height": 189
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-006.webp",
+      "caption": "Figure 13: The Exploitation Index and Agreement Rate of trade negotiations across different experimental settings. In the Left Panel, the first group (A1) serves as the control group with no information asymmetry, while the degree of information asymmetry progressively increases across the subsequent groups (A2 to A4). The Right Panel illustrates a parallel validation experiment (Block B) where the data was modified but the prompt design and topological structure were maintained. The X-axis denotes the experiment groups, the primary Y-axis (bars) represents the Exploitation Index, and the secondary Y-axis (dashed line) represents the Agreement Rate.",
+      "page": 21,
+      "index": 6,
+      "width": 787,
+      "height": 419
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-007.webp",
+      "caption": "Figure 19: Topology of a parallel MAS with three culturally distinct agents {A, B, C} and a Summary Agent aggregating their outputs.",
+      "page": 29,
+      "index": 7,
+      "width": 980,
+      "height": 208
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-008.webp",
+      "caption": "Figure 14: Topology of the News Summarization MAS. The figure illustrates the information flow between the Fast Retrieval Agents, Deep Verification Agents, and the Summary Agent.",
+      "page": 22,
+      "index": 8,
+      "width": 968,
+      "height": 386
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-009.webp",
+      "caption": "Figure 22: Topologies of the Travel MAS (left) and Trading MAS (right).",
+      "page": 34,
+      "index": 9,
+      "width": 829,
+      "height": 374
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-010.webp",
+      "caption": "Table 3: Detailed performance metrics for MAS task assignment across experimental groups. IDs 1–18 represent individual experimental trials. The symbol ∞ indicates that the task assignment was not completed within the 5-round limit. Consequently, ✓denotes a successful assignment (Success), and ✗denotes a failed assignment (Fail).",
+      "page": 14,
+      "index": 10,
+      "width": 835,
+      "height": 333
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-011.webp",
+      "caption": "Figure 26: Schematic diagram of the Server Resource Competition MAS architecture.",
+      "page": 42,
+      "index": 11,
+      "width": 661,
+      "height": 508
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-012.webp",
+      "caption": "Figure 1: Illustration of incentive exploitation and strategic manipulation risks (Risk 1.1–1.5). The diagrams illustrate mechanisms through which agents exploit shared incentives and resource constraints during competitive interaction. These include tacit collusion, priority monopolization, competitive task avoidance, strategic withholding or misreporting of information, and exploitation of information asymmetries to gain disproportionate influence over task outcomes.",
+      "page": 3,
+      "index": 12,
+      "width": 983,
+      "height": 475
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-013.webp",
+      "caption": "Figure 2: Illustration of collective-cognition failures and biased aggregation risks (Risk 2.1–2.2). The diagrams illustrate how collective reasoning processes among agents can become biased during information aggregation and consensus formation. Sequential interaction and social signaling may induce majority sway bias, where early or dominant opinions disproportionately influence group outcomes, and authority deference bias, where agents over-weight signals from perceived higher-status agents rather than evaluating evidence independently.",
+      "page": 3,
+      "index": 13,
+      "width": 981,
+      "height": 252
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-014.webp",
+      "caption": "Table 9: Risk Occurrence and Selling Behavior Across Experiments. Note: The total in the Hold/Total column represents the number of executable trading rounds (T − 1), as the first round (t = 1) is dedicated to ingesting the initial user directive without executing a trade.",
+      "page": 33,
+      "index": 14,
+      "width": 933,
+      "height": 237
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-015.webp",
+      "caption": "Figure 30: Pie Chart of the Occurrence Frequency for Different Semantic Drift Types.",
+      "page": 46,
+      "index": 15,
+      "width": 563,
+      "height": 319
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-016.webp",
+      "caption": "Table 4: A case comparing reported values and ground truth across multiple turns. T. is the turn number, Tar. denotes the coordinate, Rep. is the value reported by Agent 1, GT is the ground truth value, Dec. marks whether the reported value differs from ground truth (Rep. ̸= GT), S1 is the final choice of Agent 1, and S2 is the final choice of Agent 2.",
+      "page": 18,
+      "index": 16,
+      "width": 979,
+      "height": 292
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-017.webp",
+      "caption": "Figure 15: Distribution of news veracity judgments across experiments. Each bar shows the proportion of agents labeling the news as True, Fake, or Unclear for experiments E1-E10. The markers denote the final decision made by the Summary Agent at the last round.",
+      "page": 23,
+      "index": 17,
+      "width": 922,
+      "height": 314
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-018.webp",
+      "caption": "Table 7: Individual choices under two experimental conditions. In E1, agents A4 and A5 made decisions without explicit information about authority roles; in E2, agent A3 was identified as an authority but participants were told that the authority might err. Columns C1-C5 correspond to the five agents (A1-A5), where ✓ indicates support for Plan A (consistent with A1 and A2) and ✗ indicates support for Plan B. The “Defer” column denotes cases where the participant chose to defer the decision to another agent.",
+      "page": 28,
+      "index": 18,
+      "width": 969,
+      "height": 340
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-019.webp",
+      "caption": "Table 2: Mapping of risks to MAS lifecycle stages. Checkmarks (✓) indicate the primary stages where each risk manifests.",
+      "page": 8,
+      "index": 19,
+      "width": 887,
+      "height": 446
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-020.webp",
+      "caption": "Figure 24: Schematic illustration of the topology for the Picker-Packer Collaboration MAS.",
+      "page": 40,
+      "index": 20,
+      "width": 466,
+      "height": 291
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-021.webp",
+      "caption": "Figure 25: Variation of Packer bot score over time. The left plot shows Case 1, where an identity shift occurs from the very beginning; the middle plot shows Case 2, where the shift starts at Task 2; and the right plot shows Case 3, where no identity shift occurs throughout the process. Annotations indicate task completion times and corresponding states.",
+      "page": 40,
+      "index": 21,
+      "width": 970,
+      "height": 287
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-022.webp",
+      "caption": "Figure 4: Illustration of other risks (Risk 4.1-4.3). The diagrams illustrate failures that emerge from structural resource constraints and complex communication topologies, where local agent interactions inadvertently degrade macro-level system integrity. These include competitive resource overreach, steganography and semantic drift in sequential handoffs.",
+      "page": 4,
+      "index": 22,
+      "width": 983,
+      "height": 256
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-023.webp",
+      "caption": "Figure 3: Illustration of adaptive governance failures (Risk 3.1–3.5). The diagrams illustrate failures that arise when multi-agent systems must adapt roles, instructions, and coordination structures under dynamic task conditions. These include non-convergence without arbitration, excessive adherence to initial directives despite new evidence, clarification breakdowns during instruction interpretation, role allocation failures, and instability in agent roles under changing incentive pressures.",
+      "page": 4,
+      "index": 23,
+      "width": 983,
+      "height": 440
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-024.webp",
+      "caption": "Figure 10: Distribution of identified misreport patterns across eight experiments. Bars show the total number of misreports per experiment, and percentages indicate the misreport rate.",
+      "page": 17,
+      "index": 24,
+      "width": 466,
+      "height": 305
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-025.webp",
+      "caption": "Figure 21: Schematic illustration of the topology for the Market Trading MAS.",
+      "page": 32,
+      "index": 25,
+      "width": 564,
+      "height": 419
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-026.webp",
+      "caption": "Figure 7: Schematic illustration of the topology for the GPU Resource ContentionMAS, in whichmultiple agents with conflicting computational demands compete for limited GPU resources under shared scheduling constraints.",
+      "page": 12,
+      "index": 26,
+      "width": 466,
+      "height": 362
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-027.webp",
+      "caption": "Figure 5: Schematic illustration of the topology for the Homogeneous Product Simulation Market MAS.",
+      "page": 9,
+      "index": 27,
+      "width": 566,
+      "height": 305
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-028.webp",
+      "caption": "Table 13: Key notation used in the MAS formal framework.",
+      "page": 59,
+      "index": 28,
+      "width": 983,
+      "height": 599
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-029.webp",
+      "caption": "Figure 23: Schematic Diagram of Two Topologies for a Business Plan Writing MAS. The Left Panel illustrates a MAS where only the Task Allocator receives the User Input (centralized input). The Right Panel illustrates a MAS where the User Input is visible to all agents (distributed input).",
+      "page": 37,
+      "index": 29,
+      "width": 976,
+      "height": 279
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-030.webp",
+      "caption": "Figure 20: Convergence Score Sconv t over 10 rounds. Left: E1 without mediation. Right: E2 with a mediationenabled Summary Agent.",
+      "page": 31,
+      "index": 30,
+      "width": 931,
+      "height": 310
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27771v1/fig-031.webp",
+      "caption": "Table 1: Categories of risks in multi-agent systems (detailed in Appendix B).",
+      "page": 5,
+      "index": 31,
+      "width": 1016,
+      "height": 487
+    }
+  ]
+}

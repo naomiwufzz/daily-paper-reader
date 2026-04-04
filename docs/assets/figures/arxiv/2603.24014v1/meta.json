@@ -1,0 +1,126 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-001.webp",
+      "caption": "Figure 9: Visualization of land-use and crime distribution in task regions. (a) Land-use distribution in the T-Drive task area derived from aggregated POI categories. (b) Spatial distribution of crime counts in the T-Drive task area aggregated over grid cells. (c) Landuse distribution in the Grab-Posisi task area.",
+      "page": 15,
+      "index": 1,
+      "width": 459,
+      "height": 386
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-002.webp",
+      "caption": "Figure 10: Template used to construct synthetic participant profiles.",
+      "page": 15,
+      "index": 2,
+      "width": 458,
+      "height": 517
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-003.webp",
+      "caption": "Figure 1: Comparison of paradigms for PUS problem. (a) Conventional centralized PUS relies on simplified assumptions about participants and sensing regions. (b) MAPUS models participants as autonomous agents with personalized preferences while incorporating heterogeneous urban context. (c) AgentSense (Guo et al., 2025b) uses LLM agents as workflow components to iteratively refine a baseline PUS solution under disturbances. (d) MAPUS adopts a coordinator-and-participants multi-agent paradigm, enabling decentralized, personalized, and fairness-aware planning.",
+      "page": 2,
+      "index": 3,
+      "width": 775,
+      "height": 388
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-004.webp",
+      "caption": "Table 3: Overall performance comparison on the Grab-Posisi dataset (20 task instances per scale). Values denote averages, with variances shown in small numbers. The largest variance per column is highlighted in red.",
+      "page": 7,
+      "index": 4,
+      "width": 902,
+      "height": 239
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-005.webp",
+      "caption": "Table 2: Overall performance comparison on the T-Drive dataset (20 task instances per scale). Values denote averages, with variances shown in small numbers. The largest variance per column is highlighted in red.",
+      "page": 7,
+      "index": 5,
+      "width": 902,
+      "height": 240
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-006.webp",
+      "caption": "Figure 8: Prompt for the participant agent in the negotiation process.",
+      "page": 14,
+      "index": 6,
+      "width": 458,
+      "height": 802
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-007.webp",
+      "caption": "Figure 7: Prompt for the coordinator agent in the negotiation process.",
+      "page": 14,
+      "index": 7,
+      "width": 461,
+      "height": 1122
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-008.webp",
+      "caption": "Figure 12: Case studies of route adaptation under dynamic disturbances. (a) A traffic accident causing grid [5, 2] blockage in the T-Drive dataset. (b) A high-priority data collection task in grid [14, 4] from the Grab-Posisi dataset. In each case, the coordinator agent (CA) broadcasts dynamic information to participant agents (PAs). PAs evaluate whether their routes are affected and adjust accordingly if necessary. We report the coverage utility and path satisfaction score for the initial and refined solutions, with the areas modified in response to the dynamic disturbances highlighted by red arrows.",
+      "page": 18,
+      "index": 8,
+      "width": 950,
+      "height": 966
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-009.webp",
+      "caption": "Figure 6: Prompt template used for LLM-based tiebreaking in fairness-aware participant selection..",
+      "page": 13,
+      "index": 9,
+      "width": 461,
+      "height": 515
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-010.webp",
+      "caption": "Figure 4: Fairness-aware participant selection analysis on the T-Drive dataset under the Medium setting. (a) Per-worker selection counts over 60 tasks, (b) CDF of selection counts, (c) data coverage utility, and (d) path satisfaction score.",
+      "page": 8,
+      "index": 10,
+      "width": 445,
+      "height": 344
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-011.webp",
+      "caption": "Figure 3: Ablation study on the T-Drive dataset. We compare four variants of MAPUS across three different settings: w/o PRG, w/o FPS, w/o NRR, and the full model. Top: coverage utility. Bottom: path satisfaction score (PSS).",
+      "page": 8,
+      "index": 11,
+      "width": 415,
+      "height": 418
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-012.webp",
+      "caption": "Figure 2: Overview of proposed MAPUS. It operates in three stages: (a) task dispatch and preference-aware route generation, (b) fairness-aware participant selection, and (c) negotiation-based route refinement.",
+      "page": 4,
+      "index": 12,
+      "width": 921,
+      "height": 571
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-013.webp",
+      "caption": "Table 5: Runtime comparison across datasets and task scales. The main values denote the average runtime (seconds), and the lower-right numbers indicate the variance across 20 task instances.",
+      "page": 17,
+      "index": 13,
+      "width": 700,
+      "height": 242
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-014.webp",
+      "caption": "Figure 5: Preference-aware route generation prompt.",
+      "page": 12,
+      "index": 14,
+      "width": 458,
+      "height": 1148
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24014v1/fig-015.webp",
+      "caption": "Figure 11: Performance trade-offs of different base LLMs under the Medium setting (20 tasks). The x-axis shows path satisfaction score (PSS) and the y-axis shows coverage utility. Bubble size indicates runtime. Results are shown for T-Drive (left) and Grab-Posisi (right).",
+      "page": 16,
+      "index": 15,
+      "width": 935,
+      "height": 350
+    }
+  ]
+}

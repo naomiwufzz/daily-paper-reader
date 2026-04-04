@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.10268v1/fig-001.webp",
+      "caption": "Table 2: Feature extraction across benchmarks",
+      "page": 7,
+      "index": 1,
+      "width": 495,
+      "height": 480
+    },
+    {
+      "url": "assets/figures/arxiv/2603.10268v1/fig-002.webp",
+      "caption": "Table 8: Evaluation Results: Bug Detection Performance",
+      "page": 10,
+      "index": 2,
+      "width": 498,
+      "height": 413
+    },
+    {
+      "url": "assets/figures/arxiv/2603.10268v1/fig-003.webp",
+      "caption": "Figure 3: Root causes of failure across all systems",
+      "page": 10,
+      "index": 3,
+      "width": 406,
+      "height": 379
+    },
+    {
+      "url": "assets/figures/arxiv/2603.10268v1/fig-004.webp",
+      "caption": "Table 1: Comparison of Related Work in Agent Testing (*Open source apps only)",
+      "page": 3,
+      "index": 4,
+      "width": 840,
+      "height": 225
+    },
+    {
+      "url": "assets/figures/arxiv/2603.10268v1/fig-005.webp",
+      "caption": "Figure 1: Different approaches to automate testing Open Interpreter’s (OI) file backup functionality. (a) LLM Scripts: As the test",
+      "page": 4,
+      "index": 5,
+      "width": 1059,
+      "height": 421
+    },
+    {
+      "url": "assets/figures/arxiv/2603.10268v1/fig-006.webp",
+      "caption": "Figure 2: SpecOps architecture showing the four-phase testing workflow with specialized agents operating each phase and",
+      "page": 5,
+      "index": 6,
+      "width": 1048,
+      "height": 331
+    }
+  ]
+}

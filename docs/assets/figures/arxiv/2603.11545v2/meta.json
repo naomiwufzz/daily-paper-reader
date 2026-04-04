@@ -1,0 +1,70 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.11545v2/fig-001.webp",
+      "caption": "Table 4: Performance comparison (n=2,847 queries) against the matched hierarchical baseline. TTA is latency to first correct response, and rework is the share of queries requiring user clarification or correction.",
+      "page": 15,
+      "index": 1,
+      "width": 810,
+      "height": 180
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11545v2/fig-002.webp",
+      "caption": "Figure 1: Architectural paradigm comparison showing the transition from scripted routing with brittle global restarts to Supervisor-driven adaptive orchestration with tool and model pools.",
+      "page": 2,
+      "index": 2,
+      "width": 976,
+      "height": 387
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11545v2/fig-003.webp",
+      "caption": "Figure 2: Centralized orchestration architecture coordinating specialized tools across modalities through dynamic task decomposition and delegation.",
+      "page": 7,
+      "index": 3,
+      "width": 976,
+      "height": 518
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11545v2/fig-004.webp",
+      "caption": "Figure 3: Modality-specific memory architecture with hierarchical layers and unified context scoring managed by the central orchestrator.",
+      "page": 10,
+      "index": 4,
+      "width": 976,
+      "height": 649
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11545v2/fig-005.webp",
+      "caption": "Table 3: Case study performance demonstrating consistent improvements through autonomous tool composition, parallel execution, and local failure recovery.",
+      "page": 14,
+      "index": 5,
+      "width": 918,
+      "height": 190
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11545v2/fig-006.webp",
+      "caption": "Table 2: Tool specifications and performance metrics demonstrating plug-and-play architecture efficiency across modalities.",
+      "page": 13,
+      "index": 6,
+      "width": 698,
+      "height": 215
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11545v2/fig-007.webp",
+      "caption": "Figure 4: Performance improvements across modalities showing consistent 65–77% TTA and 82–89% rework reduction.",
+      "page": 16,
+      "index": 7,
+      "width": 758,
+      "height": 279
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11545v2/fig-008.webp",
+      "caption": "Figure 5: Cost analysis by tool category showing 62–85% reduction with Memory Tools achieving highest efficiency.",
+      "page": 16,
+      "index": 8,
+      "width": 796,
+      "height": 331
+    }
+  ]
+}

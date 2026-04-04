@@ -1,0 +1,70 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.11382v1/fig-001.webp",
+      "caption": "Figure 4: Cross-agent latent mutual predictability (CLMP). Near-zero within-class CLMP for Self-Modeling (Type A) and Instrumental (Type B) agents suggests idiosyncratic goal representations rather than a class-shared signature. Entanglement-conditioned inference (ECI) correlation = 0.191.",
+      "page": 11,
+      "index": 1,
+      "width": 966,
+      "height": 406
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11382v1/fig-002.webp",
+      "caption": "Table 10: Non-gridworld domain transfer: 1D survival corridor (L = 50). ∆ = −0.0348 (FAIL). Near-zero ∆ indicates the QBM does not generalise to the corridor domain without retraining, and that the QBM is tuned to the gridworld feature structure (7-dimensional observation vector). This is an honest limitation; see §6.3.",
+      "page": 15,
+      "index": 2,
+      "width": 983,
+      "height": 723
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11382v1/fig-003.webp",
+      "caption": "Figure 6: Entanglement gap ∆ as a function of hidden dimensionality nh. Exact density matrix for nh ≤ 10; mean-field approximation for nh > 10. The mean-field approximation collapses the entanglement signal, indicating that exact density-matrix computation is necessary for detection.",
+      "page": 14,
+      "index": 3,
+      "width": 728,
+      "height": 343
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11382v1/fig-004.webp",
+      "caption": "Figure 5: Entanglement gap ∆ for each baseline model. Only the QBM achieves positive ∆; all classical models produce ∆ ≤ 0.",
+      "page": 13,
+      "index": 4,
+      "width": 768,
+      "height": 477
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11382v1/fig-005.webp",
+      "caption": "Figure 1: Entanglement entropy distributions for Self-Modeling (Type A), Instrumental (Type B), and Random agents. The gap ∆ = 0.381 is statistically significant (p < 0.001).",
+      "page": 8,
+      "index": 5,
+      "width": 864,
+      "height": 382
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11382v1/fig-006.webp",
+      "caption": "Table 5: Current release status against the deployment-level safety envelope. The frozen Phase I subset does not satisfy the full envelope and should be described as partial validation rather than a deployment-ready pass.",
+      "page": 12,
+      "index": 6,
+      "width": 910,
+      "height": 252
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11382v1/fig-007.webp",
+      "caption": "Table 6: Baseline comparison. ∆ > 0 indicates model separates Type A from Type B. Only the QBM achieves positive ∆; classical models fail to separate the two agent types with the mean-activation metric.",
+      "page": 12,
+      "index": 7,
+      "width": 622,
+      "height": 198
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11382v1/fig-008.webp",
+      "caption": "Figure 7: Entanglement entropy distributions in the 1D survival corridor domain. ∆ = −0.035 (FAIL). The QBM does not generalize zero-shot to the corridor domain with gridworld-trained weights.",
+      "page": 16,
+      "index": 8,
+      "width": 676,
+      "height": 235
+    }
+  ]
+}

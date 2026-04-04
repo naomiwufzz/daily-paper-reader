@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.20380v1/fig-001.webp",
+      "caption": "Fig. 4. Mean tool calls per task versus agency score (r ≈ 0.7).",
+      "page": 5,
+      "index": 1,
+      "width": 506,
+      "height": 408
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20380v1/fig-002.webp",
+      "caption": "Fig. 5. First-attempt pass rate (green) and additional gain from retries (orange) by task category.",
+      "page": 5,
+      "index": 2,
+      "width": 508,
+      "height": 373
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20380v1/fig-003.webp",
+      "caption": "Fig. 3. Agency (npcsh score) versus intelligence (MMLU). The regression line (r ≈ 0.8) with 1σ band; outliers beyond 1σ are labeled.",
+      "page": 5,
+      "index": 3,
+      "width": 497,
+      "height": 406
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20380v1/fig-004.webp",
+      "caption": "TABLE I Benchmark results across model families.",
+      "page": 4,
+      "index": 4,
+      "width": 438,
+      "height": 533
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20380v1/fig-005.webp",
+      "caption": "Fig. 2. Benchmark score versus parameter count across model families.",
+      "page": 4,
+      "index": 5,
+      "width": 507,
+      "height": 311
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20380v1/fig-006.webp",
+      "caption": "Fig. 6. Pass rate by model and task category. Models ordered by overall score (left to right); categories by mean difficulty (top to bottom).",
+      "page": 6,
+      "index": 6,
+      "width": 1044,
+      "height": 532
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20380v1/fig-007.webp",
+      "caption": "Fig. 1. The CAT data layer. Left: context files (orange) scope teams of NPCs (blue). Right: Jinxes (green) compose as a DAG rooted at python. Level-1 Jinxes (chat, sh, web search, screenshot) each use python as their engine. Level-2 Jinxes combine level1 steps: react chains chat + python, computer use chains chat + screenshot + sh, and delegate uses chat + sh. Shared parents (e.g. chat used by all three composites) make the graph a DAG rather than a tree. Dashed arrows show tool-catalog assignment to NPCs.",
+      "page": 2,
+      "index": 7,
+      "width": 515,
+      "height": 254
+    }
+  ]
+}

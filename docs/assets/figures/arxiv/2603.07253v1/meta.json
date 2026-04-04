@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.07253v1/fig-001.webp",
+      "caption": "Figure 5: The distribution of goals attempted by the ego agent during evaluation. For CR, ‘attempt’ means the agent occupied one of the goal tiles; for LBF, it means the agent used the ‘collect’ action while adjacent to a fruit.",
+      "page": 6,
+      "index": 1,
+      "width": 844,
+      "height": 331
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07253v1/fig-002.webp",
+      "caption": "Figure 6: A visualisation of trajectories sampled from trained PPO and GRILL agents in the no- and full-overlap scenarios of the cooperative reaching environment. Trajectories are sampled from random initial locations, and a small amount of noise is applied to each path in order to better visualise the distributions.",
+      "page": 6,
+      "index": 2,
+      "width": 400,
+      "height": 419
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07253v1/fig-003.webp",
+      "caption": "Figure 1: An illustration of the goal space under three different scenarios, with the set of ‘worthwhile’ (rewarding and inprinciple achievable) goals highlighted in green. Gego denotes the set of goals that would produce reward for the ego agent; G teammates the set of goals that would produce reward for at least one teammate; and Gsolo the set of goals that can be achieved through the effort of a single agent.",
+      "page": 2,
+      "index": 3,
+      "width": 836,
+      "height": 227
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07253v1/fig-004.webp",
+      "caption": "Figure 7: Left: the percentage increase in mean evaluation return in the LBF environment for GRILL-M vs GRILL, as a function of the amount of noise in the ego agent’s observation of their teammate’s goal vector. Returns are averaged over 1000 episodes × the 3 scenarios × 20 independent training runs. Right: the same increase compared for the extreme cases of no noise and teammate goal information entirely absent.",
+      "page": 7,
+      "index": 4,
+      "width": 844,
+      "height": 354
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07253v1/fig-005.webp",
+      "caption": "Figure 2: (A) The hierarchical architecture of GRILL (B) The encoder-decoder architecture optimised offline in stage 1, from which the action decoder becomes the low-level policy πaction in stage 2 (C) The auxiliary modelling component used in GRILLM (but not GRILL)",
+      "page": 4,
+      "index": 5,
+      "width": 844,
+      "height": 204
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07253v1/fig-006.webp",
+      "caption": "Figure 4: Top: evaluation returns relative to oracle policy, measured over 1000 episodes × the 3 scenarios × 20 independent training runs. Mean values are given by the horizontal markers, while underlaid violin plots show the KDE. Agents were trained for 1e7 and 5e7 timesteps on CR and LBF respectively. Bottom: from the same set of evaluation episodes, the difference in proportion of non-solo goals pursued between the full- and no-overlap scenarios.",
+      "page": 5,
+      "index": 6,
+      "width": 844,
+      "height": 396
+    }
+  ]
+}

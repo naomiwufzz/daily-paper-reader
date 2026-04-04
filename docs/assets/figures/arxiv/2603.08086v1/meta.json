@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.08086v1/fig-001.webp",
+      "caption": "Fig. 4. First-person observations in living and sleeping quarters. These images represent the visual input for the object detection and localization modules.",
+      "page": 5,
+      "index": 1,
+      "width": 1036,
+      "height": 514
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08086v1/fig-002.webp",
+      "caption": "Fig. 3. Overview of simulation environments. (a-b) show the spatial and semantic definitions, while (c-e) present the top-down views of various test scenes.",
+      "page": 5,
+      "index": 2,
+      "width": 1029,
+      "height": 226
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08086v1/fig-003.webp",
+      "caption": "Fig. 2. Architecture of the proactive exploration system. It integrates semantic mapping, spatial correlation reasoning, and a strategic path planner.",
+      "page": 2,
+      "index": 3,
+      "width": 512,
+      "height": 312
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08086v1/fig-004.webp",
+      "caption": "Fig. 1. Concept of the proposed memory-driven planning. Compared to (a) traditional observation-driven planning, which often results in myopic and redundant behaviors due to the lack of spatial memory, our approach transitions toward (b) map-conditioned planning. By integrating a hybrid semantic map with LLM-based reasoning, the agent achieves (c) efficient object-goal navigation through spatially-grounded decision-making and systematic exploration.",
+      "page": 1,
+      "index": 4,
+      "width": 514,
+      "height": 287
+    }
+  ]
+}

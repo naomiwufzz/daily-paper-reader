@@ -1,0 +1,70 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.15690v1/fig-001.webp",
+      "caption": "Figure 4: Multi-agent interaction in LSS, represented using UML-style sequence diagram notation. The diagram illustrates how the primitives decompose the loosely-structured runtime.",
+      "page": 6,
+      "index": 1,
+      "width": 506,
+      "height": 321
+    },
+    {
+      "url": "assets/figures/arxiv/2603.15690v1/fig-002.webp",
+      "caption": "Figure 5: Three-layer engineering framework for LSS: View– Context, Structure–Capability, and Evolution–Adaptation.",
+      "page": 6,
+      "index": 2,
+      "width": 482,
+      "height": 300
+    },
+    {
+      "url": "assets/figures/arxiv/2603.15690v1/fig-003.webp",
+      "caption": "Figure 9: The evolution engineering should accept a relative and unstable ephemeral/persistent Boundary.",
+      "page": 11,
+      "index": 3,
+      "width": 506,
+      "height": 475
+    },
+    {
+      "url": "assets/figures/arxiv/2603.15690v1/fig-004.webp",
+      "caption": "Figure 6: Sequence diagram of aMediator constructing a taskspecific A2A protocol between two agents.",
+      "page": 7,
+      "index": 4,
+      "width": 506,
+      "height": 563
+    },
+    {
+      "url": "assets/figures/arxiv/2603.15690v1/fig-005.webp",
+      "caption": "Figure 8: Inheritance in LSS: single inheritance isolates a child agent’s context under a Context Curator; multiple inheritance selects and composes trajectory fragments across instances under an Inheritance Generator to integrate capabilities and memories.",
+      "page": 10,
+      "index": 5,
+      "width": 456,
+      "height": 325
+    },
+    {
+      "url": "assets/figures/arxiv/2603.15690v1/fig-006.webp",
+      "caption": "Figure 2: Loosely-Structured Software: a software system with unstable, runtime-generated structure & abstraction and its dominant engineering focuses (View, Binding, Evolution).",
+      "page": 3,
+      "index": 6,
+      "width": 898,
+      "height": 409
+    },
+    {
+      "url": "assets/figures/arxiv/2603.15690v1/fig-007.webp",
+      "caption": "Figure 11: Sequence diagram of the Semantic Lens pattern illustrating Derived Execution, Collaboration, and SelfDerived Loops. The Worker Agent initiates the process, and the Lens Agent recursively derives new instances to handle each artifact, keeping the Worker’s context clean.",
+      "page": 13,
+      "index": 7,
+      "width": 506,
+      "height": 315
+    },
+    {
+      "url": "assets/figures/arxiv/2603.15690v1/fig-008.webp",
+      "caption": "Figure 7: Establishing a more stable structure and contract through flexible multi-agent negotiation.",
+      "page": 9,
+      "index": 8,
+      "width": 482,
+      "height": 445
+    }
+  ]
+}

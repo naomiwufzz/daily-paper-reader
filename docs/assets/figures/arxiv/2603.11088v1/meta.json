@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.11088v1/fig-001.webp",
+      "caption": "Fig. 2. Demonstrations of attack vectors (V1-V6) and security risks (R1-R7) against AI agents.",
+      "page": 6,
+      "index": 1,
+      "width": 744,
+      "height": 351
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11088v1/fig-002.webp",
+      "caption": "Table 4. Defense analysis of AutoGPT CVEs. For each vulnerability, we list the exploited risks, the defense mechanism deployed in the patch, which risks are mitigated, which remain open, and which defense categories are missing.",
+      "page": 25,
+      "index": 2,
+      "width": 827,
+      "height": 277
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11088v1/fig-003.webp",
+      "caption": "Fig. 4. The defense landscape of AI agents. We illustrate key defense mechanisms and where they can be applied within the agent system.",
+      "page": 10,
+      "index": 3,
+      "width": 827,
+      "height": 289
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11088v1/fig-004.webp",
+      "caption": "Fig. 1. Overview of an AI Agent’s structure.",
+      "page": 4,
+      "index": 4,
+      "width": 744,
+      "height": 354
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11088v1/fig-005.webp",
+      "caption": "Table 2. Defense mechanisms for AI agents organized by category, as well as the risks each defense covers.",
+      "page": 12,
+      "index": 5,
+      "width": 832,
+      "height": 927
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11088v1/fig-006.webp",
+      "caption": "Fig. 3. Relationship between agent design dimensions and risks, and the connection across different risks.",
+      "page": 9,
+      "index": 6,
+      "width": 744,
+      "height": 270
+    }
+  ]
+}

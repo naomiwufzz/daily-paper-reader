@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.19935v1/fig-001.webp",
+      "caption": "Figure 1: High-level architecture illustrating the system’s structure, data flow, and the interaction between its core components.",
+      "page": 2,
+      "index": 1,
+      "width": 786,
+      "height": 493
+    },
+    {
+      "url": "assets/figures/arxiv/2603.19935v1/fig-002.webp",
+      "caption": "Figure 2: Accuracy of Memori across different reasoning categories. Bar heights represent the mean accuracy (%), while error bars indicate the standard deviation for n = 3 runs.",
+      "page": 5,
+      "index": 2,
+      "width": 786,
+      "height": 490
+    }
+  ]
+}

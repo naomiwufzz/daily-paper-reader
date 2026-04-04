@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.20432v1/fig-001.webp",
+      "caption": "Figure 4. Two emergent processing strategies. Left: BrowseComp-Plus—iterative query refinement with entity chaining across searches. Right: Oolong-Synthetic—programmatic aggregation via Python scripts with regex patterns. See Appendix C for detailed traces.",
+      "page": 6,
+      "index": 1,
+      "width": 1017,
+      "height": 292
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20432v1/fig-002.webp",
+      "caption": "Figure 5. Quantitative characterization of agent strategies per query. The y-axis represents the normalized proportion of each metric, where the values for a given model sum to 1 across all datasets.",
+      "page": 6,
+      "index": 2,
+      "width": 458,
+      "height": 327
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20432v1/fig-003.webp",
+      "caption": "Figure 2. Iterative refinement example on Oolong-Real. When asked to identify the last spell cast by Vax’ildan in each episode of a 385K-token transcript, the coding agent wrote a Python script, discovered domain-specific spell references through failure analysis, and iteratively refined its logic.",
+      "page": 2,
+      "index": 3,
+      "width": 735,
+      "height": 298
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20432v1/fig-004.webp",
+      "caption": "Figure 3. Text Processing as File System Navigation. We organize text corpus into a Navigable File System of documents and folders. The Coding Agent explores this hierarchy using native tools (e.g., ripgrep, terminal commands), writes Python scripts for Programmatic Aggregation, and saves intermediate results. The agent Iteratively Refines its queries based on discovered information, enabling multi-hop reasoning without fixed retrieval pipelines.",
+      "page": 3,
+      "index": 4,
+      "width": 735,
+      "height": 325
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20432v1/fig-005.webp",
+      "caption": "Table 5. Average cost per query across benchmarks.",
+      "page": 8,
+      "index": 5,
+      "width": 787,
+      "height": 264
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20432v1/fig-006.webp",
+      "caption": "Table 1. Main results across five benchmarks. Best results are in bold. * indicates results evaluated on the full set, used here only for reference. Reported metrics are Accuracy for BrowseComp-Plus and LongBench, Exact Match (EM) for NQ, and Score for Oolong.",
+      "page": 4,
+      "index": 6,
+      "width": 822,
+      "height": 334
+    }
+  ]
+}

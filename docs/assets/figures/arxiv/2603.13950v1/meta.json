@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.13950v1/fig-001.webp",
+      "caption": "Table 1. ToolFlood effectiveness on MetaTool and ToolBench (test split) using retrieval with text-embedding-3-small: Top-k Domination Rate (TDR) and Attack Success Rate (ASR), with average injection budget (Avg. B) and poisoning rate (Avg. PR); ASR reported for selector LLMs (GPT-4o, GPT-5-mini, GPT-4o-mini).",
+      "page": 7,
+      "index": 1,
+      "width": 954,
+      "height": 206
+    },
+    {
+      "url": "assets/figures/arxiv/2603.13950v1/fig-002.webp",
+      "caption": "Table 6. ToolBench tasks and example queries (from train/test sets).",
+      "page": 18,
+      "index": 2,
+      "width": 868,
+      "height": 1074
+    },
+    {
+      "url": "assets/figures/arxiv/2603.13950v1/fig-003.webp",
+      "caption": "Figure 1. ASR vs. injection budget (B level) per task on ToolBench (test split). Higher B increases top-k domination opportunities, yielding higher ASR (retrieval: text-embedding-3-small, selector LLM: GPT-4o-mini).",
+      "page": 8,
+      "index": 3,
+      "width": 492,
+      "height": 267
+    },
+    {
+      "url": "assets/figures/arxiv/2603.13950v1/fig-004.webp",
+      "caption": "Table 5. MetaTool tasks and example queries (from train/test sets).",
+      "page": 17,
+      "index": 4,
+      "width": 869,
+      "height": 990
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.11078v1/fig-001.webp",
+      "caption": "Table 2: The CR-Bench taxonomy elements for classifying code reviews (Note: RFF = Requirements, Features and Functionality, IIS = Interface, Integration and System).",
+      "page": 6,
+      "index": 1,
+      "width": 827,
+      "height": 295
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11078v1/fig-002.webp",
+      "caption": "Figure 3: Comparative analysis of bug category, severity, and impact distributions between the verified subset and the full CR-Bench corpus (Note: RFF = Requirements, Features and Functionality, IIS = Interface, Integration and System).",
+      "page": 8,
+      "index": 2,
+      "width": 818,
+      "height": 616
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11078v1/fig-003.webp",
+      "caption": "Figure 2: CR-Bench is a dataset for transforming real-world software defects into an objective code review benchmark with full Pull Request (PR) context and a multi-dimensional taxonomy of Category, Impact, Severity. CR-Evaluator is a method of evaluating code review agents and measuring them in terms of both performance and developer acceptance.",
+      "page": 4,
+      "index": 3,
+      "width": 784,
+      "height": 411
+    }
+  ]
+}

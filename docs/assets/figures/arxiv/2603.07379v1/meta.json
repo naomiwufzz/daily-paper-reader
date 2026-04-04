@@ -1,0 +1,134 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-001.webp",
+      "caption": "TABLE I MAPPING AGENTIC SYSTEM PROPERTIES TO POMDP FORMALIZATION",
+      "page": 6,
+      "index": 1,
+      "width": 514,
+      "height": 340
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-002.webp",
+      "caption": "TABLE II ARCHITECTURAL DISTINCTIONS BETWEEN ACTIVE RAG AND AGENTIC RAG",
+      "page": 6,
+      "index": 2,
+      "width": 504,
+      "height": 283
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-003.webp",
+      "caption": "Fig. 5. The closed-loop Perception-Planning-Action-Reflection (PPAR) cycle with Human-in-the-Loop (HITL) escalation. This demonstrates the structural necessity of verification loops: outputs failing constraint checks are returned as structured feedback, and unresolvable loops are escalated to prevent autonomous hallucination.",
+      "page": 11,
+      "index": 3,
+      "width": 516,
+      "height": 285
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-004.webp",
+      "caption": "TABLE VII METRIC FAILURE ANALYSIS: WHY STANDARD EVALUATION FAILS FOR AGENTIC RAG",
+      "page": 15,
+      "index": 4,
+      "width": 1076,
+      "height": 425
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-005.webp",
+      "caption": "TABLE XI SUMMARY OF GRAND RESEARCH PROBLEMS AND INTERDISCIPLINARY ROADMAP FOR AGENTIC RAG",
+      "page": 21,
+      "index": 5,
+      "width": 1048,
+      "height": 296
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-006.webp",
+      "caption": "Fig. 1. High-level progression from single-pass retrieval-augmented generation to iterative retrieval and Agentic RAG. This demonstrates the architectural shift from static, one-shot context utilization to explicit multi-step control over retrieval, reasoning, and termination, conceptually anchoring the systematization presented in this paper.",
+      "page": 2,
+      "index": 6,
+      "width": 529,
+      "height": 270
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-007.webp",
+      "caption": "Fig. 3. Taxonomy of Agentic RAG systems across architecture, retrieval strategy, reasoning paradigm, and memory/context management. This structural mapping demonstrates how orthogonal control-flow decisions combine to form distinct, reproducible agentic archetypes.",
+      "page": 7,
+      "index": 7,
+      "width": 529,
+      "height": 793
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-008.webp",
+      "caption": "TABLE VI COMPARISON OF CORE AGENTIC RAG DESIGN PATTERNS",
+      "page": 14,
+      "index": 8,
+      "width": 1079,
+      "height": 371
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-009.webp",
+      "caption": "TABLE IX MAPPING INDUSTRIAL FRAMEWORKS TO AGENTIC RAG ARCHITECTURAL MODULES",
+      "page": 18,
+      "index": 9,
+      "width": 1048,
+      "height": 252
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-010.webp",
+      "caption": "Fig. 6. Control-flow map demonstrating how Agentic RAG systems compose design patterns through explicit decisions over task decomposition, retrieval timing, iterative refinement, and orchestration. This structural mapping highlights the transition from linear pipelines to cyclic loops.",
+      "page": 12,
+      "index": 10,
+      "width": 526,
+      "height": 906
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-011.webp",
+      "caption": "TABLE III CONSOLIDATED TAXONOMY MAPPING ARCHETYPES TO THEIR CORE AGENTIC RAG ATTRIBUTES.",
+      "page": 9,
+      "index": 11,
+      "width": 1064,
+      "height": 356
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-012.webp",
+      "caption": "TABLE X STRUCTURED FAILURE-MODE CATEGORIZATION FOR AGENTIC RAG SYSTEMS",
+      "page": 20,
+      "index": 12,
+      "width": 1076,
+      "height": 346
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-013.webp",
+      "caption": "Fig. 8. The interdisciplinary mapping of the proposed doctoral-scale grand problems across foundational system dimensions and research time horizons. Addressing these challenges requires systemic integration rather than isolated optimization.",
+      "page": 20,
+      "index": 13,
+      "width": 914,
+      "height": 427
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-014.webp",
+      "caption": "Fig. 2. The architectural evolution from static one-shot RAG pipelines to the Agentic RAG POMDP formulation. The Agentic framework replaces linear generation with a cyclic control policy (πθ) managing a persistent memory state (Mt).",
+      "page": 5,
+      "index": 14,
+      "width": 914,
+      "height": 814
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-015.webp",
+      "caption": "TABLE VIII SYNTHESIS OF CURRENT RAG EVALUATION FRAMEWORKS AND AGENTIC LIMITATIONS",
+      "page": 16,
+      "index": 15,
+      "width": 968,
+      "height": 189
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07379v1/fig-016.webp",
+      "caption": "Fig. 7. The Agentic RAG Evaluation Pipeline. This framework demonstrates the necessary structural shift from terminal output scoring to multi-layered assessment, capturing component-level tool accuracy, trajectory-level reasoning coherence, and system-level outcome fidelity.",
+      "page": 16,
+      "index": 16,
+      "width": 914,
+      "height": 320
+    }
+  ]
+}

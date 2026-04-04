@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.09184v1/fig-001.webp",
+      "caption": "Table 4: Consolidated evaluation results on text-space collaboration across all model combinations and reasoning benchmarks. † Evaluated with enable thinking=True, ‡ with enable thinking=False.",
+      "page": 15,
+      "index": 1,
+      "width": 824,
+      "height": 526
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09184v1/fig-002.webp",
+      "caption": "Figure 1: Accuracy–cost trade-offs across planner–executor configurations. Here DDLM refers to a LLada-8B-Instruct and ARM to a Llama-3.2-3B-Instruct model. DDLM→ARM, particularly with latent-space exchange, achieves higher reasoning accuracy at lower token budgets compared to ARM-only models.",
+      "page": 2,
+      "index": 2,
+      "width": 495,
+      "height": 385
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09184v1/fig-003.webp",
+      "caption": "Table 1: Evaluation of DeepSeek-R1-Distill-Qwen-7B and Qwen3-1.7B on reasoning benchmarks, including text-space vs. latent-space collaboration.",
+      "page": 7,
+      "index": 3,
+      "width": 825,
+      "height": 328
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09184v1/fig-004.webp",
+      "caption": "Table 3: Performance comparison of planner vs. executor issues for LLaDA-8B-Instruct and Llama3.2-3B-Instruct under Text-Space vs. Latent-Space collaboration.",
+      "page": 14,
+      "index": 4,
+      "width": 482,
+      "height": 410
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09184v1/fig-005.webp",
+      "caption": "Figure 4: Diagnostic configurations for attributing errors to planner or executor. Setup X tests whether failures stem from the planner: if replacing the diffusion planner (DDLM) with an autoregressive planner (ARM) fixes the output, the error is attributed to the DDLM. Setup Y tests executor reliability: if a diffusion executor succeeds where an ARM executor fails, the limitation lies in the executor.",
+      "page": 8,
+      "index": 5,
+      "width": 826,
+      "height": 182
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09184v1/fig-006.webp",
+      "caption": "Figure 5: Planner vs. executor failures in text- vs. latent-space collaboration. Results for LLaDA-8B-Instruct and Llama-3.2-3B-Instruct. Latent-space collaboration substantially reduces planning errors compared to text-space.",
+      "page": 9,
+      "index": 6,
+      "width": 664,
+      "height": 355
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09184v1/fig-007.webp",
+      "caption": "Figure 2: Overview of the latent-space collaboration pipeline. A discrete diffusion language model (DDLM) generates a latent plan. The plan is projected directly into the autoregressive model (ARM) embedding space through a learned projector (in blue). The ARM then conditions on the plan and the question to produce the final answer.",
+      "page": 5,
+      "index": 7,
+      "width": 622,
+      "height": 263
+    }
+  ]
+}

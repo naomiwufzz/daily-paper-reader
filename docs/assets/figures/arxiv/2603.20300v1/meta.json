@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.20300v1/fig-001.webp",
+      "caption": "TABLE I Human interfaces versus agent interfaces",
+      "page": 3,
+      "index": 1,
+      "width": 529,
+      "height": 270
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20300v1/fig-002.webp",
+      "caption": "Fig. 1. Evolution of software interaction paradigms. The proposed shift is not merely from GUI to API, but from feature-centric applications consumed by humans to capability-oriented systems invoked and dynamically composed by AI agents.",
+      "page": 3,
+      "index": 2,
+      "width": 1074,
+      "height": 375
+    }
+  ]
+}

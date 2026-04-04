@@ -1,0 +1,94 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.13594v1/fig-001.webp",
+      "caption": "Figure 1. Performance–cost tradeoff for agentic tool use on ENTERPRISEOPS-GYM We plot task success rate against estimated cost per task for both closed-source and open-source models. Open-source models incur lower cost but achieve consistently lower success rates. While higher-cost models offer modest performance gains, they remain far below reliable task completion.",
+      "page": 1,
+      "index": 1,
+      "width": 493,
+      "height": 537
+    },
+    {
+      "url": "assets/figures/arxiv/2603.13594v1/fig-002.webp",
+      "caption": "Figure 2. Overview of ENTERPRISEOPS-GYM: A benchmark for stateful agentic planning and tool use. (Top-left) ENTERPRISEOPSGYM spans eight enterprise domains and evaluates multi-step agentic planning, policy adherence, state-driven tool calling and cross domain orchestration in a reproducible sandbox. (Top-right) Domain experts create sandox and author realistic single- and cross-domain tasks, execute ground-truth trajectories, and write outcome-based verification logic with multi-stage quality assurance along with a human written oracle plan for completing the task. (Bottom) Given a task and constraints (as system level policies), agents interact with the environment and execute tools. They are evaluated by final-state verifiers that check goal completion, policy compliance, and side effects. In the above example the agent fails to adhere to system policy for linking case knowledge which mandates setting a parameter to “suggested” when a knowledge base is automatically discovered. Furthermore, the agent fails to properly send an email notification due to an unresolved identifier for the given case.",
+      "page": 2,
+      "index": 2,
+      "width": 1014,
+      "height": 533
+    },
+    {
+      "url": "assets/figures/arxiv/2603.13594v1/fig-003.webp",
+      "caption": "Table 2. Overall task completion performance on ENTERPRISEOPS-GYM. We report the percentage of tasks successfully completed by each model in oracle tool mode, broken down by domain. A task is considered successful only if all outcome verification checks pass.",
+      "page": 7,
+      "index": 3,
+      "width": 1017,
+      "height": 406
+    },
+    {
+      "url": "assets/figures/arxiv/2603.13594v1/fig-004.webp",
+      "caption": "Figure 4. Performance degrades consistently with planning horizon. Pass@1 accuracy for closed-source (solid) and openweight (dashed) models across horizon lengths 4–16. Thick lines show the group mean ±1 SE. We observe monotonic degradation of performance for both sets, while open model performance falls more sharply with horizon length.",
+      "page": 8,
+      "index": 4,
+      "width": 478,
+      "height": 540
+    },
+    {
+      "url": "assets/figures/arxiv/2603.13594v1/fig-005.webp",
+      "caption": "Table 3. Plan-Conditioned Execution Baseline. Comparison of performance with Claude Plans (CP) vs. Human Plans (HP). Green values indicate % improvement over the ReAct baseline from Table 2.",
+      "page": 8,
+      "index": 5,
+      "width": 494,
+      "height": 991
+    },
+    {
+      "url": "assets/figures/arxiv/2603.13594v1/fig-006.webp",
+      "caption": "Table 1. Comparison with existing agentic benchmarks. DB Tables reports the number of unique database tables in the environment; Avg. FK measures average foreign keys per table, indicating relational density and the complexity of inter-table dependencies agents must navigate. — denotes values not reported in the original work. ∗Avg. Steps reflects ideal human-authored execution trajectories; model trajectories may require significantly more steps. Human Plans refer to step-by-step natural language plans written by experts to complete the task. †Parenthetical values indicate the number of unique task templates.",
+      "page": 4,
+      "index": 6,
+      "width": 1017,
+      "height": 336
+    },
+    {
+      "url": "assets/figures/arxiv/2603.13594v1/fig-007.webp",
+      "caption": "Table 7. Verifier pass rates across domains by category. Models achieve highest scores on Integrity Constraints (system state validity), followed by Task Completion, with Policy Compliance showing the lowest performance. Sample counts vary across categories, with heavier domains such as CSM, ITSM and HR with more emphasis on Integrity Constraints and Policy compliance.",
+      "page": 32,
+      "index": 7,
+      "width": 683,
+      "height": 304
+    },
+    {
+      "url": "assets/figures/arxiv/2603.13594v1/fig-008.webp",
+      "caption": "Figure 5. Impact of thinking budget on performance Histograms show the performance numbers with thinking budget with GPT-OSS120B model (OpenAI et al., 2025) across domains. The results show that the model with low thinking budget performing poorly with performance steadily increasing with thinking budget.",
+      "page": 9,
+      "index": 8,
+      "width": 1003,
+      "height": 232
+    },
+    {
+      "url": "assets/figures/arxiv/2603.13594v1/fig-009.webp",
+      "caption": "Figure 6. Impact of agentic orchestration on performance Histograms show the performance numbers with various multi-agentic architectures using Claude-Sonnet-4.5. The baseline is the simple ReAct loop described in Section 4.1. Planner+Executor architecture first prompts the model for a detailed plan, and performs a ReAct loop conditioned on the plan. Planner+Decompose+Subtask Executor additionally does a task decomposition and calls subagents in a ReAct loop for each subtask. Finally, Oracle Human Plan + Executor performs a ReAct execution loop conditioned on a human written plan.",
+      "page": 9,
+      "index": 9,
+      "width": 477,
+      "height": 334
+    },
+    {
+      "url": "assets/figures/arxiv/2603.13594v1/fig-010.webp",
+      "caption": "Table 6. Overall task completion performance on ENTERPRISEOPS-GYM. (Oracle Mode) We report the percentage of tasks successfully completed by each model in oracle tool mode, broken down by domain. A task is considered successful only if all outcome verification checks pass. Results highlight substantial performance degradation on long-horizon and cross-domain (Hybrid) workflows, indicating persistent improvement gap. VL: Verifier Level, O: Overall.",
+      "page": 31,
+      "index": 10,
+      "width": 1017,
+      "height": 419
+    },
+    {
+      "url": "assets/figures/arxiv/2603.13594v1/fig-011.webp",
+      "caption": "Figure 7. Distribution of task complexity across domains in EnterpriseOps-Gym. Histograms show the distribution for number of tool-execution steps required to complete tasks in each domain. Red dashed lines indicate the mean steps per domain. The results highlight substantial variation in interaction depth, with CSM and HR exhibiting longer, heavier-tailed execution traces, while Email and Calendar tasks tend to require shorter, more tightly distributed action sequences. Hybrid and ITSM workflows show moderate to high variance.",
+      "page": 31,
+      "index": 11,
+      "width": 998,
+      "height": 500
+    }
+  ]
+}

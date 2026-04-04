@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.09337v1/fig-001.webp",
+      "caption": "Table 1. Turn-Based Mode Leaderboard. Models are ranked by PWER.",
+      "page": 6,
+      "index": 1,
+      "width": 650,
+      "height": 399
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09337v1/fig-002.webp",
+      "caption": "Figure 1. Visualization interface of STAR (Strategic Tactical Agent Reasoning Benchmark). STAR is a LLM PvP(Player versus Player) environment with multiple types of maps, evaluating the capability of LLMs to perform iterative reasoning and strategic decision-making in dynamic and zero-sum multi-agent environments.",
+      "page": 2,
+      "index": 2,
+      "width": 862,
+      "height": 358
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09337v1/fig-003.webp",
+      "caption": "Table 3. Ablation study on visual perception and logical reasoning in decision-making for VLMs and LLMs.",
+      "page": 7,
+      "index": 3,
+      "width": 850,
+      "height": 281
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09337v1/fig-004.webp",
+      "caption": "Table 2. Real-Time Mode Leaderboard. Models are ranked by PWER.",
+      "page": 7,
+      "index": 4,
+      "width": 659,
+      "height": 499
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09337v1/fig-005.webp",
+      "caption": "Figure 3. Trade-off analysis between Spatial Precision (x-axis) and Action Efficiency (y-axis). While VLMs (squares) achieve superior spatial grounding with minimal error, their high inference latency results in low action frequency. Conversely, standard LLMs (circles) sacrifice precision for speed. “Thinking” models (triangles/diamonds) bridge this gap, achieving VLM-level precision through reasoning without the visual processing overhead.",
+      "page": 8,
+      "index": 5,
+      "width": 481,
+      "height": 435
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09337v1/fig-006.webp",
+      "caption": "Figure 2. Overview of the STAR benchmark architecture. The system relies on four decoupled layers designed for high extensibility and interoperability. The Framework Layer serves as the foundational ECS engine, empowering researchers to construct diverse game scenarios in the Environment Layer by reusing core simulation components. Crucially, the Protocol Layer establishes a standardized interface that bridges the Agent Layer with the environment, enabling seamless interconnectivity between heterogeneous agents and any environment built upon the framework.",
+      "page": 4,
+      "index": 6,
+      "width": 835,
+      "height": 644
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.26635v1/fig-001.webp",
+      "caption": "Figure 9: Logit-transformed proportions of each deception type by (a) crewmate game outcome and (b) player role. Higher values correspond to more frequent deception types (logit of proportion). Equivocation dominates across conditions, with crewmates winning showing slightly higher rates.",
+      "page": 7,
+      "index": 1,
+      "width": 441,
+      "height": 467
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26635v1/fig-002.webp",
+      "caption": "Figure 2: Overview of the Among Us simulation framework. Games begin with random initialization of player roles (𝑋=#Crewmates, 𝑌=#Imposters) and tasks. During gameplay, agents act sequentially at discrete timesteps (movement, task completion, impostor actions). When a dead body is reported or an emergency meeting is called, a discussion phase is triggered: each surviving agent, including impostors, contributes up to 𝑋 rounds of utterances. After discussion, a vote is held; if a plurality is reached, the selected player is ejected. The game continues until one of three termination conditions is met: (1) impostors and crew reach parity, (2) all impostors are ejected, or (3) all crew tasks are completed.",
+      "page": 3,
+      "index": 2,
+      "width": 994,
+      "height": 258
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26635v1/fig-003.webp",
+      "caption": "Figure 4: Empirical cumulative distributions (ECDFs) of discussions and ejections over rounds for different game configurations. Larger crews delay the onset of both discussions and ejections, flattening the cumulative curve despite more total rounds.",
+      "page": 4,
+      "index": 3,
+      "width": 359,
+      "height": 507
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26635v1/fig-004.webp",
+      "caption": "Figure 3: Win outcomes by role across all configurations. Each curve shows the empirical cumulative distribution (ECDF) of games ending in crew or impostor victory. Impostors win more often overall, and their advantage increases with the number of impostors in play.",
+      "page": 4,
+      "index": 4,
+      "width": 488,
+      "height": 389
+    }
+  ]
+}

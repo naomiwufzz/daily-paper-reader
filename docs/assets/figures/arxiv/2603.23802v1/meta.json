@@ -1,0 +1,134 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-001.webp",
+      "caption": "Table 2. AI agent action tool examples by geography and consequentiality.",
+      "page": 6,
+      "index": 1,
+      "width": 898,
+      "height": 219
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-002.webp",
+      "caption": "Fig. 3. Geographic distribution of AI agent actions. Share of worldwide PyPI downloads of MCP servers with action tools 11/2024 to 10/2025 (colour intensity), in brackets percentage point change of share H1 to H2 2025. 𝑁=6.73M downloads of 528 MCP servers with action tools have download data by geography (of 11,174 MCP servers with action tools, 2,467 have download data; see Section 4.2). CA (Canada), US (United States), SE (Sweden), GB (Great Britain/United Kingdom), NL (Netherlands), DE (Germany), FR (France), KR (South Korea), CN (China), JP (Japan), TW (Taiwan), IN (India), SG (Singapore), AU (Australia).",
+      "page": 15,
+      "index": 2,
+      "width": 898,
+      "height": 450
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-003.webp",
+      "caption": "Fig. 2. Consequentiality distribution of AI agent actions. The figure shows the stakes of computer-based occupations, and the number of tools related to each occupation. Each dot represents one SOC-O*Net occupation. Occupation stakes are based on an O*NET survey [31] asking employees to rate ‘What results do your decisions usually have on other people or the image or reputation or financial resources of your employer?’ on a scale of 0-100. Absolute values are meaningless and imprecise, thus the axis labels are omitted. The y-axis (log scale) shows the number of published AI agent action tools mapped to each occupation. The dashed curve shows a quadratic polynomial fit. The fit explains little of the cross-occupation variance (𝑅2 ≈ 0.03; an F-test rejects that all slope coefficients are jointly zero, 𝑝 = 0.015), reflecting substantial heterogeneity. The pink-shaded region highlights high-stakes occupations (score >75) with many tools. Occupations without any associated agent tools – near-exclusively non-computer-based occupations – are excluded.",
+      "page": 14,
+      "index": 3,
+      "width": 898,
+      "height": 331
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-004.webp",
+      "caption": "Table 7. MCP monitoring is an early scanning method for monitoring of agentic deployments.",
+      "page": 33,
+      "index": 4,
+      "width": 898,
+      "height": 479
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-005.webp",
+      "caption": "Table 8. Task and occupation domains of AI agents in deployment",
+      "page": 33,
+      "index": 5,
+      "width": 906,
+      "height": 515
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-006.webp",
+      "caption": "Fig. 7. Agentic transaction tools by autonomy level. The figure shows the number of publicly available MCP servers (#) with any tools for payments in a given month. Human validators agree with the LLM classification 83% (n=6, Fleiss’ 𝜅 = 0.42, Prompt uses exact wording of legend and examples, see Appendix A.4).",
+      "page": 18,
+      "index": 6,
+      "width": 898,
+      "height": 265
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-007.webp",
+      "caption": "Table 6. Agent tools by task domains",
+      "page": 13,
+      "index": 7,
+      "width": 848,
+      "height": 376
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-008.webp",
+      "caption": "Fig. 1. Monitoring 177k MCP tools. Panel A illustrates how we curate and classify 177k MCP tools from GitHub and Smithery using a human-validated LLM judge, along O*NET [31] and US CAISI [20] taxonomies into generality (general-/narrow-purpose), direct impact (action/perception/reasoning), and task domain (Sections 3 and 4). 𝜅 is Fleiss’ kappa across 14 expert validators (𝑛 = 100 each; Appendix A.1). Panel B shows cumulative MCP tools over time: all tools (black) by creation date and AI-coauthored tools (blue), by the month of first labelled AI evidence in an MCP repository (Method & results in Sections 4.5 & 5.5). Panel C shows cumulative tools by O*NET task domain. ‘Other’ (dashed) aggregates remaining domains (Method & results in Sections 4.1 & 5.1). Panel D shows monthly aggregate downloads of MCP server tools, proxying usage. Dots are monthly totals for all servers (black) and AI-coauthored servers (blue); downloads are attributed to the AI-coauthored series only from the date of first detected AI evidence. Lines show exponential fits 𝑦 =𝐴𝑒𝑘𝑡 (Nov 2024–Feb 2026). Legend reports the doubling time ln 2/𝑘 . Shading shows 95% bootstrap confidence intervals. Panel E shows the share of monthly downloads by the type of tools, specifically the set of actions a tool allows an agent to take (’action space’). Dots are monthly shares. “Action tools” (light pink) denotes all tools classified as action. Three subcategories cross-classify action tools by generality (“general-purpose,” red) and O*NET occupational-impact stakes (“medium-stakes” 50–75, dark red; “high-stakes” 75–100, black, on the 0–100 O*NET impact-of-decisions scale). Subcategory shares do not sum to the action total as dimensions are independent. Lines show WLS fits: asymptotic convergence for action and medium-stakes (95% error-propagation CI), and poly-convergence for general-purpose and high-stakes (95% bootstrap CI). Method & results in Sections 4.3, 4.4, 5.3 & 5.4.",
+      "page": 8,
+      "index": 8,
+      "width": 898,
+      "height": 990
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-009.webp",
+      "caption": "Fig. 8. Cumulative usage distribution, across total usage metrics (NPM, PyPI and Smithery’s ‘use count’), by ranked MCP servers (only Servers with usage data included).",
+      "page": 36,
+      "index": 9,
+      "width": 627,
+      "height": 498
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-010.webp",
+      "caption": "Fig. 9. Bottom-up subclusters of MCP servers. Each dot represents one MCP server. The legend and colouring show the match of top-down domains (see Section 4.1) to the clusters. Labels provided for the top subclusters in each top-down domain. Clustering methodology in Section 4.1.",
+      "page": 36,
+      "index": 10,
+      "width": 898,
+      "height": 493
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-011.webp",
+      "caption": "Fig. 6. AI-coauthored MCP servers by AI coding agent. Monthly share of newly published MCP servers with AI assistance detected in first-month commits, by coding agent (stacked area). The trend line shows a WLS quadratic best fit weighted by monthly server count (𝑅2=0.97, average marginal change +4.10 [+3.55, +4.65] pp/mo, 95% CI via delta method); grey lines show 95% CI. Claude dominates AI-assisted MCP server creation (69% of AI-coauthored servers).",
+      "page": 17,
+      "index": 11,
+      "width": 898,
+      "height": 435
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-012.webp",
+      "caption": "Table 4. Direct impact and functionality of Agent tools.",
+      "page": 12,
+      "index": 12,
+      "width": 898,
+      "height": 311
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-013.webp",
+      "caption": "Table 3. The action space of AI systems measured across studies, by direct impact, generality, task domain, and geography",
+      "page": 9,
+      "index": 13,
+      "width": 890,
+      "height": 369
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-014.webp",
+      "caption": "Table 1. AI agent tool examples by generality and direct impact.",
+      "page": 5,
+      "index": 14,
+      "width": 861,
+      "height": 533
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-015.webp",
+      "caption": "Fig. 4. AI agent tool usage for perception, reasoning and action. Stacked area chart showing the percentage of monthly tool downloads on PyPI and NPM (y-axis) by tool functionality subcategory, from Nov 2024 to Jan 2026 (x-axis; 𝑛 indicates total monthly downloads). Stacked areas are grouped into three direct impact types (bottom to top): Action (red shades), Reasoning (blue shades), and Perception (grey). Parenthetical percentages in the legend show each subcategory’s overall download share across all months. Subcategory definitions follow the taxonomy in Section 4.3; software extensions are tools for specific software packages and APIs, code execution covers command-line tools (e.g., a bash tool), and computer use includes tools for mouse-based computer control, browser automation, and GUI interaction. The black trend line shows an asymptotic convergence model 𝑦 (𝑡 ) = 𝐿 − (𝐿 − 𝑦0 ) 𝑒−𝑘𝑡 fitted via weighted least squares (by monthly downloads). The asymptotic limit 𝐿 and 95% confidence interval (from the parameter covariance matrix) are on the legend; grey lines show 95% CI of overall trend. LLM classification validated by human experts (78% agreement, see Appendix A.1). Download data is on server level, allocated assuming 1 server install = 1 use of every tool on the server.",
+      "page": 16,
+      "index": 15,
+      "width": 898,
+      "height": 352
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23802v1/fig-016.webp",
+      "caption": "Fig. 5. General-purpose tool share over time. Top: general-purpose share of total monthly downloads (𝑛 = total npm/PyPI downloads per month); bottom: general-purpose share of cumulative published servers (# = cumulative server count). Dots are observed monthly values. Curves: polynomial-convergence model 𝑦 = 𝐿 − exp(𝑎 + 𝑏𝑡 + 𝑐𝑡2 ) fitted via WLS. Shading: 95% confidence intervals—wild bootstrap (top) and standard covariance-based (bottom). Download-weighted general-purpose share converges toward 𝐿 = 55% [50%, 100%] (𝑅2 = 0.84); the count-based share remains stable near 𝐿 = 21% [21%, 21%] (𝑅2 ≈ 0).",
+      "page": 16,
+      "index": 16,
+      "width": 898,
+      "height": 260
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.10600v1/fig-001.webp",
+      "caption": "Figure 1: Overview of our approach",
+      "page": 5,
+      "index": 1,
+      "width": 1056,
+      "height": 429
+    }
+  ]
+}

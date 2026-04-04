@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.07024v1/fig-001.webp",
+      "caption": "Fig. 6. Analysis of two representative failure modes in cross-website grounding. (a) Ambiguous Grounding: The agent retrieves a generic descriptor (text_contains: more) lacking hierarchical constraints. Consequently, the Actor assigns a higher similarity (score 0.92) to the distractor candidate than to the intended target (score 0.89), leading to an execution error. (b) State Verification Error: The Planner retrieves a strict success criterion expecting a NAVIGATION event (e.g., URL change or page reload). Although the action triggers a visual update (modal popup), the URL remains static. The Planner’s rigid verification logic (url_change = False and page_reload = False) fails to recognize the visual progress, incorrectly marking the step as incomplete and initiating a retry loop.",
+      "page": 10,
+      "index": 1,
+      "width": 969,
+      "height": 591
+    }
+  ]
+}

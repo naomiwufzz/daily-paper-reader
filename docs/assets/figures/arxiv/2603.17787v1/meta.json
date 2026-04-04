@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.17787v1/fig-001.webp",
+      "caption": "Figure 2. Dual extraction pipeline. A single LLM call produces both open-set facts and schemaenforced typed properties, followed by quality gates and write-side deduplication.",
+      "page": 6,
+      "index": 1,
+      "width": 896,
+      "height": 323
+    },
+    {
+      "url": "assets/figures/arxiv/2603.17787v1/fig-002.webp",
+      "caption": "Figure 3. Governance routing with tiered modes (fast/full) and progressive context delivery. The session layer tracks delivered variables to inject only delta content on each autonomous step.",
+      "page": 7,
+      "index": 2,
+      "width": 891,
+      "height": 361
+    },
+    {
+      "url": "assets/figures/arxiv/2603.17787v1/fig-003.webp",
+      "caption": "Table 1. Experimental dataset summary.",
+      "page": 10,
+      "index": 3,
+      "width": 825,
+      "height": 202
+    },
+    {
+      "url": "assets/figures/arxiv/2603.17787v1/fig-004.webp",
+      "caption": "Table 8. Recurring diagnostic patterns from evaluation records.",
+      "page": 23,
+      "index": 4,
+      "width": 733,
+      "height": 302
+    },
+    {
+      "url": "assets/figures/arxiv/2603.17787v1/fig-005.webp",
+      "caption": "Figure 4. Reflection-bounded retrieval with entity-scoped isolation. The optional reflection loop generates targeted follow-up queries within bounded rounds; entity isolation is enforced by CRM key prefiltering.",
+      "page": 8,
+      "index": 5,
+      "width": 890,
+      "height": 385
+    },
+    {
+      "url": "assets/figures/arxiv/2603.17787v1/fig-006.webp",
+      "caption": "Figure 1. Governed Memory four-layer architecture. Agent nodes interact through a shared, organization-scoped API surface. Layers are independently configurable.",
+      "page": 5,
+      "index": 6,
+      "width": 787,
+      "height": 479
+    }
+  ]
+}

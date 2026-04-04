@@ -1,0 +1,70 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.07607v1/fig-001.webp",
+      "caption": "Fig. 3: Comprehensive performance dashboard comparing the MAS-H² agent (orange) against the HPA Baseline (blue), conducting Heartbeat scenario. The plots detail pod and infrastructure scaling, application performance, resource efficiency, and cost metrics over the duration of the experiment.",
+      "page": 15,
+      "index": 1,
+      "width": 725,
+      "height": 963
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07607v1/fig-002.webp",
+      "caption": "Fig. 1: High-level diagram of the MAS-H² architecture.",
+      "page": 7,
+      "index": 2,
+      "width": 725,
+      "height": 710
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07607v1/fig-003.webp",
+      "caption": "Table 2: Detailed workload profile for the Chaotic Flash Sale scenario, designed to test forecasting robustness and strategic adaptation under stress.",
+      "page": 14,
+      "index": 3,
+      "width": 806,
+      "height": 455
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07607v1/fig-004.webp",
+      "caption": "Fig. 5: Pairwise relationship of key metrics in Chaotic Flash Sale scenario. The diagonal shows the distribution for each metric, while the off-diagonal scatter plots reveal correlations. The MAS-H² agent (orange) explores a much wider operational space and navigates efficiency trade-offs more effectively than the static HPA baseline (blue).",
+      "page": 18,
+      "index": 4,
+      "width": 725,
+      "height": 623
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07607v1/fig-005.webp",
+      "caption": "Table 1: Detailed workload profile for the ’Heartbeat’ scenario, designed to test predictive accuracy and scale-down efficiency.",
+      "page": 13,
+      "index": 5,
+      "width": 671,
+      "height": 446
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07607v1/fig-006.webp",
+      "caption": "Fig. 6: Pairwise relationship of key metrics in Chaotic Flash Sale scenario. The diagonal shows the distribution for each metric, while the off-diagonal scatter plots reveal correlations. The MAS-H² agent (orange) explores a much wider operational space and navigates efficiency trade-offs more effectively than the static HPA baseline (blue).",
+      "page": 19,
+      "index": 6,
+      "width": 725,
+      "height": 620
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07607v1/fig-007.webp",
+      "caption": "Fig. 2: Prototype implementation pipeline",
+      "page": 9,
+      "index": 7,
+      "width": 438,
+      "height": 665
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07607v1/fig-008.webp",
+      "caption": "Fig. 4: Comprehensive performance dashboard comparing the MAS-H² agent (orange) against the HPA Baseline (blue), conducting Flash Sale scenario. The plots detail pod and infrastructure scaling, application performance, resource efficiency, and cost metrics over the duration of the experiment.",
+      "page": 16,
+      "index": 8,
+      "width": 725,
+      "height": 963
+    }
+  ]
+}

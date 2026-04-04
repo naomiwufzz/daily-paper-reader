@@ -1,0 +1,134 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-001.webp",
+      "caption": "Table 1: Performance of different methods across models and datasets (Decentralized MAD). For each setting, best value are bold, while second-best are underlined.",
+      "page": 6,
+      "index": 1,
+      "width": 975,
+      "height": 698
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-002.webp",
+      "caption": "Table 4: Overview of evaluation benchmarks, including the number of samples and representative examples.",
+      "page": 15,
+      "index": 2,
+      "width": 975,
+      "height": 740
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-003.webp",
+      "caption": "Figure 13: Complete qualitative responses on Qwen2.5-1.5B (Society Of Mind).",
+      "page": 21,
+      "index": 3,
+      "width": 979,
+      "height": 935
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-004.webp",
+      "caption": "Figure 1: Visualization of our diversity-enhanced MAD pipeline (DAR). In standard MAD, each agent receives all peer responses (e.g., A, A) as context, which can introduce redundancy or noisy prompts. Our method introduces the filter module F to maintain informative diversity across debate rounds, preserving varied reasoning paths and increasing the probability of generating correct answers.",
+      "page": 2,
+      "index": 4,
+      "width": 929,
+      "height": 598
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-005.webp",
+      "caption": "Figure 14: Complete qualitative responses on Qwen2.5-1.5B (DAR).",
+      "page": 22,
+      "index": 5,
+      "width": 979,
+      "height": 1269
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-006.webp",
+      "caption": "Table 8: Performance of different methods across models and datasets (Decentralized MAD, N=8).",
+      "page": 18,
+      "index": 6,
+      "width": 968,
+      "height": 692
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-007.webp",
+      "caption": "Figure 6: DAR retaining prompt",
+      "page": 13,
+      "index": 7,
+      "width": 979,
+      "height": 193
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-008.webp",
+      "caption": "Table 3: Performance under different selection criteria on Arithmetics and Formal Logic tasks.",
+      "page": 8,
+      "index": 8,
+      "width": 952,
+      "height": 242
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-009.webp",
+      "caption": "Figure 3: Diversity of retained responses across retention strategies on Qwen2.5-3B. Similar result for Qwen2.5-1.5B is provided in Appendix A.5.",
+      "page": 8,
+      "index": 9,
+      "width": 956,
+      "height": 327
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-010.webp",
+      "caption": "Table 9: Performance of different methods across models and datasets (Sparse MAD).",
+      "page": 19,
+      "index": 10,
+      "width": 968,
+      "height": 813
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-011.webp",
+      "caption": "Table 7: Performance of different methods across models and datasets (Decentralized MAD, N=4).",
+      "page": 17,
+      "index": 11,
+      "width": 968,
+      "height": 813
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-012.webp",
+      "caption": "Figure 4: DAR recovers minority-correct answers while standard MAD fails. Example from Arithmetics using Qwen2.5-1.5B; full responses in Appendix A.6.",
+      "page": 9,
+      "index": 12,
+      "width": 992,
+      "height": 331
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-013.webp",
+      "caption": "Figure 5: Average results on Arithmetics and Form.Log. over debate rounds R. R=0 indicates Majority Vote.",
+      "page": 9,
+      "index": 13,
+      "width": 962,
+      "height": 304
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-014.webp",
+      "caption": "Figure 12: Complete qualitative responses on Qwen2.5-1.5B (Majority Vote).",
+      "page": 20,
+      "index": 14,
+      "width": 979,
+      "height": 743
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-015.webp",
+      "caption": "Table 6: Performance of different methods across models and datasets (Decentralized MAD, N=2).",
+      "page": 16,
+      "index": 15,
+      "width": 968,
+      "height": 699
+    },
+    {
+      "url": "assets/figures/arxiv/2603.20640v1/fig-016.webp",
+      "caption": "Figure 11: Diversity of retained responses across retention strategies on Qwen2.5-1.5B.",
+      "page": 16,
+      "index": 16,
+      "width": 959,
+      "height": 364
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-001.webp",
+      "caption": "Figure 4: Trade-off between performance and token cost of Qwen2.5VL-7B-Instruct based Multi-Agent Methods across Medical Benchmarks.",
+      "page": 6,
+      "index": 1,
+      "width": 976,
+      "height": 275
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-002.webp",
+      "caption": "Table 2: We compare the performance of general-task and medicine-specific methods across five aspects in the medical",
+      "page": 6,
+      "index": 2,
+      "width": 982,
+      "height": 466
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-003.webp",
+      "caption": "Figure 10: Simplified framework diagrams of DyLAN, Debate, Reconcile, Discussion, AutoGen, MDAgents, MedAgents, MDTeamGPT, ColaCare, and Meta-Prompting.",
+      "page": 15,
+      "index": 3,
+      "width": 980,
+      "height": 646
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-004.webp",
+      "caption": "Figure 15: The Guide module, offering comprehensive documentation on supported MAS methods, dataset schemas, and tutorials. 21",
+      "page": 21,
+      "index": 4,
+      "width": 976,
+      "height": 1413
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-005.webp",
+      "caption": "Figure 1: MedMASLab, the first unified orchestration framework designed for medical visual-language multi-agent systems.",
+      "page": 2,
+      "index": 5,
+      "width": 882,
+      "height": 538
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-006.webp",
+      "caption": "Figure 5: Comparison of Method Performance and Token Cost using Qwen2.5VL-7B, LLaVA-7B, and GPT-4o-mini as Backbones on MedQA and MedVidQA.",
+      "page": 7,
+      "index": 6,
+      "width": 976,
+      "height": 579
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-007.webp",
+      "caption": "Figure 16: The Quick Test interface for single-sample multimodal inference and real-time performance profiling.",
+      "page": 22,
+      "index": 7,
+      "width": 976,
+      "height": 642
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-008.webp",
+      "caption": "Figure 17: The Batch Evaluation module, orchestrating large-scale dataset testing with dynamic algorithmic parameter tuning.",
+      "page": 22,
+      "index": 8,
+      "width": 976,
+      "height": 544
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-009.webp",
+      "caption": "Table 3: Distribution of outcomes for the Reconcile framework using Qwen2.5VL series models as the base model. The table compares the proportions of Right Answer, Wrong Answer, Format Error, and Others across multiple medical datasets for 3B and 7B model variants.",
+      "page": 10,
+      "index": 9,
+      "width": 588,
+      "height": 265
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-010.webp",
+      "caption": "Table 1: Taxonomy of MAS methods and their design dimensions: 1. Interaction: Inter-agent communication pattern. 2. Role: Fixed vs. dynamic agent identities. 3. Tool: Yes/No. 4. Adaptivity: Feedback-driven self-tuning. 5. Decision: Consensus rule. 6. Retrieval: Access to external knowledge/search.",
+      "page": 3,
+      "index": 10,
+      "width": 980,
+      "height": 513
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-011.webp",
+      "caption": "Figure 12: Performance and Token Cost of MedAgents under Different Medical Expert-Playing Modes.We use Qwen2.5VL-7B as the base model for MedAgents to investigate the performance and token cost of MAS frameworks on the PubMedQA, MedQA, MedVidQA, DxBench, and M3CoTBench datasets under three modes: no medical expert-playing, fixed medical expert-playing, and dynamic medical expert-playing.",
+      "page": 18,
+      "index": 11,
+      "width": 976,
+      "height": 284
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-012.webp",
+      "caption": "Figure 13: Backbone Model Size Scaling of Multi Agent Frameworks on PubMedQA, DxBench and MedVidQA with Performance and Token Cost Comparisons. Beyond our previous findings, we discover that increasing model scale does not necessarily lead to performance improvements for both multi-agent frameworks and single-agent systems. For instance, on the PubMedQA dataset at the 72B model scale, the performance of all MAS methods and single-agent models (except for the MedAgents framework) is lower than their 32B counterparts. Notably, MAS demonstrates an amplification effect on performance variations observed in single-agent models . For example ,improvements in single-agent performance are magnified in MAS, while performance degradation is similarly amplified.",
+      "page": 18,
+      "index": 12,
+      "width": 979,
+      "height": 714
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-013.webp",
+      "caption": "Figure 18: The Custom MAS Builder, providing a drag-and-drop canvas for topological design and automated Python code generation.",
+      "page": 23,
+      "index": 13,
+      "width": 979,
+      "height": 649
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-014.webp",
+      "caption": "Figure 6: Trade-off under MAS Compute Scaling on MedQA and MedVidQA.",
+      "page": 8,
+      "index": 14,
+      "width": 976,
+      "height": 324
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-015.webp",
+      "caption": "Figure 7: Performance and Token Cost of Debate and MDTeamGPT under Different Medical Expert-Playing Modes.",
+      "page": 8,
+      "index": 15,
+      "width": 786,
+      "height": 449
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-016.webp",
+      "caption": "Figure 2: Framework of MedMASLab.",
+      "page": 4,
+      "index": 16,
+      "width": 489,
+      "height": 385
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-017.webp",
+      "caption": "Figure 11: Trade-off between performance and token cost of Qwen2.5VL-7B-Instruct based Multi-Agent Methods across remaining Medical Benchmarks. We compute the average performance and average token cost across 11 datasets.",
+      "page": 17,
+      "index": 17,
+      "width": 882,
+      "height": 460
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-018.webp",
+      "caption": "Figure 8: Trade-off under MAS Model Size Scaling on MedQA and MedXpertQA-MM.",
+      "page": 9,
+      "index": 18,
+      "width": 786,
+      "height": 433
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-019.webp",
+      "caption": "Figure 14: The API Setup interface, allowing decoupled configuration of Base and Judge models via OpenAI-compatible endpoints.",
+      "page": 20,
+      "index": 19,
+      "width": 976,
+      "height": 467
+    },
+    {
+      "url": "assets/figures/arxiv/2603.09909v1/fig-020.webp",
+      "caption": "Figure 3: Performance and ranking variations of different MAS methods across five evaluation protocols on DxBench, PubMedQA, and MedXpertQA.",
+      "page": 5,
+      "index": 20,
+      "width": 968,
+      "height": 570
+    }
+  ]
+}

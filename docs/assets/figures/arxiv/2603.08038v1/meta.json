@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.08038v1/fig-001.webp",
+      "caption": "Fig. 1. Evolution of error ε[k] (shown in (28)) over time k averaged over 100 random digraphs of 150 potentially participating nodes, during the execution of QAOD, QAPOD, and QAIOD.",
+      "page": 16,
+      "index": 1,
+      "width": 477,
+      "height": 299
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08038v1/fig-002.webp",
+      "caption": "Fig. 2. Evolution of error ε[k] (shown in (28)) over time k averaged over 100 random digraphs of 150, 300, and 600 potentially participating nodes, respectively, during the execution of QAOD, QAPOD, and QAIOD.",
+      "page": 16,
+      "index": 2,
+      "width": 477,
+      "height": 299
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08038v1/fig-003.webp",
+      "caption": "Fig. 3. Evolution of error ε[k] (shown in (28)) over time k averaged over 100 random digraphs of 150 potentially participating nodes for departing rates of 10% and 50%, during the execution of QAOD, QAPOD, and QAIOD.",
+      "page": 16,
+      "index": 3,
+      "width": 477,
+      "height": 299
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08038v1/fig-004.webp",
+      "caption": "Table 1 Comparison of our algorithms with other works in the literature. The metrics are: (A) utilization of directed network, (B) absence of connected, strongly connected, weight balanced network at every time step (C) finite time convergence, (D) efficient communication, (E) dynamic communication links among active nodes, (F) processing delays, and (G) indefinite openness.",
+      "page": 5,
+      "index": 4,
+      "width": 500,
+      "height": 739
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08038v1/fig-005.webp",
+      "caption": "Fig. 4. Evolution of normalized errors ε[k], and ε′[k] over time k, for a random digraph of 150 potentially participating nodes, during the execution of QAOD, QAPOD, QAIOD, [7, 20].",
+      "page": 17,
+      "index": 5,
+      "width": 477,
+      "height": 299
+    }
+  ]
+}

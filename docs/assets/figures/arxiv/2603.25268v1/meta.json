@@ -1,0 +1,206 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-001.webp",
+      "caption": "Figure 2: Director perspective views for structure_016 (25 blocks, complex tier). D1 (left wall), D2 (far wall), and D3 (right wall) each observe a fixed 2D projection across all vertical layers. The full grid minimap shows ground-truth stack heights.",
+      "page": 6,
+      "index": 1,
+      "width": 826,
+      "height": 244
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-002.webp",
+      "caption": "Figure 4: LLM grader scores across three evaluation dimensions—spatial grounding (left), mind modeling (center), and pragmatic sufficiency (right)—broken down by question and model group. Error bars denote ±1 standard error of the mean across all structure–turn– director observations per model (from independent LLM grader runs: SG and MM n=3; PS n=2).",
+      "page": 11,
+      "index": 2,
+      "width": 826,
+      "height": 275
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-003.webp",
+      "caption": "Table 3: Director personality archetypes used in CRAFT experiments. Each archetype shapes the director’s internal reasoning style and public communication tone. Assignments are deterministic per (structure_index, run, director_id) ensuring consistency across all model evaluations.",
+      "page": 25,
+      "index": 3,
+      "width": 768,
+      "height": 391
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-004.webp",
+      "caption": "Figure 16: Oracle-prescribed vs. attempted remove rate per turn for all base open-weight models.",
+      "page": 38,
+      "index": 4,
+      "width": 816,
+      "height": 356
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-005.webp",
+      "caption": "Figure 17: Oracle-prescribed vs. attempted remove rate per turn for all frontier and proprietary models.",
+      "page": 38,
+      "index": 5,
+      "width": 816,
+      "height": 356
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-006.webp",
+      "caption": "Figure 1: CRAFT framework overview. A structure generator creates a target 3D object and three private 2D views for directors, enforcing information asymmetry. At each turn, directors produce instructions from their partial views, which a builder executes via PLACE, REMOVE, or CLARIFY actions in the CRAFT engine. The system logs task progress and evaluates communication using LLM judges for spatial grounding, mind modeling, and pragmatic sufficiency.",
+      "page": 2,
+      "index": 6,
+      "width": 768,
+      "height": 516
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-007.webp",
+      "caption": "Table 5: Dialogue segment illustrating ambiguity resolution, perceptual misalignment, and multi-agent grounding prior to moving the small red block (RS) at layer 1. ∆t is measured relative to the action at t = 599.6s from Group 3",
+      "page": 29,
+      "index": 7,
+      "width": 826,
+      "height": 682
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-008.webp",
+      "caption": "Table 7: Pearson and Spearman correlations of director communication features with task progress at turn 20 (n = 15 models). Features are ordered by absolute Pearson r. Judge question codes in parentheses refer to the evaluation framework in Section E. Significance: ∗p<0.05, ∗∗p<0.01, ∗∗∗p<0.001.",
+      "page": 39,
+      "index": 8,
+      "width": 752,
+      "height": 494
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-009.webp",
+      "caption": "Table 8: Remove action rates per model. Oracle remove rate reflects what the CRAFT game engine considers necessary given the current board state; attempted remove rate reflects what directors instructed the builder to do. Negative gap indicates under-removal (builder removes less than oracle prescribes); positive gap indicates over-removal. Bold = best within group. Underline = largest absolute gap. Turn-level Spearman correlations use full oracle adherence as outcome (n = 5382).",
+      "page": 39,
+      "index": 9,
+      "width": 568,
+      "height": 520
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-010.webp",
+      "caption": "Figure 12: Pragmatic Sufficiency (PS) judge. Evaluated once per turn over the collective director messages. Six binary questions targeting location specificity, block type precision, rational sufficiency, spatial anchoring, builder understanding, and failure attribution.",
+      "page": 34,
+      "index": 10,
+      "width": 829,
+      "height": 552
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-011.webp",
+      "caption": "Figure 11: Builder’s More Exploration Tool Call Prompt. Note that although CRAFT provides this facility, this is not explored in our current benchmark. After initial experimentation, we decided to instead use oracle moves in the builder’s observation space in order to restrict the action space of the builder for controlled experiments.",
+      "page": 34,
+      "index": 11,
+      "width": 829,
+      "height": 292
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-012.webp",
+      "caption": "Figure 3: Failure taxonomy over all turns across 15 director models.",
+      "page": 10,
+      "index": 12,
+      "width": 389,
+      "height": 349
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-013.webp",
+      "caption": "Figure 6: Three turns of zero progress in Qwen-32B (structure_001, T10–T14): D1 and D2 repeatedly instruct removal from the wrong layer while the oracle recommends forward placement, and the builder follows director consensus over oracle, consuming three turns without any board state change (full trace in Table 9).",
+      "page": 14,
+      "index": 13,
+      "width": 826,
+      "height": 246
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-014.webp",
+      "caption": "Figure 14: Mind Model (MM) Judge. Evaluated once per turn across 20 structures and 20 overall turns over the collective director messages. Note that oracle correct moves are not provided to the MM judge during evaluation.",
+      "page": 35,
+      "index": 14,
+      "width": 829,
+      "height": 610
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-015.webp",
+      "caption": "Figure 13: Spatial Grounding (SG) judge. Evaluated once per turn across 20 structures and 20 overall turns over the collective director messages.",
+      "page": 35,
+      "index": 15,
+      "width": 829,
+      "height": 520
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-016.webp",
+      "caption": "Figure 9: Director prompt used in the experiments, composed of Blocks I–II. Note that personality and archetypes are populated from Table 3.",
+      "page": 28,
+      "index": 16,
+      "width": 829,
+      "height": 988
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-017.webp",
+      "caption": "Table 9: Turn-by-turn trace of the Qwen-32B correction spiral on structure_001. Despite the oracle recommending forward placement moves at every turn, D1 and D2 repeatedly issue remove instructions targeting the wrong layer, while D3 remains unaware of the deadlock. The builder escapes the spiral on T11 and T12 by following D3 instead, but returns to the failed pattern when D1 and D2 reach consensus on T13–14.",
+      "page": 40,
+      "index": 17,
+      "width": 746,
+      "height": 705
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-018.webp",
+      "caption": "Table 6: LLM grader scores (mean ± SEM) for spatial grounding (SG), mind modeling (MM), and pragmatic sufficiency (PS), alongside task progress. Frontier models achieve higher SG and MM scores but lower progress than open-weight models. SG and MM are averaged over three independent grader runs; PS is averaged over two runs, except for Gemini-3.1-Flash-Lite-Preview, which uses a single run (no SEM reported).",
+      "page": 36,
+      "index": 18,
+      "width": 826,
+      "height": 580
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-019.webp",
+      "caption": "Figure 18: Three turns, zero progress: a CRAFT correction spiral (Qwen-32B, structure_001, T10–T14) (see Table 9 for the full turn-by-turn trace). D1 (left wall) sees a large orange domino at layer 1 spanning (0,0)–(1,0) sitting directly on top of a small",
+      "page": 41,
+      "index": 19,
+      "width": 826,
+      "height": 243
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-020.webp",
+      "caption": "Table 4: Failure taxonomy for base and frontier models across CRAFT evaluation runs on 20 target structures. Each cell shows the fraction of oracle-available turns; Correct is the full oracle match rate. Engine errors are diagnosed from the game-engine response after the builder agent makes a move; positional, color, and span errors reflect oracle-level mismatches.",
+      "page": 27,
+      "index": 20,
+      "width": 798,
+      "height": 359
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-021.webp",
+      "caption": "Figure 8: Turn-level outcome rates per model sorted by oracle adherence. Oracle available (orange) is uniformly high; the gap between oracle available and oracle followed (green) directly corresponds to the failure fractions in Table 4. No-oracle turns (purple) are rare across all models (< 15%).",
+      "page": 27,
+      "index": 21,
+      "width": 582,
+      "height": 523
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-022.webp",
+      "caption": "Figure 7: Director perspective views for structure_016, a complex-tier structure with 25 total blocks. D1 (left column, j=0) sees a large yellow domino spanning (0, 0)–(1, 0) at L2, a small red at (0, 0) and large yellow domino spanning (1, 0)–(2, 0) at L1, and small orange, red, green blocks at L0. D2 (top row, i=0) sees a large orange domino spanning (0, 0)–(0, 1) with small red at (0, 2) at L0, a large red domino spanning (0, 0)–(0, 1) with small red at (0, 2) at L1, and small yellow, red, blue at L2. D3 (right column, j=2) sees small blue, red, orange at L2, small red, yellow, green at L1, and a large red domino spanning (0, 2)–(1, 2) with small red at (2, 2) at L0. The shared position (0, 0) is visible to both D1 and D2, serving as the sole grounding anchor between views. The Full Grid minimap shows all seven required positions at height 3; the optional positions (1, 1) and (2, 1) have heights 1 and 2 respectively, both topped by green blocks. No director can reconstruct the full structure unilaterally: D1 and D3 observe vertical depth along their respective walls but cannot see interior or opposite-wall positions, while D2 has exclusive visibility into interior positions but cannot observe vertical structure below the topmost block. Notably, the large orange domino spanning (0, 0)–(0, 1) at L0 is seen as a full domino by D2 (both cells visible) but appears as a small block to D1, which can only see (0, 0) and has no visibility into (0, 1). Similarly, the large red domino spanning (0, 2)–(1, 2) at L0 is seen as a full domino by D3 but appears small to D2, which sees (0, 2) but not (1, 2). These cases illustrate how the same physical block can have different apparent sizes depending on the observing director’s projection, a direct consequence of the partial observability design.",
+      "page": 24,
+      "index": 22,
+      "width": 826,
+      "height": 246
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-023.webp",
+      "caption": "Table 1: Task performance in CRAFT across 7 frontier-proprietary models and 8 openweight models across 20 games after end of turns (turn=20). The builder receives up to 5 “legal” moves per turn and selects among them based solely on director instructions. Progress, Completion, Pos. Acc., and Dist. are continuous metrics; Failed is a binary per-turn outcome.",
+      "page": 9,
+      "index": 23,
+      "width": 842,
+      "height": 575
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-024.webp",
+      "caption": "Figure 15: Per-model judge scores across selected questions for spatial grounding (top), mind modeling (middle), and pragmatic sufficiency (bottom). Models are sorted by overall judge score descending; dashed vertical line separates base (green) from frontier (orange) models. Error bars denote ±1 standard error of the mean across all structure–turn–director observations per model (from independent LLM grader runs: SG and MM n=3; PS n=2).",
+      "page": 37,
+      "index": 24,
+      "width": 826,
+      "height": 538
+    },
+    {
+      "url": "assets/figures/arxiv/2603.25268v1/fig-025.webp",
+      "caption": "Figure 10: Builder prompt used in the experiments, composed of Blocks I–III. Block IV (tool-based move exploration) is included for completeness but not used.",
+      "page": 31,
+      "index": 25,
+      "width": 829,
+      "height": 1037
+    }
+  ]
+}

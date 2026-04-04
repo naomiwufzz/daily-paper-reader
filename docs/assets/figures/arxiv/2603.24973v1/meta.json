@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.24973v1/fig-001.webp",
+      "caption": "Table 1: Main results across three evaluation scenarios. We report mean ± standard deviation over five runs. Best results are in bold, second-best are underlined. For Contradiction, lower values indicate better performance. All values are in percentage.",
+      "page": 6,
+      "index": 1,
+      "width": 1056,
+      "height": 302
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24973v1/fig-002.webp",
+      "caption": "Figure 1: Comparison of three collaboration types in a judicial deliberation task.",
+      "page": 2,
+      "index": 2,
+      "width": 500,
+      "height": 387
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24973v1/fig-003.webp",
+      "caption": "Figure 4: The case study of dynamic collaboration type switching in resolving complex medical reasoning tasks. The framework BEACOF adaptively shifts the interaction type, guiding agents from an initial incorrect consensus to the ground truth.",
+      "page": 8,
+      "index": 3,
+      "width": 1049,
+      "height": 789
+    },
+    {
+      "url": "assets/figures/arxiv/2603.24973v1/fig-004.webp",
+      "caption": "Figure 2: Overview of the Belief-driven Adaptive Collaboration Framework (BEACOF). The framework models collaboration as a dynamic game of incomplete information, applicable across diverse scenarios with specific belief dimensions (top panel). The central workflow executes as follows at round 𝑡 : (1) Meta-Agent Coordination: The centralized Meta-Agent utilizes scenario history to generate contextual payoffs𝑈𝑡 and predict probability distributions over agent collaboration types. (2) Agent Strategic Action: A Participant Agent 𝑖, conditioned on its private profile and the Meta-Agent’s outputs, computes an approximate best response strategy 𝑐∗𝑖 and generates an interaction message𝑚∗𝑖 . (3) Evaluation & Belief Update: The Meta-Agent evaluates𝑚∗𝑖 to produce a capability estimate tuple (𝑒𝑡𝑖 , 𝜔𝑡 𝑖 ). The dashed callout box on the right details the critical Gaussian belief update mechanism: other peers (e.g., Agent 𝑗 , bottom left) refine their prior belief estimates regarding agent 𝑖, denoted as b𝑡−1𝑗 (𝑖), by integrating this new evidence 𝑒𝑡𝑖 weighted by confidence scores and a forgetting factor 𝜆. This cyclic process drives the evolution of beliefs and strategic adaptation.",
+      "page": 4,
+      "index": 4,
+      "width": 1048,
+      "height": 571
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.23875v1/fig-001.webp",
+      "caption": "Figure 2: Overview of SEMA. First, structural modeling and dynamic pruning are employed to extract core observations, reducing reasoning latency. Second, decision and evaluation agents perform closed-loop calibration via history retrieval to suppress stochastic bias. Finally, the policy agent analyzes episode performance and updates experience, driving the continuous self-evolution of strategic logic.",
+      "page": 6,
+      "index": 1,
+      "width": 976,
+      "height": 430
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23875v1/fig-002.webp",
+      "caption": "Figure 4: Ablation study of structural entropy driven pruning on response time across different maps and different levels. (a) 3m; (b) 8m; (c) Flat64(VeryEasy); (d) Flat64(Easy).",
+      "page": 11,
+      "index": 2,
+      "width": 976,
+      "height": 252
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23875v1/fig-003.webp",
+      "caption": "Figure 1: The SEMA framework addresses two pivotal challenges for LLMs in RTS environments. First, the massive observational data leads to excessive input sequences, escalating reasoning latency and hindering real-time response. Second, the inherent stochastic bias of LLMs induces inconsistent decision logic, even in the exact same scenario, two distinct decisions can yield diametrically opposed outcomes, such as a shift from victory to defeat. This volatility severely undermines the robustness of agents in complex adversarial settings.",
+      "page": 2,
+      "index": 3,
+      "width": 979,
+      "height": 411
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23875v1/fig-004.webp",
+      "caption": "Table 2: Win rate(%) and average episode time for successful games across different methods on SMAC and Melee Maps. The time duration listed represents the execution time of a single successful episode; cases where no victory was achieved are denoted by a dash.",
+      "page": 10,
+      "index": 4,
+      "width": 988,
+      "height": 203
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23875v1/fig-005.webp",
+      "caption": "Figure 3: Performance comparison of win rate and response time across diverse scenarios. (a) 3m; (b) 8m; (c) 25m; (d) Flat64 (VeryEasy); (e) Flat64 (Easy). For each point, the values in parentheses (x, y), e.g., (0.49, 88), denote the average response time (s) and the success rate (%).",
+      "page": 10,
+      "index": 5,
+      "width": 976,
+      "height": 199
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23875v1/fig-006.webp",
+      "caption": "Figure 6: Snapshots of tactical evolution on the 8m map (µ = 0.48). (a) illustrates the disordered state in Episode 2, while (b) demonstrates the collaborative formation and focus fire strategy in Episode 3.",
+      "page": 14,
+      "index": 6,
+      "width": 952,
+      "height": 225
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23875v1/fig-007.webp",
+      "caption": "Table 4: Analysis of information retention rates across different combat phases and hyperparameter configurations.",
+      "page": 12,
+      "index": 7,
+      "width": 977,
+      "height": 194
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23875v1/fig-008.webp",
+      "caption": "Figure 5: Hyperparameter sensitivity analysis and semantic filtering visualization on the Simple64-Lv2 map. (a) and (b) (at frame 30 and frame 200, respectively) visualize the structural entropy-driven dynamic pruning process of observation information, where red regions indicate observation attribute nodes with ∆H below the threshold µ that require pruning, while green regions represent retained attribute nodes; (c) shows the relationship between average win rate and the number of tokens under different capacity factors N .",
+      "page": 12,
+      "index": 8,
+      "width": 956,
+      "height": 257
+    },
+    {
+      "url": "assets/figures/arxiv/2603.23875v1/fig-009.webp",
+      "caption": "Table 1: List of Notations for SEMA Framework.",
+      "page": 5,
+      "index": 9,
+      "width": 977,
+      "height": 297
+    }
+  ]
+}

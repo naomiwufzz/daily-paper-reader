@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.08388v1/fig-001.webp",
+      "caption": "Figure 2: Structure of HECG Transition Policy.",
+      "page": 6,
+      "index": 1,
+      "width": 450,
+      "height": 300
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08388v1/fig-002.webp",
+      "caption": "Table 4",
+      "page": 15,
+      "index": 2,
+      "width": 498,
+      "height": 995
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08388v1/fig-003.webp",
+      "caption": "Figure 1: A categorization of autonomous robot methods.",
+      "page": 2,
+      "index": 3,
+      "width": 448,
+      "height": 300
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08388v1/fig-004.webp",
+      "caption": "Figure 3: LLM Goal Compliance Evaluation Results.",
+      "page": 10,
+      "index": 4,
+      "width": 1029,
+      "height": 427
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08388v1/fig-005.webp",
+      "caption": "Figure 6: Transition Type Distribution Under Different Error Regimes",
+      "page": 18,
+      "index": 5,
+      "width": 817,
+      "height": 239
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08388v1/fig-006.webp",
+      "caption": "Figure 7: Task-Level Comprehensive Performance Score by Policy Variant and Model",
+      "page": 18,
+      "index": 6,
+      "width": 817,
+      "height": 275
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08388v1/fig-007.webp",
+      "caption": "Figure 5: Threshold Sensitivity Analysis & Comprehensive Performance Score By Policy Variant and Model",
+      "page": 17,
+      "index": 7,
+      "width": 1023,
+      "height": 323
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08388v1/fig-008.webp",
+      "caption": "Table 6",
+      "page": 17,
+      "index": 8,
+      "width": 531,
+      "height": 531
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08388v1/fig-009.webp",
+      "caption": "Figure 4: Evaluation Metrics of Task Plan",
+      "page": 12,
+      "index": 9,
+      "width": 929,
+      "height": 775
+    },
+    {
+      "url": "assets/figures/arxiv/2603.08388v1/fig-010.webp",
+      "caption": "Table 5",
+      "page": 16,
+      "index": 10,
+      "width": 498,
+      "height": 701
+    }
+  ]
+}

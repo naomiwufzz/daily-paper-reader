@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.16453v1/fig-001.webp",
+      "caption": "Table 8: Performance comparison of eight large language models under four agent frameworks in the EASY environment. A hand-crafted heuristic policy is included as an approximate upper bound.",
+      "page": 26,
+      "index": 1,
+      "width": 941,
+      "height": 1052
+    },
+    {
+      "url": "assets/figures/arxiv/2603.16453v1/fig-002.webp",
+      "caption": "Figure 1: Overview of the hierarchical supermarket environment, illustrating intra-day agent–environment interactions and end-of-day state transition dynamics.",
+      "page": 2,
+      "index": 2,
+      "width": 859,
+      "height": 495
+    },
+    {
+      "url": "assets/figures/arxiv/2603.16453v1/fig-003.webp",
+      "caption": "Figure 7: Illustration of Evolving Strategy and Execution Framework",
+      "page": 22,
+      "index": 3,
+      "width": 908,
+      "height": 1133
+    },
+    {
+      "url": "assets/figures/arxiv/2603.16453v1/fig-004.webp",
+      "caption": "Figure 3: Net worth and available funds trajectories of the heuristic policy under different environment configurations, illustrating the calibrated difficulty levels. The Middle and Hard settings involve a larger number of product categories, enabling higher potential net worth and cash accumulation over the course of an episode.",
+      "page": 14,
+      "index": 4,
+      "width": 401,
+      "height": 610
+    },
+    {
+      "url": "assets/figures/arxiv/2603.16453v1/fig-005.webp",
+      "caption": "Table 5: Example Strategy",
+      "page": 23,
+      "index": 5,
+      "width": 939,
+      "height": 1089
+    },
+    {
+      "url": "assets/figures/arxiv/2603.16453v1/fig-006.webp",
+      "caption": "Table 1: Performance comparison of three representative large language models under four agent frameworks in the EASY environment. A hand-crafted heuristic policy is included as an approximate upper bound.",
+      "page": 4,
+      "index": 6,
+      "width": 941,
+      "height": 632
+    },
+    {
+      "url": "assets/figures/arxiv/2603.16453v1/fig-007.webp",
+      "caption": "Table 6: Performance comparison of seven large language models under three difficulty levels. Lower Expiry and Return ratios indicate better operational stability. A hand-crafted policy is included as an approximate upper bound for each difficulty.",
+      "page": 24,
+      "index": 7,
+      "width": 941,
+      "height": 784
+    },
+    {
+      "url": "assets/figures/arxiv/2603.16453v1/fig-008.webp",
+      "caption": "Figure 4: Macro strategy similarity over time in the easy environment. Higher values indicate greater consistency in high-level decisions across days.",
+      "page": 16,
+      "index": 8,
+      "width": 446,
+      "height": 329
+    },
+    {
+      "url": "assets/figures/arxiv/2603.16453v1/fig-009.webp",
+      "caption": "Figure 5: Execution strategy similarity over time in the easy environment. Execution-level behaviors exhibit substantially higher temporal variability than macro strategies.",
+      "page": 16,
+      "index": 9,
+      "width": 446,
+      "height": 329
+    },
+    {
+      "url": "assets/figures/arxiv/2603.16453v1/fig-010.webp",
+      "caption": "Figure 6: Correlation between the frequency of SKU review queries during rollouts and average daily sales across all runs. Each point represents a single rollout. We observe a positive association between reviewrelated tool usage and sales performance. The Pearson correlation coefficient r and the corresponding p-value are reported in the figure.",
+      "page": 16,
+      "index": 10,
+      "width": 449,
+      "height": 337
+    }
+  ]
+}

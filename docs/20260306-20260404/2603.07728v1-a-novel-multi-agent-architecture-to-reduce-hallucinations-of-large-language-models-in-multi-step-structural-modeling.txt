@@ -1,0 +1,1050 @@
+Title: A Novel Multi-Agent Architecture to Reduce Hallucinations of Large Language Models in Multi-Step Structural Modeling
+
+URL Source: https://arxiv.org/pdf/2603.07728v1
+
+Published Time: Tue, 10 Mar 2026 01:24:51 GMT
+
+Number of Pages: 19
+
+Markdown Content:
+# A N OVEL MULTI -A GENT ARCHITECTURE TO REDUCE 
+
+# HALLUCINATIONS OF LARGE LANGUAGE MODELS IN 
+
+# MULTI -STEP STRUCTURAL MODELING 
+
+Ziheng Geng 1,∗, Jiachen Liu 2,∗, Ran Cao 3, Lu Cheng 4, Dan M. Frangopol 5, Minghui Cheng 1,6†
+
+> 1
+
+Department of Civil and Architectural Engineering, University of Miami, Coral Gables, FL 33146, USA 
+
+> 2
+
+HBC Engineering Company, Miami, FL 33178, USA 
+
+> 3
+
+College of Civil Engineering, Hunan University, Changsha, 410082, China 
+
+> 4
+
+Department of Computer Science, University of Illinois Chicago, Chicago, IL 60607, USA 
+
+> 5
+
+Department of Civil and Environmental Engineering, Lehigh University, Bethlehem, PA 18015, USA 
+
+> 6
+
+School of Architecture, University of Miami, Coral Gables, FL 33146, USA 
+
+> ∗
+
+Equal contribution. 
+
+> †
+
+Corresponding author: minghui.cheng@miami.edu 
+
+March 10, 2026 
+
+ABSTRACT 
+
+Large language models (LLMs) such as GPT and Gemini have demonstrated remarkable capabilities in contextual understanding and reasoning. The strong performance of LLMs has sparked growing interest in leveraging them to automate tasks traditionally dependent on human expertise. Recently, LLMs have been integrated into intelligent agents capable of operating structural analysis software (e.g., OpenSees) to construct structural models and perform analyses. However, existing LLMs are limited in handling multi-step structural modeling due to frequent hallucinations and error accumulation during long-sequence operations. To this end, this study presents a novel multi-agent architecture to automate the structural modeling and analysis using OpenSeesPy. First, problem analysis and construction planning agents extract key parameters from user descriptions and formulate a stepwise modeling plan. Node and element agents then operate in parallel to assemble the frame geometry, followed by a load assignment agent. The resulting geometric and load information is translated into executable OpenSeesPy scripts by code translation agents. The proposed architecture is evaluated on a benchmark of 20 frame problems over ten repeated trials, achieving 100% accuracy in 18 cases and 90% in the remaining two. The architecture also significantly improves computational efficiency and demonstrates scalability to larger structural systems. 
+
+Keywords: Large language models, Multi-agent architecture, Structural analysis, Hallucination 
+
+1 Introduction 
+
+Structural analysis is a fundamental pillar of civil engineering, underpinning the design and evaluation of buildings and infrastructure to ensure their safety, stability, and serviceability. Over the past several decades, finite element modeling has emerged as the dominant approach for conducting structural analysis due to its accuracy, versatility, and broad applicability. A variety of commercial and open-source software platforms, such as OpenSees (McKenna, 2011), ETABS (Computers and Structures, Inc., 2025a), SAP2000 (Computers and Structures, Inc., 2025b), ANSYS (ANSYS, Inc., 2025), and Abaqus (Dassault Systèmes, 2025), have been widely adopted in both academia and industry. Despite these technical advances, structural modeling using finite element software is multi-step and remains highly manual and labor-intensive. Engineers are required to perform a series of repetitive steps, such as defining nodes and elements, 
+
+> arXiv:2603.07728v1 [cs.AI] 8 Mar 2026
+
+A PREPRINT - M ARCH 10, 2026 assigning material properties, applying load patterns, and specifying boundary conditions. These tasks are typically executed through graphical user interfaces (GUIs), which depend on click-based operations and demand considerable domain expertise. Such manual workflows hinder modeling efficiency, underscoring the need for automation in structural analysis. Trained on massive text datasets and consisting of billions of parameters, large language models (LLMs) such as GPT (OpenAI, 2025) and Gemini (Google DeepMind, 2025) have demonstrated remarkable capabilities in contextual understanding (An et al., 2024; Zhu et al., 2024), logical reasoning (Cheng et al., 2025; Xie et al., 2025), and instruction following (Zhou et al., 2023; Zeng et al., 2023). These breakthroughs have sparked growing interest in leveraging LLMs to automate tasks traditionally dependent on human expertise. Within the structural engineering community, initial efforts have been made to evaluate LLM’s structural engineering ability. Wan et al. (2025) established a dataset of strength of materials problems and found that general-purpose LLMs are not accurate in solving these problems. To overcome these challenges, supervised fine-tuning and retrieval-augmented generation are employed to integrate domain knowledge. Successful applications include textual interpretations of structural damage images and building surface defects (Jiang et al., 2025; Xu et al., 2025), generation of construction inspection reports (Pu et al., 2024; Wang et al., 2025), and information query of building codes and standards (Joffe et al., 2025; Shi et al., 2025). Another major direction lies in the development of agents. Specifically, the LLM serves as the central reasoning engine that plans a sequence of operations and utilizes computational tools to complete complex engineering tasks. In existing studies, agents have been developed to use Revit to generate and review building models (Du et al., 2024; Deng et al., 2025; Dong et al., 2025) and to use OpenSeesPy to automate the analysis of beams and frame structures (Liu et al., 2026; Geng et al., 2025; Liang et al., 2025). The aforementioned studies pioneer the application of LLMs in structural engineering and demonstrate their potential to automate and accelerate existing workflows. However, they remain limited in handling multi-step structural modeling tasks. While supervised fine-tuning and retrieval-augmented generation enable LLMs to acquire qualitative domain knowledge, they lack the quantitative reliability required for rigorous structural calculations (Liu et al., 2026). Agents that combine the qualitative reasoning capabilities of LLMs with the numerical precision of established software are therefore more suitable for structural modeling and analysis. Nevertheless, existing agent frameworks are typically restricted to tasks involving only a small number of steps, whereas realistic structural analysis problems often require hundreds to thousands of steps to construct a valid structural model. As the number of steps increases, error accumulation and hallucination become increasingly severe, leading to invalid structural models. This issue is particularly critical in structural engineering, where even minor errors can compromise safety. Therefore, a new agent architecture is needed to scale long-horizon structural modeling while maintaining consistency, numerical accuracy, computational efficiency, and reliability against hallucination. This paper proposes a novel multi-agent architecture to reliably and efficiently perform multi-step structural modeling. The architecture decomposes the modeling workflow into four coordinated modules: analysis and planning, geometry assembly, load integration, and code translation. Specifically, problem analysis and construction planning agents first extract key parameters from user input and formulate a sequential modeling plan. The frame geometry is then constructed through parallel node and element agents, after which a load assignment agent applies the corresponding nodal and elemental loads. Finally, code translation agents transform the geometric and loading information into executable OpenSeesPy scripts. The results indicate that the proposed architecture consistently achieves accuracy exceeding 90% across 20 benchmark problems and scale to larger building structures. The remainder of the paper is organized as follows. Section 2 introduces the benchmark dataset comprising 20 representative frame problems and identifies the limitations of the existing architecture. Section 3 presents the proposed multi-agent architecture, while section 4 shows the evaluation results. Finally, Sections 5 and 6 discuss the study’s limitations and provide the concluding remarks. 
+
+2 Benchmark Dataset and Evaluation 
+
+2.1 Dataset overview 
+
+A benchmark dataset developed in previous work (Geng et al., 2025) is adopted to evaluate the performance of multi-agent LLMs for automated frame structural modeling. The dataset comprises 20 representative frame problems, as illustrated in Fig. 1. Each problem features a unique structural geometry composed of vertical columns and horizontal girders. Among them, five frames have three bays and fifteen contain five bays, where each bay spans six meters. The number of stories in each bay and story heights are randomly sampled between one and five to assess the generalizability. The boundary conditions, load patterns, and material properties are consistent across all problems. Specifically, all supports are fixed at the base. A uniformly distributed load of 10 kN/m is applied downward on each girder, while a point load of 50 kN is applied rightward to the top node of each story at the leftmost bay. The material is specified by 2A PREPRINT - M ARCH 10, 2026 three parameters: Young’s modulus, cross-sectional area, and moment of inertia. Distinct cross-sectional properties are assigned to the columns and girders, respectively. These problems provide a systematic testbed for assessing the capability of multi-agent LLMs in solving frame structural modeling. Fig 1. A benchmark dataset comprising twenty representative frame structural analysis problems                                             
+
+> Point load: 50 kN Distributed load: 10 kN/m
+> 6 m 6 m 6 m
+> 5 m 4 m 5 m
+> 6 m 6 m 6 m
+> 4 m 5 m  4 m  4 m
+> 6 m 6 m 6 m
+> 3 m 5 m  5 m  3 m
+> 6 m 6 m 6 m
+> 3 m 5 m  5 m  3 m  4 m
+> 6 m 6 m 6 m
+> 4 m 5 m  4 m  5 m  4 m
+> 6 m 6 m 6 m
+> 4 m 5 m  4 m
+> 6 m 6 m 6 m 6 m 6 m
+> 4 m 5 m  4 m
+> 6 m 6 m 6 m 6 m 6 m
+> 4 m 5 m  4 m
+> 6 m 6 m
+> 6 m 6 m 6 m
+> 4 m 5 m  3 m
+> 6 m 6 m 6 m 6 m 6 m
+> 4 m 5 m  3 m
+> 6 m 6 m
+> 2 m
+> 1 m
+> 6 m 6 m 6 m
+> 4 m 5 m  3 m
+> 6 m 6 m
+> 2 m
+> 1 m
+> 6 m 6 m 6 m
+> 4 m 5 m
+> 6 m 6 m
+> 5 m  3 m
+> 6 m 6 m 6 m
+> 4 m 5 m  4 m
+> 6 m 6 m
+> 2 m  3 m
+> 6 m 6 m 6 m
+> 4 m 5 m  3 m
+> 6 m 6 m
+> 3 m  3 m
+> 6 m 6 m 6 m
+> 4 m 5 m  4 m
+> 6 m 6 m
+> 4 m  3 m
+> 6 m 6 m 6 m
+> 4 m 5 m  4 m
+> 6 m 6 m
+> 4 m  3 m
+> 6 m 6 m 6 m
+> 4 m 5 m  4 m
+> 6 m 6 m
+> 4 m  3 m
+> 6 m 6 m 6 m
+> 4 m 5 m
+> 6 m 6 m
+> 5 m  3 m  5 m
+> 6 m 6 m 6 m
+> 4 m 5 m  4 m
+> 6 m 6 m
+> 5 m  3 m
+> 6 m 6 m 6 m
+> 4 m 5 m  4 m
+> 6 m 6 m
+> 6 m  3 m
+
+Fig. 1: Benchmark dataset of twenty frame structural modeling problems (adapted from Geng et al., 2025). The input to the multi-agent LLMs is a textual description of the 2D frame structural modeling problem. The description template, shown in Fig. 2, includes four components: geometry, boundary conditions, load patterns, and material properties. The geometry section specifies the overall configuration, including the number of bays and the number of stories in each bay, as well as detailed dimensions such as bay spans and story heights. The boundary conditions section identifies the types and locations of supports. The load patterns section defines the load types, magnitudes, directions, and application locations. The material properties section provides the Young’s modulus, cross-sectional areas, and moments of inertia for columns and girders. Given this textural input, the multi-agent LLMs automatically generate the structural modeling scripts and invokes OpenSeesPy to perform the corresponding analysis. Performance evaluation focuses on three criteria: accuracy across ten repeated trails, efficiency of the inference process, and scalability to larger structural systems. 3A PREPRINT - M ARCH 10, 2026 Fig. 2. Workflow to assess the performance of Llama model in 2D frame structural analysis problems.                      
+
+> Performance evaluation
+> Translate
+> Geometry: The frame has three bays. The length of the first bay is 6 meters. The first bay has three stories. The height of the first, second, and third story are 7 m, 5.5 m, and 5.5 m. The length of the second bay is 6 meters. The second bay has four stories. The height of the first, second, third, and fourth story are 7 m, 5.5 m, 5.5 m, and 5.5 m. The length of the third bay is 6 meters. The third bay has three stories. The height of the first, second, and third story are 7 m, 5.5 m, and 5.5 m.
+> Boundary Conditions: All supports are fixed at the base.
+> Load Patterns: A uniformly distributed load of 10 kN/m is applied downward along each horizontal girder. A horizontal concentrated load of 50 kN is applied to the top-story nodes at the leftmost side of the first bay, acting in the rightward direction.
+> Material Properties: Considering elastic material properties with aYoung’s modulus of 2.0e11 Pa. The vertical columns have a cross-sectional area of 2.0e-3 m 2and a moment of inertia of 1.6e-5 m 4. The horizontal girders have a cross-sectional area of 6.0e-3 m 2and a moment of inertia of 5.4e-5 m 4.
+> Text description 2D Frame Problem
+> 6 m 6 m 6 m
+> 5.5 m 7 m  5.5 m  5.5 m
+> Accuracy
+> Across ten repeated trails
+> Scalability
+> Towards larger structural systems
+> Efficiency
+> Average inference time per task
+
+Fig. 2: Textual description template for specifying a 2D frame structural modeling problem 
+
+2.2 Performance evaluation of sequential multi-agent architecture 
+
+The multi-agent LLMs proposed in Geng et al. (2025) adopt a sequential architectural design, in which the overall frame structural modeling task is decomposed into five subtasks: problem analysis, geometry assembly, code translation, model validation, and load application. Each subtask is handled by a specialized LLM agent, all powered by the Llama-3.3 70B Instruct model. Inter-agent communication follows a unidirectional pipeline: each agent receives the input from its predecessor and passes its output to the subsequent agent. The performance of this sequential architecture is evaluated using the benchmark dataset, where each problem is executed ten times to account for stochasticity of LLM outputs. The results show that the sequential multi-agent LLMs outperform leading general-purpose LLMs, such as Gemini-2.5 Pro and GPT-4o. However, notable limitations remain, particularly in terms of accuracy, efficiency, and scalability, as demonstrated in Fig. 3. First, while the sequential multi-agent architecture achieves error-free analysis for relatively simple structures such as frames with 3 bays, its performance deteriorates as structural complexity increases. For frames with 5 bays, the architecture exhibits unstable performance across cases, with accuracy dropping to as low as 60%. This indicates that hallucination persists when the LLMs perform long-sequence inference. It is expected that as the number of stories and bays increases, the probability of hallucination will increase to an unacceptable level. Second, the sequential architecture incurs considerable inference time because each agent can proceed only after its predecessor has completed its operation. Despite offering improvements over manual coding, the benchmark problems still require 269-949 seconds to complete. This falls short of the efficiency expectations for real-world engineering workflows. Third, the architecture demonstrates limited scalability. When extended to larger structures, such as frames with seven bays and seven stories, the pipeline fails due to API time limits. Specifically, the geometry agent exceeds the 30-minute inference cap and triggers timeout errors. This failure illustrates the vulnerability of sequential architecture when the computational burden of a single agent escalates. Collectively, these limitations significantly hinder the practical applicability of the sequential multi-agent LLMs and underscore the need to improve accuracy, efficiency, and scalability in automated frame structural modeling. 
+
+3 A Novel Multi-Agent Architecture for Frame Structural Modeling 
+
+To address the limitations of sequential architectural design, this section proposes a robust multi-agent architecture to automate frame structural modeling, as shown in Fig. 4. The architecture receives a text description of the problem as input and processes it through four functional modules: analysis and planning, geometry assembly, load integration, and code translation. Each module includes one or more specialized LLM agents, whose roles are detailed in the following subsections. To improve robustness, checkpoints are embedded within the analysis and planning module and geometry assembly module. These checkpoints perform consistency checks and trigger regeneration when discrepancies are detected, thus mitigating error propagation to downstream agents. The architecture utilizes two lightweight LLM backbones: GPT-OSS 120B is assigned to agents that perform complex reasoning, whereas Llama-3.3 70B Instruct Turbo is used for tasks related to information translation and mapping. The rationale for this design choice is illustrated 4A PREPRINT - M ARCH 10, 2026 Fig. 3. System design of the LLM-based multi-agent framework for automated frame structural analysis.                             
+
+> 7-bay frames
+> 6 m
+> 5 m 6 m  4 m  5 m  6 m  5 m  3 m
+> 6 m 6 m 6 m 6 m 6 m 6 m
+> Scale
+> up
+> Limitation 3: Fail to scale up to larger structures due to API time limits
+> User Input
+> Powered by Llama-3.3 70B Instruct Model
+> Code
+> Translation
+> Agent
+> Model Validation
+> Agent
+> Load
+> Agent
+> Geometry
+> Agent
+> Problem Analysis Agent
+> Output
+> Sequential Multi-Agent Architecture
+> Performance
+> Limitation 1: Hallucination persists, reducing accuracy to 60%
+> Limitation 2: High inference time (269 to 949 seconds across cases)
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 12345678910 11 12 13 14 15 16 17 18 19 20
+> Accuracy across ten trials
+> Question number
+> 3-bay frames 5-bay frames
+> 0.6
+> 0.7 0.7
+> 0.8 0.8
+> !Request timed out!
+
+Fig. 3: Limitations of sequential multi-agent architecture in accuracy, efficiency, and scalability. via a comparative experiment in Section 5. Following these modules, the multi-agent LLMs generate executable scripts, invoke OpenSeesPy (Zhu et al., 2018) for structural analysis, and utilize OpsVis (Kokot, 2024) to visualize the model geometry and structural responses. Fig. 4. System design 
+
+Agents powered by GPT-OSS 120B  Agents powered by Llama-3.3 70B Instruct Turbo 
+
+User Input 
+
+Connectivity 
+
+Mapping 
+
+Function 
+
+Problem Analysis Agent 
+
+Construction 
+
+Planning 
+
+Agent 
+
+Node 
+
+Agent 
+
+Element 
+
+Agent 
+
+JSON 
+
+File 
+
+Compiler 
+
+> Checkpoint
+> Checkpoint
+
+Load 
+
+Assignment Agent 
+
+LLM-based multi-agent system 
+
+OpsVis 
+
+Output 
+
+Analysis & Planning 
+
+Geometry Assembly 
+
+Geometry 
+
+Code 
+
+Translator 
+
+Complete 
+
+Code 
+
+Generator 
+
+Code Translation Load Integration 
+
+Agents powered by GPT-OSS 120B  Agents powered by Llama-3.3 70B Instruct Turbo 
+
+User Input 
+
+Connectivity 
+
+Mapping 
+
+Function 
+
+Problem Analysis Agent 
+
+Construction 
+
+Planning 
+
+Agent 
+
+Node 
+
+Agent 
+
+Element 
+
+Agent 
+
+JSON 
+
+File 
+
+Compiler 
+
+> Checkpoint
+> Checkpoint
+
+Load 
+
+Assignment Agent 
+
+Proposed multi-agent architecture 
+
+OpsVis 
+
+Output 
+
+Analysis & Planning 
+
+Geometry Assembly 
+
+Geometry 
+
+Code 
+
+Translator 
+
+Complete 
+
+Code 
+
+Generator 
+
+Code Translation Load Integration 
+
+Fig. 4: A robust multi-agent architecture for LLMs to automate frame structural modeling. 
+
+3.1 Analysis and planning 
+
+The analysis and planning module includes two LLM agents: problem analysis agent and construction planning agent. The problem analysis agent extracts the key parameters from the user’s textual input and organizes them into a structured JSON file, as illustrated in Table 1. The JSON format comprises four components for downstream modeling: geometry, boundary conditions, material properties, and load patterns. Within the geometry section, the agent first identifies the total number of bays and stories in the frame, which will be used for subsequent consistency checks within the module. It then records detailed information such as bay index, span length, story count, and story heights. For boundary conditions, the agent classifies support types (e.g., pinned, roller, fixed) and specifies their locations. The material 5A PREPRINT - M ARCH 10, 2026 properties section captures five parameters: Young’s Modulus, cross-sectional areas, and moments of inertia for both columns and girders. The load section specifies the load type (point, distributed, or other), location, direction, and magnitude. Table 1: JSON representations produced by the problem analysis agent, node agent, and element agent. Problem analysis agent Node agent Element agent 
+
+> {"Geometry": { "Total_bays": <int>, "Total_stories": <int>, "Bay_data": [ {"Bay": <int>, "Span": <float>, "Story_count": <int>, "Heights": [<float>, ...] }// Additional bays omitted ]}, "Supports": { "Type": "<string>", "Location": "<string>" }, "Material": { "E": <float>, "A_col": <float>, "A_gir": <float>, "I_col": <float>, "I_gir": <float> }, "Loads": { "Type": "<string>", "Location": "<string>", "Direction": "<string>", "Magnitude": <float> }}{"Construction_steps": [ {"Step_number": <int>, "Bay_number": <int>, "Story_number": <int>, "Step_type": "<string>", "Nodes": [ {"ID": <int>, "x": <float>, "y": <float>, "Description": "<string>" }// Additional nodes omitted ], "Boundary_conditions": [ {"Node_ID": <int>, "Constraints": "<string>" }// Additional constraints omitted ]}// Additional steps omitted ]}{"Construction_steps": [ {"Step_number": <int>,. "Bay_number": <int>, "Story_number": <int>, "Step_type": "<string>", "Elements": [ {"ID": <int>, "Coord_i": [[<float>, <float>], "Coord_j": [<float>, <float>]], "Description": "<string>" }// Additional elements omitted ]}// Additional steps omitted ]}
+
+The construction planning agent receives the output from the problem analysis agent and generates a stepwise plan for assembling the 2D frame, as demonstrated in Fig. 5. The planning process follows a bay-by-bay, story-by-story logic: the agent constructs all stories in the current bay before proceeding to the next, and within each bay, stories are constructed from bottom to top. For each construction step, the agent assigns a step type that instructs downstream agents to apply the appropriate rule. These step types are derived from expert domain knowledge and capture five possible conditions encountered in 2D frame assembly. Specifically, step type 1 is assigned when constructing the first story of the first bay. Step type 2 applies to additional stories (story ≥ 2) within the first bay. Step type 3 is used when expanding the first story in subsequent bays (bay ≥ 2) . For higher stories in subsequent bays, step type 4 is assigned if the height of the current story is less than or equal to that of the adjacent left bay, while step type 5 is used when it exceeds the height of the left bay. The output of the construction planning agent is a JSON file containing a sequence of construction steps, each with an assigned step number, bay number, story number and step type. To ensure the consistency of this module’s output, a checkpoint is placed following the planning stage, as shown in Fig. 4. This checkpoint performs two consistency checks: (a) whether the maximum bay number in the generated plan matches the total number of bays in the problem analysis, and (b) whether the total number of construction steps equals the total number of stories in the problem analysis. If either check fails, the pipeline re-executes both the problem analysis and construction planning procedures, with up to five retries permitted. Because these two agents involve complex semantic reasoning, both are powered by the GPT-OSS 120B model. 
+
+3.2 Geometry assembly 
+
+The geometry assembly module is designed to determine the nodes and elements required to construct the 2D frame structure. As shown in Fig. 4, this module consists of two LLM agents, the node agent and the element agent, as well as a connectivity mapping function. To improve computational efficiency, the two agents operate in parallel and receive same input from two upstream agents: (a) problem analysis agent, which provides geometric parameters such as bay spans and story heights and boundary conditions, and (b) construction planning agent, which specifies the assembly 6A PREPRINT - M ARCH 10, 2026 Fig. 5. Step planner    
+
+> Output JSON File
+> Construction steps :[
+> { "step_number": 1, "bay_number": 1, "story_number": 1, "step_type": "base_frame" }
+> { "step_number": 2, "bay_number": 1, "story_number": 2, "step_type": "add_story_first_bay" }
+> { "step_number": 3, "bay_number ": 2, "story_number": 1, "step_type": "add_bay_base_story" }
+> { "step_number": 4, "bay_number ": 2, "story_number": 2, "step_type": "add_story_below_left" }
+> // … Omitted
+> { "step_number": 7, "bay_number": 3, "story_number": 3, "step_type": "add_story_above_left" } ]
+> Task :
+> •Sequentially assemble the frame bay by bay and story by story.
+> •Complete all stories within the current bay before proceeding to the next.
+> •Assign a corresponding Step Type based on its structural configuration.
+> Construction
+> Planning
+> Agent
+> Powered by GPT-OSS 120B
+> Definition of the five Step Types
+> Step Type 1:
+> Base Frame
+> Bay = 1,
+> Story = 1
+> Step 1
+> Bay ≥ 2, Story ≥ 2
+> Current story ≤ Left bay
+> Step Type 4:
+> Add Story (Below left)
+> Step 4
+> Step Type 5:
+> Add Story (Above left)
+> Bay ≥ 2, Story ≥ 2
+> Current story > Left bay
+> Step 7
+> Step Type 2:
+> Add Story (First bay)
+> Step 2
+> Bay = 1,
+> Story ≥ 2
+> Step Type 3:
+> Add Bay (Base story)
+> Step 3
+> Bay ≥ 2,
+> Story = 1
+
+Fig. 5: Workflow of construction planning agent for generating a stepwise assembly plan. step and associated step types. Specifically, the node agent is tasked with deriving node identifiers, spatial coordinates, and boundary conditions, while the element agent determines element identifiers, types, and end coordinates. Both agents proceed step-by-step according to the construction plan, and their actions within each step are instructed by the step type. For each step type, a dedicated set of rules is defined by domain experts to separately guide the node agent and the element agent. These rules prescribe the number of nodes or elements to be added and provide formulas to calculate node coordinates from the input dimensions. For instance, when constructing the first story of the first bay, the step type is identified as “base frame”. The node agent applies the corresponding rule to define four nodes and compute their coordinates using the given span and height. It then identifies the nodes with zero y -coordinate as base nodes and assigns fixed supports. In parallel, the element agent applies its rule to generate two columns and one girder and determine their end coordinates. Fig. 6 provides illustrative examples for each rule set. Following the parallel generation of nodes and elements, the module performs post-processing and validation steps. First, a connectivity mapping function is executed to transform the representation of each element into a format compatible with the OpenSeesPy syntax. Specifically, this deterministic Python function maps endpoint coordinate pairs (e.g., [( x1, y 1), (x2, y 2)] ) to node ID connectivity (e.g., [node i, node j ]). Then, a checkpoint is applied to ensure geometric consistency. The checks include (a) duplicate nodes, (b) duplicate elements, (c) element coordinates with no matching node, and (d) nodes that are not referenced by any element. These validations are also implemented using Python functions to enhance robustness. If any discrepancy is detected, the pipeline re-invokes both the node and element agents, with a maximum of five regeneration attempts. A template for the structured JSON outputs of the node and element agents is provided in Table 1. Because the node and element agents perform rule-based sequential reasoning, GPT-OSS 120B is selected as the backbone LLM. 
+
+3.3 Load integration 
+
+The load integration module includes two components: the load assignment agent and the JSON file compiler, as illustrated in Fig. 4. The load assignment agent is responsible for translating abstract load descriptions into a structured format that conforms to the load application syntax in OpenSeesPy. It receives input from two upstream sources: (a) problem analysis agent, which provides load attributes, including type, location, direction, and magnitude, and (b) geometry assembly module, which records the definitions of nodes and elements, including their identifiers, coordinates, and types. Using these inputs, the agent parses the load descriptions and determines the corresponding structural components for load application, such as assigning point loads to nodes and distributed loads to elements. Given that this task involves consistent information mapping, the Llama-3.3 70B Instruct Turbo model is selected as the agent’s backbone due to its strong performance in instruction-following tasks. The output of the load assignment agent is a structured JSON file that links each load, characterized by type, magnitude, and direction, to the corresponding structural components, as demonstrated in Fig. 7. While the benchmark dataset 7A PREPRINT - M ARCH 10, 2026 Fig. 6. Node agent and element agent 
+
+Output from Problem Analysis Agent & Construction Planning Agent 
+
+Node 
+
+Agent 
+
+Task: Derive node identifiers, spatial coordinates, and boundary conditions. 
+
+Element 
+
+Agent 
+
+Task: Derive element identifiers, types, and end coordinates. 
+
+Nodes: 
+
+[1: (0, 0), 2: (6, 0), 3: (0, 5), 4: (6, 5)] 
+
+Boundary conditions: 
+
+[Node 1: Fixed, Node 2: Fixed] 
+
+Elements: 
+
+{ 1: [(0, 0), (0, 5), column], 
+
+2: [(6, 0), (6, 5), column], 
+
+3: [(0, 5), (6, 5), girder] } 
+
+> Base Frame
+
+Connectivity Mapping Function 
+
+Nodes: 
+
+[5: (0, 9), 6: (6, 9)] 
+
+> Add Story
+> (First bay)
+
+Elements: 
+
+{ 4: [(0, 5), (0, 9), column], 
+
+5: [(6, 5), (6, 9), column], 
+
+6: [(0, 9), (6, 9), girder] } 
+
+Nodes: 
+
+[7: (12, 0), 8: (12, 5)] 
+
+Boundary conditions: 
+
+[Node 7: Fixed] 
+
+> Add Bay
+> (Base story)
+
+Elements: 
+
+{ 7: [(12, 0), (12, 5), column], 
+
+8: [(6, 5), (12, 5), girder] } 
+
+> Add Story
+> (Below left)
+
+Nodes: 
+
+[9: (12, 9)] 
+
+Elements: 
+
+{ 9: [(12, 5), (12, 9), column], 
+
+10: [(6, 9), (12, 9), girder] } 
+
+Nodes: 
+
+[13: (12, 11), 14: (18, 11)] 
+
+> Add Story
+> (Above left)
+
+Elements: 
+
+{ 15: [(12, 9), (12, 11), column], 
+
+16: [(18, 9), (18, 11), column], 
+
+17: [(12, 11), (18, 11), girder] } 
+
+Transform element definitions from coordinate pairs to node ID connectivity 
+
+Nodes: [1: (0, 0), 3: (0, 5)] 
+
+Elements:{ 1: [(0, 0), (0, 5), column] }  Elements:{ 1: [(1, 3), column] } 
+
+Elements:{ id: [(node_i, node_j), type] } 
+
+Fig. 6: Workflow of the geometry assembly module, in which the node and element agents operate in parallel, followed by a connectivity mapping function. Load 
+
+Assignment Agent 
+
+Task : Assign loads (e.g., point and distributed and loads) to corresponding components, such as nodes and elements. 
+
+Output 
+
+{ "load_type": " point_load ", 
+
+"location": "top of each story in the first bay", 
+
+"direction": "rightward", "magnitude": "50 kN" } 
+
+{ "load_type": " distributed_load ", 
+
+"location": "each horizontal girder", 
+
+"direction": "downward", "magnitude": "10 kN/m" } 
+
+Nodes : [ 1: (0, 0), 2: (6, 0), 
+
+3: (0, 5), 4: (6, 5) ] 
+
+Elements :{ 1: [(1 , 3), column], 2: [(2, 4), column], 3: [(3 , 4), girder] } 
+
+Output from Problem Analysis Agent 
+
+Output from Geometry Assembly Module 
+
+JSON File 
+
+{ " point_loads ": [ 
+
+{ "node_id": 3 ,
+
+"direction": "rightward", 
+
+"magnitude": "50 kN" } 
+
+// … Omitted ], 
+
+"distributed_loads ": [ 
+
+{ "element_id": 3, 
+
+"direction": "downward", 
+
+"magnitude": 10 kN/m" } 
+
+// … Omitted ] } 
+
+Fig. 7: Workflow of the load assignment agent for mapping loads to corresponding structural components. 8A PREPRINT - M ARCH 10, 2026 includes a representative load pattern, the agent is designed to handle diverse loading cases. More examples are presented in Section 4.3. Following load assignment, the JSON file compiler integrates the load data with other structured JSON outputs from upstream modules, such as material properties from the problem analysis agent and node and element definitions from the geometry assembly module. This is implemented via a deterministic Python utility. The compiled file encapsulates all information required for frame modeling in OpenSeesPy and serves as inputs to the code translation module for generating the executable scripts. 
+
+3.4 Code translation 
+
+The code translation module is tasked with converting the structured JSON file into a complete, executable OpenSeesPy script. To mitigate the risk of hallucinations associated with long-context reasoning, the task is decomposed into two subtasks and assigned to two specialized LLM agents: the geometry code translator and the complete code generator, as shown in Fig. 4. The geometry code translator focuses on transforming geometric information, including nodes, boundary conditions, and elements, into corresponding OpenSeesPy code. This process is guided by a prompt that specifies the required command syntax and parameter specifications. The outputs of the translator include three code blocks, as illustrated in Fig. 8 (a). Following this, the complete code generator assembles the OpenSeesPy script by integrating the translated geometric code with additional blocks for load definitions and model configuration. Its role lies in twofold. First, it processes load data from the JSON file to generate point and distributed load commands using OpenSeesPy syntax. Then, it integrates the geometry and load code with mandatory configuration commands, such as geometric transformation and time series and patterns of loads. The resulting output is a complete and executable OpenSeesPy script, as shown in Fig. 8 (b). Given that both agents perform deterministic translation tasks, the Llama-3.3 70B Instruct Turbo model is used as the backbone LLM for its strong adherence to syntax rules. Output     
+
+> •Material and section properties
+> •Nodes : IDs and spatial coordinates
+> •Boundary conditions : Types and locations
+> •Elements : Element connectivity and types
+
+Input: JSON File 
+
+> # Node definition:
+> ops.node(node_id, x, y)
+> # Boundary condition definition:
+> ops.fix(node_id, c1, c2, c3)
+> # Element definition:
+> ops.element('elasticBeamColumn', element_id, node_i, node_j, A, E, Iz, transfTag)]
+
+Prompt: Command Syntax 
+
+OpenSeesPy Code 
+
+> # Node definition:
+> ops.node(1, 0.0, 0.0)
+> ops.node(2, 6.0, 0.0)
+> ops.node(3, 0.0, 5.0)
+> ops.node(4, 6.0, 5.0)
+> # Boundary condition definition:
+> ops.fix(1, 1, 1, 1)
+> ops.fix(2, 1, 1, 1)
+> # Element definition:
+> ops.element('elasticBeamColumn', 1, 1, 3, Acol, E, IzCol, 1)
+> ops.element('elasticBeamColumn', 2, 2, 4, Acol, E, IzCol, 1)
+> ops.element('elasticBeamColumn', 3, 3, 4, Agir, E, IzGir, 1)
+
+Task : Translate geometric information from JSON file into corresponding OpenSeesPy code 
+
+Geometry 
+
+Code 
+
+Translator 
+
+(a) 
+
+Complete 
+
+Code 
+
+Generator 
+
+Task : Assemble geometric, load, and configuration codes into a complete OpenSeesPy script     
+
+> •Load Data (JSON File)
+> •Output from Geometry Code Translator
+
+Input   
+
+> •Load definition :
+> # Distributed loads
+> ops.eleLoad('-ele', element_id, '-type’,
+> ‘-beamUniform', load_magnitude, 0)
+> # Concentrated loads
+> ops.load(node_id, F_x, F_y, M_z)
+> •Configuration commands:
+> # Geometric transformation
+> ops.geomTransf('Linear', 1)
+> # Load time-series and pattern
+> ops.timeSeries('Constant', 1)
+> ops.pattern('Plain', 1, 1)
+
+Prompt: Command Syntax  Output 
+
+OpenSeesPy Code 
+
+> import openseespy.opensees as ops
+> import opsvis as opsv
+> import matplotlib.pyplot as plt
+> # Reset and initialize the model
+> ops.wipe()
+> # Model configuration
+> ops.model('basic', '-ndm', 2, '-ndf', 3)
+> # Material and section properties
+> E = 200e9 …
+> # Node definition:
+> ops.node(1, 0.0, 0.0) …
+> # Boundary conditions:
+> ops.fix(1, 1, 1, 1) …
+> # Elements:
+> ops.element('elasticBeamColumn', 1, 1, 3, Acol, E, IzCol, 1)
+> …
+
+(b) 
+
+Fig. 8: Workflow of the code generation module, in which the geometry code translator converts geometric information into OpenSeesPy code and complete code generator integrates the geometric code with load and configuration commands to produce executable OpenSeesPy scripts. 9A PREPRINT - M ARCH 10, 2026 
+
+4 Results and Discussion 
+
+4.1 Performance of the proposed multi-agent architecture 
+
+The performance of the proposed multi-agent architecture is evaluated using the benchmark dataset. As shown in Fig. 9 and Table 2, the architecture exhibits strong reliability and robustness across 20 frame analysis problems. It achieves error-free predictions for 18 cases and 90% accuracy for the remaining two. These results indicate that the architecture effectively coordinates specialized agents and substantially reduces the risk of hallucinations. In comparison, the sequential multi-agent architecture attains 80% accuracy for most cases, but its performance drops to 60% for the frame configuration of 2-3-1-4-5. This highlights its deficiencies in robustness under higher structural complexity. Additionally, the proposed architecture significantly outperforms two state-of-the-art general-purpose LLMs, including Gemini 2.5 Pro and GPT 4o. These two LLMs receive the textual descriptions of problems and are prompted to generate executable OpenSeesPy code. It shows that the general-purpose LLMs struggle to perform domain-specific structural modeling tasks. Gemini achieves an average accuracy of only 37%, while GPT fails to produce the correct code across all test cases. Fig 7. Evaluation of Llama model’s spatial reasoning capability through frame geometry generation.                      
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 12345678910 11 12 13 14 15 16 17 18 19 20
+> Accuracy across ten repeated trials
+> Question number
+> Proposed architecture Gemini-2.5 Pro GPT-4o Sequential architecture
+
+Fig. 9: Performance comparison of the proposed multi -agent architecture with the sequential architecture and two state-of-the-art general-purpose LLMs. Table 2: Average accuracy across 20 benchmark problems for different architectures and backbone LLMs. Architecture comparison Backbone LLM comparison Metric Proposed architecture Sequential architecture Gemini-2.5 Pro GPT-4o GPT & Llama GPT Llama Qwen Avg. accuracy 99% 91% 37% 0% 99% 90% 79% 69% The proposed multi-agent LLMs automatically execute the generated OpenSeesPy scripts and visualize the analysis results using OpsVis. As illustrated in Fig. 10, a representative frame configuration of 2-3-1-4-5 is used to showcase six visual outputs: frame geometry, load patterns, deformed shape, axial force diagram, shear force diagram, and bending moment diagram. Specifically, the geometry and load visualizations provide a clear representation of nodes, elements, boundary conditions, and applied loads. They enable engineers to identify potential modeling errors and implement corrective actions accordingly. The deformed shape is computed from nodal displacements and scaled for intuitive interpretation. These nodal displacements (i.e., elastic deflections) are also recorded in the output files. The visualizations enhance the usability of the multi-agent LLMs by providing an integrated workflow from model generation to analysis and interpretation, making it well-suited for both engineering practice and educational applications. 
+
+4.2 Effects of backbone LLMs on performance 
+
+The proposed multi-agent architecture utilizes two backbone LLMs to enhance task alignment. Specifically, GPT-OSS 120B is assigned to agents that perform complex reasoning, including problem analysis agent, construction planning 10 A PREPRINT - M ARCH 10, 2026 Fig 7. Three input styles    
+
+> Frame geometry Load patterns
+> Deformed shape Axial force diagram
+> Shear force diagram Bending moment diagram
+
+Fig. 10: Visualizations of the proposed multi-agent LLMs, including geometry, loading, deformation, and internal force diagrams. agent, node agent, and element agent. In contrast, Llama-3.3 70B Instruct Turbo powers agents tasked with information mapping and translation, including load assignment agent, geometry code translator, and complete code generator. This subsection aims to justify the rationale for this selection by benchmarking its performance against three alternatives. Each alternative is powered by a single LLM: GPT-OSS 120B, Llama-3.3 70B Instruct Turbo, and Qwen-3 235B Instruct. All systems are evaluated using the benchmark dataset, with each problem tested for ten repeated trials. Fig. 11 and Table 2 present the performance comparison between the proposed multi-agent LLMs and three alternatives across 20 test cases. The results indicate that the proposed architecture consistently achieves near-perfect accuracy, demonstrating strong generalization and robustness. In contrast, alternatives powered by a single LLM exhibit significant performance variability across different frame configurations. Among the three alternatives, the GPT-powered architecture achieves the highest average accuracy of 90%. However, its performance is unstable, dropping to 40% for the 3 - 5- 2-3- 5 frame and 60% for the 5 -3- 2- 4-1 frame. The Llama-powered architecture yields an average accuracy of 79% but fails entirely on frames with particular spatial geometry such as 1-2-3-1-5, 2-4-3-2-5, and 2-4-3-5-1. 11 A PREPRINT - M ARCH 10, 2026 The Qwen-powered architecture exhibits the lowest average accuracy of 69%. While it performs reliably on frames with 3 bays, the performance degrades significantly on frames with 5 bays, where accuracy drops below 50% in half of the cases. These findings show that the proposed prompt template is effective and interpretable across general-purpose LLMs because all three alternatives exhibit high accuracy in frames with 3 bays and certain cases with 5 bays such as 2-2-3-1-2 and 3-2-3-2-3. However, the varied failure patterns observed across three alternatives underscore the sensitivity of LLMs to prompt design and problem configuration. This reveals a critical vulnerability of multi-agent architectures powered by a single LLM. 0.0                      
+
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 12345678910 11 12 13 14 15 16 17 18 19 20
+> Accuracy across ten repeated trials
+> Question number
+> Powered by GPT & Llama Powered by Llama Powered by Qwen Powered by GPT
+
+Fig. 11: Performance comparison of the multi-agent architecture powered by various LLMs. To uncover the causes of performance degradation in alternatives powered by single LLMs, the intermediate outputs of all agents are extracted for detailed error analysis. The results reveal diverse hallucination patterns across LLMs, as illustrated in the Appendix. Specifically, the GPT-powered architecture exhibits hallucinations primarily in mapping and translation tasks. In case 1, the element agent correctly defines geometric attributes in the JSON file, but the geometry code translator introduces a duplicated element when generating OpenSeesPy code, resulting in execution failures. In case 2, the load assignment agent fails to map the distributed load to element 25, despite the element being correctly defined as a girder. In contrast, hallucinations in Llama-powered architecture concentrate on complex reasoning tasks. In case 1, the construction planning agent redundantly produces steps that had already been included in prior planning. This leads to a mismatch between the total number of stories and construction steps, ultimately causing script failure. In case 2, the node agent loses mathematical precision during long-context reasoning. Although the story heights are correctly specified as 5, 4, 3, 2, and 1 meters, the agent assigns incorrect cumulative elevations of 13, 16, and 18 meters for the third, fourth, and fifth floors, respectively. The Qwen-powered architecture exhibits broad vulnerability, producing hallucinations in both reasoning and translation tasks. In case 1, the construction planning agent fails to maintain logical consistency during the long-sequence reasoning task. It generates repeated steps during the construction of the first story in bays 3, 4, and 5, and misclassifies the step type for bay 2. In case 2, during the code translation process, the geometry code translator resets a valid horizontal coordinate to zero, resulting in a duplicate node and an incorrect diagonal connection in the frame. Collectively, these analyses confirm that no single LLM exhibits consistent reliability across all subtasks in structural analysis. Each model demonstrates task-specific strengths: GPT excels in complex planning and reasoning, whereas Llama performs reliably in information mapping and translation. To harness these complementary strengths, the proposed multi-agent architecture allocates backbone LLMs to agents according to their specific task type. This design mitigates the limitations of single-LLM systems and enhances robustness across structural configurations. 
+
+4.3 Adaptation to diverse linguistic styles 
+
+The proposed multi-agent architecture provides an end-to-end workflow that receives natural language input and outputs structural analysis results. This functionality significantly lowers the entry barrier for non-expert users by enabling task specification via flexible textual descriptions. However, this flexibility raises a key question: can the system maintain robust and reliable performance across diverse linguistic styles? To evaluate this capability, a pilot test is conducted with three students from the School of Architecture at the University of Miami, as shown in Fig. 12. Unlike civil engineering students, these participants possess only introductory-level knowledge of structural mechanics, making them well-suited for assessing the usability from a non-specialist perspective. 12 A PREPRINT - M ARCH 10, 2026 Fig 7. Three input styles       
+
+> Geometry: The frame has three bays, each with a span of 6.1 m. Each bay has three stories with heights of 3.35 m, 3.35 m, and 3.35 m, respectively.
+> Boundary Conditions: All supports are fixed at the base.
+> Load Patterns: A uniformly distributed load of 1.22 kN/m is applied downward along each beam of the third story (roof). A uniformly distributed load of 29.22 kN/m is applied downward along each beam of the first and second stories (floor). Horizontal point loads of 30 kN are applied rightward at the top of each story level within the first bay.
+> Material Properties …
+
+Student 1                    
+
+> Text description
+> Geometry: The 2D frame consists of three bays located at grid lines of 0 m, 9.14 m, 18.28 m, and 27.44 m. The structure has three stories, including the roof level, with twelve columns (three per line across four lines). The height per story is 6 m, 6 m, and 3 m elevation.
+> Boundary Conditions: The base supports are modeled as fixed.
+> Load Patterns: Gravity loads: (a) roof beams: uniform distributed load of 1.83 kN/m, and (b) floor beams: 43.77 kN/m. The direction is downward. Wind load per story: rightward 4.5 kN/m applied to the leftmost columns at the first bay.
+> Material Properties …
+> Geometry: The frame is a 3 ×3 Square. 3.2 mheight each story and 6.0 mlength each bay.
+> Boundary Conditions: The base is fixed.
+> Load Patterns: A load of 14.3 kN/m is applied at the horizontal beams for the first and second stories. The direction is going down. A roof load is 0.6 kN/m is applied at the horizontal beams for the third story. The direction is also going down. The wind load is 14.9 kN and it is applied to all top floor nodes (story 1, story 2, and roof) at the leftmost side of the first bay. The direction is going right.
+> Material Properties …
+
+Student 2  Student 3 
+
+> Frame geometry Load patterns
+> q = 4.5 kN/m  q = 4.5 kN/m  q = 4.5 kN/m
+
+Output  Output  Output 
+
+Accuracy: 100% 
+
+Runtime: 131.9 seconds 
+
+Accuracy: 100% 
+
+Runtime: 148.0 seconds 
+
+Accuracy: 100% 
+
+Runtime: 128.2 seconds 
+
+Fig. 12: Adaptation of the proposed architecture to diverse input styles provided by three students. Specifically, student 1 follows the provided input template to describe the geometry, boundary conditions, and load patterns. Notably, the student assigns distinct distributed loads across floors: 1.22 kN/m for the third floor and 29.22 kN/m for the first and second floors. Additionally, horizontal point loads of 30 kN are applied to the top floor nodes in the first bay. Student 2 describes the structural geometry using gridlines, which is a conventional practice in architectural and structural design. Instead of explicitly specifying bay spans, this student describes the locations of vertical gridlines and indicates the number of columns per line to imply the number of stories. The load patterns include gravity loads of 1.83 kN/m on the first and second floors and 43.77 kN/m on the third floor. Wind loads are represented as distributed loads of 4.5 kN/m applied to the leftmost columns, which differs from the point loads used by student 1. Student 3 provides a concise geometric description, referring to the frame as a 3×3 square with equal bay span and story height. The load pattern matches that of student 1 in type but differs in magnitude: a distributed load of 0.6 kN/m on the third floor, 14.3 kN/m on the first and second floors, and 14.9 kN point loads on the façade. Despite substantial variations in problem descriptions provided by users, the proposed architecture consistently generates correct structural analysis results across all ten repeated trials for each case, as illustrated in Fig. 12. This robust performance demonstrates the effectiveness of the problem analysis agent in performing semantic reasoning on diverse user inputs. The agent can extract key parameters required for structural modeling and organize them into a standardized JSON format. This structured representation ensures that downstream agents operate reliably, regardless of differences in user’s language styles or levels of domain expertise. These results indicate the strong adaptability and robustness of the proposed architecture, highlighting its huge potential for broader adoption beyond engineering professionals. 
+
+4.4 Scalability to larger structural systems 
+
+In addition to accuracy, another advantage of the proposed multi-agent architecture over sequential design is its scalability to larger structural systems. As mentioned in Section 2, the sequential pipeline often encounters timeout 13 A PREPRINT - M ARCH 10, 2026 errors when handling large-scale structures due to prolonged reasoning times that exceed API limits. These errors are commonly triggered by the geometry agent, which is tasked with defining node coordinates and element connectivity simultaneously. To overcome this limitation, the proposed architecture decomposes the geometry assembly task into two independent sub-tasks, each assigned to a dedicated agent: the node agent and the element agent. This task decomposition significantly enhances the overall efficiency, improving the capacity to scale up. Fig 7. Scale up  
+
+> Case 1 Case 2 Case 3
+> Frame geometry Load patterns
+> Accuracy: 90%
+> Runtime: 371.2 seconds
+> Accuracy: 100%
+> Runtime: 393.0 seconds
+> Accuracy: 80%
+> Runtime: 548.6 seconds
+
+Fig. 13: Scalability of the proposed architecture across three representative structural configurations. Fig. 13 illustrates the scalability of the proposed architecture through three representative cases. The configurations of these cases are as follows. Case 1 features a frame with 7 bays and a symmetric profile, comprising 5, 5, 6, 7, 6, 5, and 5 stories from left to right. Case 2 introduces random asymmetry in a frame with 7, 5, 6, 4, 7, 3, and 5 stories. Case 3 further scales up to a ten-bay, ten-story frame with story counts of 7, 7, 8, 8, 10, 10, 8, 8, 7, and 7. All three cases adopt a consistent load pattern from the benchmark dataset: each girder is subjected to a uniformly distributed downward load of 10 kN/m, while each top floor node at the leftmost bay is subjected to a rightward point load of 50 kN. The results demonstrate that the proposed architecture maintains strong performance under increasing structural complexity, achieving accuracy rates of 90%, 100%, and 80% across the three cases, respectively. These findings affirm the effectiveness of the task decomposition strategy in mitigating computational bottlenecks while ensuring robustness and scalability for large-scale structural systems. 14 A PREPRINT - M ARCH 10, 2026 
+
+4.5 Runtime and cost 
+
+Beyond accuracy and scalability, computational efficiency is another critical factor for evaluating the practicality of automated structural modeling and analysis. To this end, the proposed multi-agent architecture is compared with sequential design in terms of runtime across 20 benchmark problems. For each case, the average runtime is computed over ten repeated trials. Fig. 14 clearly demonstrates the substantial improvement in computational efficiency provided by the proposed architecture over the sequential design. Specifically, the sequential architecture exhibits runtime ranging from 269.2 to 949.0 seconds, whereas the proposed architecture reduces this range to between 75.4 and 194.2 seconds. A particularly illustrative example is the 3-4-5-4-3 frame, where the sequential architecture requires 949.0 seconds, while the proposed architecture completes the task in just 140.9 seconds, which is an 85% reduction in inference time. Additionally, the proposed architecture maintains efficient computational performance when scaling to larger structural systems. As illustrated in Fig. 13, the total inference times for three large-scale cases are 371.2, 393.0, and 548.6 seconds, respectively. These results indicate that the proposed architecture exhibits an approximately linear growth in runtime with increasing structural complexity, which is a highly desirable property for practical applications in engineering workflows. Fig 7. Running time comparison    
+
+> 0
+> 300
+> 600
+> 900
+> 1200
+> 611 16 21
+> Average runtime [seconds]
+> Total number of stories in the frame
+> Proposed architecture
+> Sequential architecture
+
+Fig. 14: Runtime comparison between the proposed multi-agent architecture and the sequential design. The economic cost of the proposed architecture is further evaluated through token consumption analysis using the benchmark dataset. For each of the 20 problems, total input and output token usage is recorded for LLMs: GPT-OSS 120B and Llama-3.3 70B Instruct Turbo. Specifically, the 3-2-3 frame incurs the lowest token usage. GPT consumes 6,867 input tokens and 3,394 output tokens, while Llama uses 8,323 input tokens and 3,325 output tokens. In contrast, the 3-4-5-4-3 frame yields the highest token consumption. GPT processes 9,645 input tokens and 8,333 output tokens, whereas Llama consumes 13,410 input tokens and 5,778 output tokens. Based on the price information provided by Together AI (in 2026 US$), GPT costs $0.15 per million input tokens and $0.60 per million output tokens, while Llama is priced at $0.88 per million tokens for both input and output. Accordingly, the total cost per benchmark problem ranges from $0.013 to $0.023 (2026 US$). These results highlight the economic viability of the proposed architecture, demonstrating that accurate structural modeling and analysis can be achieved at minimal cost using lightweight LLMs. 
+
+5 Limitations and Future work 
+
+Despite the reliable, efficient, and robust performance of the proposed multi-agent LLMs for automated structural analysis of frames, several limitations remain. First, although the proposed prompt templates are effective for the selected backbone LLMs, they fail to maintain consistent reliability across other models, as discussed in Section 4.2. This shows the sensitivity of LLMs to prompt engineering, which is a widely recognized challenge in existing literature (Sclar et al., 2023; Chatterjee et al., 2024). Therefore, future work should focus on developing an automated prompt optimization framework that can adapt domain-specific instructions to diverse LLMs. Second, the current architecture is restricted to the structural analysis of rectangular frames with vertical columns and horizontal beams. It lacks the ability to model structural components such as diagonal bracing and cantilevers, which are commonly used in real-world practice. Future research should expand the architecture’s capabilities to handle complex structural typologies to improve its generalizability and practical utility. Third, the current structural analysis scope is limited to linear elastic behavior under static loading conditions. While adequate for preliminary design and verification tasks, it does not address dynamic effects (e.g., wind and seismic loads) or nonlinear analysis. Incorporating these capabilities is essential for broader applicability of the LLM in advanced structural design workflows. 15 A PREPRINT - M ARCH 10, 2026 
+
+6 Summary and Conclusions 
+
+This paper proposes a novel large language model (LLM)-based multi-agent architecture for automated structural analysis of 2D frames. The architecture is designed to address three limitations of existing LLMs: (a) unstable performance and hallucinations across diverse structural configurations, (b) low computational efficiency, and (c) limited scalability to larger structural systems. The proposed multi-agent architecture is as follows. The problem analysis agent interprets the user’s description and extracts key parameters required for structural analysis. Then, the construction planning agent formulates a stepwise plan for assembling the frame. Next, the node agent and element agent operate in parallel to define node coordinates and element connectivity. This is followed by a load assignment agent, which applies nodal and elemental loads and compiles all material, geometric, boundary, and load information into a JSON file. This JSON file is then processed by two translation agents to produce the geometry code and the complete OpenSeesPy scripts. To improve robustness, checkpoints are embedded after the planning stage and the node/element generation stage. When inconsistencies are detected, the architecture returns to the previous step and regenerates the outputs. The performance of the proposed architecture is assessed using a benchmark dataset of 20 representative frame structural analysis problems. The key findings are summarized below: • The proposed multi-agent architecture demonstrates reliable and robust performance on the benchmark dataset, achieving 100% accuracy in 18 cases and 90% in the remaining two. These results not only reflect significant improvement over sequential architectural design but also consistently outperform leading general-purpose LLMs such as Gemini 2.5 Pro and GPT 4o. • The proposed architecture significantly improves computational efficiency compared to sequential muti-agent architecture, reducing runtime range from 269.2–949.0 seconds to 75.4–194.2 seconds across the benchmark problems. This indicates the effectiveness of the task decomposition strategy in the proposed architecture. • The proposed architecture exhibits strong scalability towards larger structural systems. It maintains high accuracy rates of 90%, 100%, and 80% across three large-scale cases involving frames with 7 and 10 bays. It also delivers efficient computation, with inference times of 371.2, 393.0, and 548.6 seconds, respectively. • The proposed architecture demonstrates strong adaptation to diverse linguistic styles. A pilot test involving three students from the School of Architecture at the University of Miami confirms that the architecture consistently produces correct structural analysis results across ten repeated trials, regardless of differences in user input styles. • The proposed architecture utilizes two backbone LLMs to power specialized agents. GPT-OSS 120B is assigned to agents requiring complex reasoning, while Llama-3.3 70B Instruct Turbo is tasked with information mapping and translation. Comparisons against single -LLM alternatives demonstrate the rationale for this model selection strategy. • The multi-agent LLMs powered by the proposed architecture have been deployed as a publicly accessible web application, enabling community evaluation and real-world testing of multi-step structural modeling and analysis tasks. The website link is https://civilbot.netlify.app .
+
+Data Availability Statement 
+
+Some or all data, models, or code that support the findings of this study are available from the corresponding author upon reasonable request. 
+
+References 
+
+An, S., Ma, Z., Lin, Z., Zheng, N., Lou, J.-G., and Chen, W. 2024. “Make your llm fully utilize the context.” Advances in Neural Information Processing Systems , 37: 62160–62188. ANSYS, Inc. 2025. ANSYS: Engineering Simulation Software . ANSYS, Inc., Canonsburg, PA. https://www.ansys. com .Chatterjee, A., Renduchintala, H. K., Bhatia, S., and Chakraborty, T. 2024. “Posix: A prompt sensitivity index for large language models.” arXiv preprint arXiv:2410.02185 .Cheng, F., Li, H., Liu, F., van Rooij, R., Zhang, K., and Lin, Z. 2025. “Empowering llms with logical reasoning: A comprehensive survey.” arXiv preprint arXiv:2502.15652 .Computers and Structures, Inc. 2025a. ETABS: Integrated Building Design Software . Computers and Structures, Inc., Walnut Creek, CA. https://www.csiamerica.com/products/etabs .16 A PREPRINT - M ARCH 10, 2026 Computers and Structures, Inc. 2025b. SAP2000: Integrated Software for Structural Analysis and Design . Computers and Structures, Inc., Walnut Creek, CA. urlhttps://www.csiamerica.com/products/sap2000. Dassault Systèmes 2025. Abaqus: Finite Element Analysis . Dassault Systèmes Simulia Corp., Providence, RI. urlhttps://www.3ds.com/products-services/simulia/products/abaqus. Deng, Z., Du, C., Nousias, S., and Borrmann, A. 2025. “Bimgent: Towards autonomous building modeling via computer-use agents.” arXiv preprint arXiv:2506.07217 .Dong, Y., Zhan, Z., Hu, Y., Doe, D. M., and Han, Z. 2025. “Ai bim coordinator for non-expert interaction in building design using llm-driven multi-agent systems.” Automation in Construction , 180: 106563. Du, C., Esser, S., Nousias, S., and Borrmann, A. 2024. “Text2bim: Generating building models using a large language model-based multi-agent framework.” arXiv preprint arXiv:2408.08054 .Geng, Z., Liu, J., Cao, R., Cheng, L., Wang, H., and Cheng, M. 2025. “A lightweight large language model-based multi-agent system for 2d frame structural analysis.” arXiv preprint arXiv:2510.05414 .Google DeepMind 2025. “Gemini 3 pro model card. Accessed: 2026-01-06. Jiang, Y., Wang, J., Shen, X., and Dai, K. 2025. “Large language model for post-earthquake structural damage assessment of buildings.” Computer-Aided Civil and Infrastructure Engineering .Joffe, I., Felobes, G., Elgouhari, Y., Talebi Kalaleh, M., Mei, Q., and Chui, Y. H. 2025. “The framework and implementation of using large language models to answer questions about building codes and standards.” Journal of Computing in Civil Engineering , 39 (4): 05025004. Kokot, S. 2024. “Opsvis documentation. Accessed: 2025-06-07. Liang, H., Kalaleh, M. T., and Mei, Q. 2025. “Integrating large language models for automated structural analysis.” 
+
+arXiv preprint arXiv:2504.09754 .Liu, J., Geng, Z., Cao, R., Cheng, L., Bocchini, P., and Cheng, M. 2026. “A large language model-empowered agent for reliable and robust structural analysis.” Structure and Infrastructure Engineering , 1–16. McKenna, F. 2011. “Opensees: a framework for earthquake engineering simulation.” Computing in Science & Engineering , 13 (4): 58–66. OpenAI 2025. “Update to gpt-5 system card: Gpt-5.2. Accessed: 2026-01-06. Pu, H., Yang, X., Li, J., and Guo, R. 2024. “Autorepo: A general framework for multimodal llm-based automated construction reporting.” Expert Systems with Applications , 255: 124601. Sclar, M., Choi, Y., Tsvetkov, Y., and Suhr, A. 2023. “Quantifying language models’ sensitivity to spurious features in prompt design or: How i learned to start worrying about prompt formatting.” arXiv preprint arXiv:2310.11324 .Shi, J. W. L., Solihin, W., and Yeoh, J. K. 2025. “Fine-tuning a large language model for automated code compliance of building regulations.” Advanced Engineering Informatics , 68: 103676. Wan, Q., Wang, Z., Zhou, J., Wang, W., Geng, Z., Liu, J., Cao, R., Cheng, M., and Cheng, L. 2025. “Som-1k: A thousand-problem benchmark dataset for strength of materials.” arXiv preprint arXiv:2509.21079 .Wang, Y., Luo, H., and Fang, W. 2025. “An integrated approach for automatic safety inspection in construction: Domain knowledge with multimodal large language model.” Advanced Engineering Informatics , 65: 103246. Xie, T., Gao, Z., Ren, Q., Luo, H., Hong, Y., Dai, B., Zhou, J., Qiu, K., Wu, Z., and Luo, C. 2025. “Logic-rl: Unleashing llm reasoning with rule-based reinforcement learning.” arXiv preprint arXiv:2502.14768 .Xu, G., Pan, F., and Yuen, P. C. 2025. “A two-stage multi-modal llm fine-tuning framework for analyzing building surface defects. Zeng, Z., Yu, J., Gao, T., Meng, Y., Goyal, T., and Chen, D. 2023. “Evaluating large language models at evaluating instruction following.” arXiv preprint arXiv:2310.07641 .Zhou, J., Lu, T., Mishra, S., Brahma, S., Basu, S., Luan, Y., Zhou, D., and Hou, L. 2023. “Instruction-following evaluation for large language models.” arXiv preprint arXiv:2311.07911 .Zhu, M., McKenna, F., and Scott, M. H. 2018. “Openseespy: Python library for the opensees finite element framework.” 
+
+SoftwareX , 7: 6–11. Zhu, Y., Moniz, J. R. A., Bhargava, S., Lu, J., Piraviperumal, D., Zhang, Y., Yu, H., and Tseng, B.-H. 2024. “Can large language models understand context?.” arXiv preprint arXiv:2402.00858 .17 A PREPRINT - M ARCH 10, 2026 
+
+Appendix: Hallucination patterns in multi-agent architectures powered by single LLMs GPT-OSS 120B: Hallucinations in Mapping and Translation tasks 
+
+JSON file [Elements]: 
+
+{ "element_id": 16 ,
+
+"type": "girder", 
+
+"node_i": 12, 
+
+"node_j": 13 } 
+
+OpenSeesPy code: 
+
+# Vertical columns 
+
+ops.element('elasticBeamColumn’, 16 , 12, 13, Acol, E, IzCol, 1) 
+
+# Horizontal girders 
+
+ops.element('elasticBeamColumn’, 16 , 12, 13, Agir, E, IzGir, 1) 
+
+Duplicate Elements! 
+
+JSON file [Elements]: 
+
+{ "element_id": 23, 
+
+"type": "girder", 
+
+"node_i": 10, 
+
+"node_j": 18 } 
+
+{ "element_id": 25, 
+
+"type": "girder", 
+
+"node_i": 11, 
+
+"node_j": 19 } 
+
+{ "element_id": 27, 
+
+"type": "girder", 
+
+"node_i": 18, 
+
+"node_j": 21 } 
+
+JSON file [Loads]: 
+
+"distributed_loads": [ 
+
+{ "element_id": 23, 
+
+"direction": "downward", 
+
+"magnitude": 10 kN/m" }, 
+
+{ "element_id": 27, 
+
+"direction": "downward", 
+
+"magnitude": 10 kN/m" } 
+
+// … Omitted ] 
+
+Omit Distributed Load 
+
+Applied on Element 25! 
+
+Execution error: Element with tag 16 already exists in model 
+
+> Case 1 Case 2
+
+Fig. A.1: GPT-powered system: hallucinations concentrated in mapping and translation tasks.. Llama-3.3 70B Instruct Turbo: Hallucinations in tasks involving Complex Reasoning 
+
+JSON file [Problem analysis]: 
+
+{ "bay_number": 1, "span": 6, 
+
+"story_count": 1, "story_heights": [5] } 
+
+{ "bay_number": 2, "span": 6, 
+
+"story_count": 2, "story_heights": [5, 4] } 
+
+{ "bay_number": 3, "span": 6, 
+
+"story_count": 3, "story_heights": [5, 4, 3] } 
+
+{ "bay_number": 4, "span": 6, 
+
+"story_count": 1, "story_heights": [5] } 
+
+{ "bay_number": 5, "span": 6, 
+
+"story_count": 5, "story_heights": [5, 4, 3, 2, 1] } 
+
+JSON file [Nodes]: 
+
+{ "node_id": 16, "x": 30, "y": 0, "description": "Base node at bay 5" } 
+
+{ "node_id": 17, "x": 30, "y": 5, "description": “Node at story 1, bay 5" } 
+
+{ "node_id": 18, "x": 24, "y": 9, "description": “Node at story 2, bay 5" } 
+
+{ "node_id": 19, "x": 30, "y": 9, "description": “Node at story 2, bay 5" } 
+
+{ "node_id": 20, "x": 24, " y": 13 , "description": “Node at story 3, bay 5" } 
+
+{ "node_id": 21, "x": 30, " y": 13 , "description": “Node at story 3, bay 5" } 
+
+{ "node_id": 22, "x": 24, " y": 16 , "description": “Node at story 4, bay 5" } 
+
+{ "node_id": 23, "x": 30, " y": 16 , "description": “Node at story 4, bay 5" } 
+
+{ "node_id": 24, "x": 24, " y": 18 , "description": “Node at story 5, bay 5" } 
+
+{ "node_id": 25, "x": 30, " y": 18 , "description": “Node at story 5, bay 5" } 
+
+The floor elevation was calculated incorrectly! 
+
+> Case 1 Case 2
+
+JSON file [Problem analysis]: 
+
+{ "bay_number": 1, "span": 6, 
+
+"story_count": 1, "story_heights": [5] } 
+
+{ "bay_number": 2, "span": 6, 
+
+"story_count": 2, "story_heights": [5, 4] } 
+
+{ "bay_number": 3, "span": 6, 
+
+"story_count": 3, "story_heights": [5, 4, 4] } 
+
+{ "bay_number": 4, "span": 6, 
+
+"story_count": 1, "story_heights": [5] } 
+
+{ "bay_number": 5, "span": 6, 
+
+"story_count": 2, "story_heights": [5, 4] } 
+
+JSON file [Stepwise plan]: 
+
+{ "step": 1, "bay": 1, "story": 1, "step_type": "base_frame" } 
+
+{ "step": 2, "bay": 2, "story": 1, "step_type": "add_bay_base_story" } 
+
+{ "step": 3, "bay": 2, "story": 2, "step_type": "add_story_above_left" } 
+
+{ "step": 4, "bay": 3, "story": 1, "step_type": "add_bay_base_story" } 
+
+{ "step": 5, "bay": 3, "story": 2, "step_type": "add_story_below_left" } 
+
+{ "step": 6, "bay": 3, "story": 3, "step_type": "add_story_above_left" } 
+
+{ "step": 7, "bay": 4, "story": 1, "step_type": "add_bay_base_story" } 
+
+{ "step": 8, "bay": 5, "story": 1, "step_type": "add_bay_base_story" } 
+
+{ "step": 9, "bay": 5, "story": 2, "step_type": "add_story_above_left" } 
+
+{ "step": 10, "bay": 2, "story": 1, "step_type": "add_bay_base_story" } 
+
+{ "step": 11, "bay": 1, "story": 1, "step_type": "add_bay_base_story" } 
+
+{ "step": 12, "bay": 4, "story": 1, "step_type": "add_bay_base_story" } 
+
+{ "step": 13, "bay": 5, "story": 1, "step_type": "add_bay_base_story" } 
+
+Additional steps were planned! 
+
+Fig. A.2: Llama-powered system: hallucinations arising during complex reasoning tasks. 18 A PREPRINT - M ARCH 10, 2026 Qwen-3 235B Instruct: Hallucinations in Reasoning and Translation tasks 
+
+> Case 2: Translation
+
+JSON file [Nodes]: 
+
+{ "node_id": 1,
+
+"x": 0, 
+
+"y": 0, 
+
+"desc": "left base of bay 1" } 
+
+// … Omitted 
+
+{ "node_id": 9,
+
+"x": 12, 
+
+"y": 0, 
+
+"desc": "right base of bay 1 
+
+and left base of bay 2" } 
+
+OpenSeesPy code [Nodes]: 
+
+ops.node( 1, 0.0, 0.0 )
+
+// … Omitted 
+
+ops.node( 9, 0.0, 0.0 )
+
+Duplicate Nodes! 
+
+JSON file [Problem analysis]: 
+
+{ "bay_number": 1, "length": 6, 
+
+"total_stories": 1, "story_heights": [5] } 
+
+{ "bay_number": 2, "length": 6, 
+
+"total_stories": 2, "story_heights": [5, 4] } 
+
+{ "bay_number": 3, "length": 6, 
+
+"total_stories": 3, "story_heights": [5, 4, 4] } 
+
+{ "bay_number": 4, "length": 6, 
+
+"total_stories": 1, "story_heights": [5] } 
+
+{ "bay_number": 5, "length": 6, 
+
+"total_stories": 2, "story_heights": [5, 4] } 
+
+JSON file [Stepwise plan]: 
+
+{ "step": 1, "bay": 1, "story": 1, "step_type": "base_frame" } 
+
+{ "step": 2, "bay": 2, "story": 1, "step_type": "add_story_below_left " } 
+
+{ "step": 3, "bay": 2, "story": 2, "step_type": "add_story_above_left" } 
+
+{ "step": 4, "bay": 3, "story": 1, "step_type": "add_bay_base_story" } 
+
+{ "step": 5, "bay": 3, "story": 1, "step_type": "add_story_below_left " } 
+
+{ "step": 6, "bay": 3, "story": 2, "step_type": "add_story_below_left" } 
+
+{ "step": 7, "bay": 3, "story": 3, "step_type": "add_story_above_left" } 
+
+{ "step": 8, "bay": 4, "story": 1, "step_type": "add_bay_base_story" } 
+
+{ "step": 9, "bay": 4, "story": 1, "step_type": "add_story_below_left " } 
+
+{ "step": 10, "bay": 5, "story": 1, "step_type": "add_bay_base_story" } 
+
+{ "step": 11, "bay": 5, "story": 1, "step_type": "add_story_below_left " } 
+
+{ "step": 12, "bay": 5, "story": 2, "step_type": "add_story_above_left" } 
+
+Repeated steps were planned! 
+
+> Case 1: Reasoning
+
+Fig. A.3: Qwen-powered system: hallucinations involving both reasoning and translation tasks. 19

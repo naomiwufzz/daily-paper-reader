@@ -1,0 +1,150 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-001.webp",
+      "caption": "Table 1: JSON representations produced by the problem analysis agent, node agent, and element agent.",
+      "page": 6,
+      "index": 1,
+      "width": 976,
+      "height": 591
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-002.webp",
+      "caption": "Fig. 10: Visualizations of the proposed multi-agent LLMs, including geometry, loading, deformation, and internal force diagrams.",
+      "page": 11,
+      "index": 2,
+      "width": 784,
+      "height": 946
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-003.webp",
+      "caption": "Fig. 14: Runtime comparison between the proposed multi-agent architecture and the sequential design.",
+      "page": 15,
+      "index": 3,
+      "width": 416,
+      "height": 318
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-004.webp",
+      "caption": "Fig. 5: Workflow of construction planning agent for generating a stepwise assembly plan.",
+      "page": 7,
+      "index": 4,
+      "width": 775,
+      "height": 446
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-005.webp",
+      "caption": "Fig. 9: Performance comparison of the proposed multi-agent architecture with the sequential architecture and two state-of-the-art general-purpose LLMs.",
+      "page": 10,
+      "index": 5,
+      "width": 765,
+      "height": 350
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-006.webp",
+      "caption": "Fig. 13: Scalability of the proposed architecture across three representative structural configurations.",
+      "page": 14,
+      "index": 6,
+      "width": 767,
+      "height": 861
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-007.webp",
+      "caption": "Fig. 1: Benchmark dataset of twenty frame structural modeling problems (adapted from Geng et al., 2025).",
+      "page": 3,
+      "index": 7,
+      "width": 775,
+      "height": 954
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-008.webp",
+      "caption": "Fig. A.1: GPT-powered system: hallucinations concentrated in mapping and translation tasks..",
+      "page": 18,
+      "index": 8,
+      "width": 832,
+      "height": 439
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-009.webp",
+      "caption": "Fig. A.2: Llama-powered system: hallucinations arising during complex reasoning tasks.",
+      "page": 18,
+      "index": 9,
+      "width": 832,
+      "height": 564
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-010.webp",
+      "caption": "Fig. 12: Adaptation of the proposed architecture to diverse input styles provided by three students.",
+      "page": 13,
+      "index": 10,
+      "width": 770,
+      "height": 722
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-011.webp",
+      "caption": "Fig. 6: Workflow of the geometry assembly module, in which the node and element agents operate in parallel, followed by a connectivity mapping function.",
+      "page": 8,
+      "index": 11,
+      "width": 771,
+      "height": 707
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-012.webp",
+      "caption": "Fig. 7: Workflow of the load assignment agent for mapping loads to corresponding structural components.",
+      "page": 8,
+      "index": 12,
+      "width": 784,
+      "height": 279
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-013.webp",
+      "caption": "Fig. 2: Textual description template for specifying a 2D frame structural modeling problem",
+      "page": 4,
+      "index": 13,
+      "width": 784,
+      "height": 404
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-014.webp",
+      "caption": "Fig. A.3: Qwen-powered system: hallucinations involving both reasoning and translation tasks.",
+      "page": 19,
+      "index": 14,
+      "width": 832,
+      "height": 539
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-015.webp",
+      "caption": "Fig. 11: Performance comparison of the multi-agent architecture powered by various LLMs.",
+      "page": 12,
+      "index": 15,
+      "width": 770,
+      "height": 363
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-016.webp",
+      "caption": "Fig. 8: Workflow of the code generation module, in which the geometry code translator converts geometric information into OpenSeesPy code and complete code generator integrates the geometric code with load and configuration commands to produce executable OpenSeesPy scripts.",
+      "page": 9,
+      "index": 16,
+      "width": 786,
+      "height": 678
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-017.webp",
+      "caption": "Fig. 4: A robust multi-agent architecture for LLMs to automate frame structural modeling.",
+      "page": 5,
+      "index": 17,
+      "width": 770,
+      "height": 410
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07728v1/fig-018.webp",
+      "caption": "Fig. 3: Limitations of sequential multi-agent architecture in accuracy, efficiency, and scalability.",
+      "page": 5,
+      "index": 18,
+      "width": 759,
+      "height": 479
+    }
+  ]
+}

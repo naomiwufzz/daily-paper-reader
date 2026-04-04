@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.30031v3/fig-001.webp",
+      "caption": "Figure 3: Univariate parameter sensitivity: terminal patient viability (mean ± 95% CI, N=200 seeds per setting). Each panel varies one parameter while holding the others at default (α=0.01, β=0.50, λS=0.80); the middle bar in each panel corresponds to the default. Dashed line in the α panel marks ReAct viability (56.8) for reference. Accuracy remains 1.0 across all 7 configurations.",
+      "page": 14,
+      "index": 1,
+      "width": 926,
+      "height": 373
+    },
+    {
+      "url": "assets/figures/arxiv/2603.30031v3/fig-002.webp",
+      "caption": "Figure 2: EMDG ablations (N=200): terminal patient viability and terminal deliberation time across controller variants. Bars show means and error bars denote ±1σ over seeds. The full triadic controller achieves the highest viability while minimizing deliberation time, illustrating the necessity of jointly pricing space, time, and enforcing an explicit stopping boundary.",
+      "page": 13,
+      "index": 2,
+      "width": 903,
+      "height": 779
+    },
+    {
+      "url": "assets/figures/arxiv/2603.30031v3/fig-003.webp",
+      "caption": "Figure 4: Triadic Cognitive Architecture (TCA): a coupled loop between Space (state), Time (dynamics), and Epistemic Truth (belief revision).",
+      "page": 17,
+      "index": 3,
+      "width": 627,
+      "height": 252
+    },
+    {
+      "url": "assets/figures/arxiv/2603.30031v3/fig-004.webp",
+      "caption": "Table 8: Algorithm 1: Discrete TCA controller (rollout VOI + myopic stopping).",
+      "page": 24,
+      "index": 4,
+      "width": 876,
+      "height": 517
+    },
+    {
+      "url": "assets/figures/arxiv/2603.30031v3/fig-005.webp",
+      "caption": "Figure 1: EMDG Monte Carlo (N=200): mean entropy and patient viability trajectories over a fixed horizon. Step corresponds to discrete tool-query iterations; trajectories are padded after stopping by carrying forward the terminal state, ensuring step-wise consistency (e.g., time cannot decrease).",
+      "page": 9,
+      "index": 5,
+      "width": 913,
+      "height": 702
+    },
+    {
+      "url": "assets/figures/arxiv/2603.30031v3/fig-006.webp",
+      "caption": "Table 1: Notation summary for the discrete EMDG instantiation.",
+      "page": 5,
+      "index": 6,
+      "width": 610,
+      "height": 302
+    },
+    {
+      "url": "assets/figures/arxiv/2603.30031v3/fig-007.webp",
+      "caption": "Table 6: Congestion-decay robustness: TCA vs. ReAct (Greedy) for κ ∈ {0.00, 0.05, 0.10} (N=200 seeds). κ=0.00 replicates Table 2 exactly. Bold marks best viability per κ level.",
+      "page": 16,
+      "index": 7,
+      "width": 577,
+      "height": 209
+    }
+  ]
+}

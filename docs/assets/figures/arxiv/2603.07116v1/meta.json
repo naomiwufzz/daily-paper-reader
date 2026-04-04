@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.07116v1/fig-001.webp",
+      "caption": "Figure 1: Projected human–LLM timing separation gap by per-round narrative length 𝐿.",
+      "page": 7,
+      "index": 1,
+      "width": 474,
+      "height": 278
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07116v1/fig-002.webp",
+      "caption": "Table 2: Human cognitive limits vs. LLM-agent capabilities.",
+      "page": 7,
+      "index": 2,
+      "width": 486,
+      "height": 397
+    },
+    {
+      "url": "assets/figures/arxiv/2603.07116v1/fig-003.webp",
+      "caption": "Table 1: What each mechanism verifies, grouped by purpose.",
+      "page": 3,
+      "index": 3,
+      "width": 506,
+      "height": 387
+    }
+  ]
+}

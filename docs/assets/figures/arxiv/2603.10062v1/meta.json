@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.10062v1/fig-001.webp",
+      "caption": "Figure 1: Two fundamental multi-agent memory architectures formanaging growing context complexity: sharedmemory and distributed memory.",
+      "page": 1,
+      "index": 1,
+      "width": 506,
+      "height": 270
+    },
+    {
+      "url": "assets/figures/arxiv/2603.10062v1/fig-002.webp",
+      "caption": "Figure 2: Agent memory hierarchy and protocol framing.",
+      "page": 2,
+      "index": 2,
+      "width": 496,
+      "height": 328
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.11277v2/fig-001.webp",
+      "caption": "Table 1 Comparative analysis of AI governance frameworks",
+      "page": 6,
+      "index": 1,
+      "width": 785,
+      "height": 242
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11277v2/fig-002.webp",
+      "caption": "Fig. 4 Explainability: radar graphic for use case (test.id): SOV-05, CAR-05, COM-05, ETH-05.",
+      "page": 15,
+      "index": 2,
+      "width": 390,
+      "height": 347
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11277v2/fig-003.webp",
+      "caption": "Fig. 1 High-level architecture of the multi-agent framework showing the decision-making flow from user input to final optimized action.",
+      "page": 7,
+      "index": 3,
+      "width": 775,
+      "height": 400
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11277v2/fig-004.webp",
+      "caption": "Table 7 Results for the evaluation of the compliance aspect.",
+      "page": 14,
+      "index": 4,
+      "width": 679,
+      "height": 244
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11277v2/fig-005.webp",
+      "caption": "Table 8 Results for the evaluation of the ethical aspect.",
+      "page": 14,
+      "index": 5,
+      "width": 679,
+      "height": 244
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11277v2/fig-006.webp",
+      "caption": "Table 5 Results for the evaluation of the sovereignty aspect.",
+      "page": 13,
+      "index": 6,
+      "width": 679,
+      "height": 243
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11277v2/fig-007.webp",
+      "caption": "Table 6 Results for the evaluation of the carbon aspect.",
+      "page": 13,
+      "index": 7,
+      "width": 679,
+      "height": 244
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11277v2/fig-008.webp",
+      "caption": "Fig. 2 Simplified UML Class Diagram illustrating the object-oriented architecture and extensibility of the Framework.",
+      "page": 8,
+      "index": 8,
+      "width": 777,
+      "height": 277
+    },
+    {
+      "url": "assets/figures/arxiv/2603.11277v2/fig-009.webp",
+      "caption": "Table 9 Qualitative comparison of the Framework against existing AI paradigms.",
+      "page": 16,
+      "index": 9,
+      "width": 777,
+      "height": 384
+    }
+  ]
+}
