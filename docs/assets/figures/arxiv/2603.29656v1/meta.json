@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.29656v1/fig-001.webp",
+      "caption": "Fig. 1: Agent interaction model. The agent selects tools in a closed loop until the operator intent is verified. Configuration tools mutate network state, requiring re-observation.",
+      "page": 1,
+      "index": 1,
+      "width": 504,
+      "height": 460
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29656v1/fig-002.webp",
+      "caption": "TABLE I: Overall Success Rate (%) on 6GAgentBench. Best in bold, second best underlined. †: our fine-tuned models.",
+      "page": 6,
+      "index": 2,
+      "width": 529,
+      "height": 648
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29656v1/fig-003.webp",
+      "caption": "Fig. 2: Overview of the 6GAgentGym framework. Left: interactive environment with 42 typed tools and Experiment Model. Center: 6G-Forge bootstraps closed-loop trajectories via iterative Self-Instruct generation with execution verification. Right: 6GAgentBench tiered evaluation (L1–L3). Below: Agentic SFT + RL training pipeline.",
+      "page": 3,
+      "index": 3,
+      "width": 1076,
+      "height": 588
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29656v1/fig-004.webp",
+      "caption": "TABLE IV: Complete tool catalog of 6GAgentGym.",
+      "page": 8,
+      "index": 4,
+      "width": 546,
+      "height": 811
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29656v1/fig-005.webp",
+      "caption": "Fig. 3: The 6G-Forge data synthesis pipeline. Step 1: NS-3 traces are annotated into seed trajectories. Step 2: A teacher LLM generates new trajectories from seed demonstrations. Step 3: Execution against Mθ produces golden and error-recovery traces. Step 4: Verified trajectories expand the seed pool; Steps 2–4 repeat for K iterations.",
+      "page": 4,
+      "index": 5,
+      "width": 1048,
+      "height": 298
+    }
+  ]
+}

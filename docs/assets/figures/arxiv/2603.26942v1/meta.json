@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.26942v1/fig-001.webp",
+      "caption": "Figure 1: Overview of the generate–evaluate–evolve loop in the earned autonomy setting. In each cycle, a coding agent generates code, an execution agent runs the script and renders the scene, a human evaluator provides feedback on rendered output only, and a review agent promotes validated functions into the reusable library for the next cycle. The example illustrates library growth from 0 validated functions in Cycle 1 to 15 in Cycle 2.",
+      "page": 2,
+      "index": 1,
+      "width": 794,
+      "height": 479
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26942v1/fig-002.webp",
+      "caption": "Figure 3: Example successful scene generated after the diagnostic intervention in Group D. With the ground plane excluded from collision checks, the system can satisfy object completeness, ground contact, collision avoidance, and scale plausibility simultaneously.",
+      "page": 3,
+      "index": 2,
+      "width": 406,
+      "height": 373
+    },
+    {
+      "url": "assets/figures/arxiv/2603.26942v1/fig-003.webp",
+      "caption": "Figure 2: Failure-mode oscillation across three consecutive runs in Group C. The task specifies BVH-based collision detection against “all mesh objects in the scene”. Left: the ground plane is included in the collision list, so every candidate placement intersects at z=0, causing timeout before trees or cars are placed; from rendered output alone, this appears as missing objects. Center: after feedback on missing objects, the agent restructures import and placement logic and places the trees and cars, but now excludes the house from collision checks, producing overlap. Right: feedback on overlap causes the agent to re-include all meshes in collision checks, re-triggering the original timeout failure.",
+      "page": 3,
+      "index": 3,
+      "width": 1056,
+      "height": 255
+    }
+  ]
+}

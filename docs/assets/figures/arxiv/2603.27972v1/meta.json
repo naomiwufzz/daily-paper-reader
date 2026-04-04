@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.27972v1/fig-001.webp",
+      "caption": "Fig. 1. Queue lengths (left) and per-agent opinions (right) over time for 10 anti-cooperative agents. 6 agents lack queue imbalance information. Agents polarize quickly, do not switch queues, and easily settle in N .",
+      "page": 5,
+      "index": 1,
+      "width": 502,
+      "height": 254
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27972v1/fig-002.webp",
+      "caption": "Fig. 2. Queue lengths (left) and per-agent opinions (right) over time for 10 fully-cooperative agents when 6 agents lack imbalance information. After initial herding near t = 4 where all agents end up in A, the agents rapidly settle into two distinct groups based on their access to imbalance information.",
+      "page": 6,
+      "index": 2,
+      "width": 502,
+      "height": 252
+    }
+  ]
+}

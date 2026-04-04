@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.28569v1/fig-001.webp",
+      "caption": "Figure 4: The evaluation framework of CirrusBench. The evaluation of a multi-turn task proceeds as a sequence of single-turn subtask sessions.",
+      "page": 7,
+      "index": 1,
+      "width": 866,
+      "height": 301
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28569v1/fig-002.webp",
+      "caption": "Figure 6: Pass@1, pass@2 success rate and AMTL by different reply types.",
+      "page": 10,
+      "index": 2,
+      "width": 775,
+      "height": 1253
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28569v1/fig-003.webp",
+      "caption": "Figure 1: The construction of CirrusBench. The process comprises four core phases: Phase 1: Data Collection; Phase 2: Preprocessing (Steps 1–5); Phase 3: Knowledge-Grounded Annotation (Step 6); Phase 4: Quality Assurance (Step 7). The final benchmark supports both single-turn subtask evaluation and multi-turn task evaluation.",
+      "page": 3,
+      "index": 3,
+      "width": 882,
+      "height": 381
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28569v1/fig-004.webp",
+      "caption": "Figure 5: Overall Success Rate results on CirrusBench.",
+      "page": 9,
+      "index": 4,
+      "width": 855,
+      "height": 317
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.29741v1/fig-001.webp",
+      "caption": "Figure 1: Overview of the BotVerse architecture.",
+      "page": 2,
+      "index": 1,
+      "width": 616,
+      "height": 207
+    }
+  ]
+}

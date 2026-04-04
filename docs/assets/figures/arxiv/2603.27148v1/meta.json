@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.27148v1/fig-001.webp",
+      "caption": "Figure 4: Detection rate vs. false positive rate across thresholds for the Markov monitor.",
+      "page": 6,
+      "index": 1,
+      "width": 499,
+      "height": 377
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27148v1/fig-002.webp",
+      "caption": "Figure 5: Distribution of early warning steps for detected violations (mean 3.7, median 4).",
+      "page": 6,
+      "index": 2,
+      "width": 499,
+      "height": 353
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27148v1/fig-003.webp",
+      "caption": "Figure 6: Dimension ablation study. Tool escalation is the most important predictor.",
+      "page": 6,
+      "index": 3,
+      "width": 500,
+      "height": 296
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27148v1/fig-004.webp",
+      "caption": "Figure 7: Learning curve: prediction accuracy vs. number of training traces.",
+      "page": 7,
+      "index": 4,
+      "width": 500,
+      "height": 313
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27148v1/fig-005.webp",
+      "caption": "Figure 1: Estimated transition probabilities for the coarse 5-state safety model. Notable: MILD has a 13% per step probability of jumping directly to VIOLATED, making it the highest risk transient state.",
+      "page": 3,
+      "index": 5,
+      "width": 373,
+      "height": 329
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27148v1/fig-006.webp",
+      "caption": "Figure 3: Per category finite horizon violation probabilities. Research & communication (top right) shows clear points of no return, while sysadmin (bottom left) and code debugging (top left) show near zero violation probability.",
+      "page": 4,
+      "index": 6,
+      "width": 503,
+      "height": 398
+    }
+  ]
+}
