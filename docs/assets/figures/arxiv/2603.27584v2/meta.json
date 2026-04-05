@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.27584v2/fig-001.webp",
+      "caption": "Table 1: Main results on MM-Bench across four backbones. All scores are reported as mean ± std over three evaluation runs.",
+      "page": 7,
+      "index": 1,
+      "width": 865,
+      "height": 488
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27584v2/fig-002.webp",
+      "caption": "Figure 4: Case study reasoning trace of Sci-Mind.",
+      "page": 10,
+      "index": 2,
+      "width": 947,
+      "height": 538
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27584v2/fig-003.webp",
+      "caption": "Figure 2: The Overall Architecture of the Sci-Mind Framework.",
+      "page": 4,
+      "index": 3,
+      "width": 902,
+      "height": 494
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27584v2/fig-004.webp",
+      "caption": "Table 3: Comprehensive ablation on MM-Bench with GPT-4o backbone. All scores are reported as mean ± std over three evaluation runs.",
+      "page": 9,
+      "index": 4,
+      "width": 827,
+      "height": 361
+    }
+  ]
+}

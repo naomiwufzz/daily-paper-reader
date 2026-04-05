@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.29560v1/fig-001.webp",
+      "caption": "Fig. 6. State and input signals of the platoon experiment. The experiment starts with the configuration 0 Ð 1 Ð 2. It consists of the following events: Car 3 approaches with high speed from behind and plugs in at t « 47s. Then, the leading car 0 plugs out at t « 59s. Finally, at t « 78s, this car approaches with high speed from behind and plugs in again. It can be seen that, in both plug-in scenarios, temporary violations of velocity and distance constraints occur, since the cars have limited acceleration. Although the infeasible commands proposed by the unsafe PID controllers (gray signals) would violate state constraints, the framework prevents unsafe operation whenever possible by applying the filtered commands (red signals). Moreover, it enables safety recovery in cases of constraint violations (gray shaded times). The leader vehicle is constrained to a smaller maximum acceleration to generate visible distance-constraint violations.",
+      "page": 8,
+      "index": 1,
+      "width": 908,
+      "height": 257
+    }
+  ]
+}

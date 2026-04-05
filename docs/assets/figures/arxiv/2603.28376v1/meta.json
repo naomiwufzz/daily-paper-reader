@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.28376v1/fig-001.webp",
+      "caption": "Figure 5. Relative to open-source data, our synthesized datasets indicate higher intrinsic difficulty.",
+      "page": 11,
+      "index": 1,
+      "width": 717,
+      "height": 195
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28376v1/fig-002.webp",
+      "caption": "Figure 4. Distribution comparison between three deep search data (ASearcher, DeepDive, and REDSearcher) and our synthesized data. Left: token count per sample. Right: tool-call rounds per sample. Our data is consistently shifted toward longer outputs and more tool interactions.",
+      "page": 10,
+      "index": 2,
+      "width": 971,
+      "height": 281
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28376v1/fig-003.webp",
+      "caption": "Figure 3. Distribution comparison between the open-source multi-hop QA dataset (2Wiki, BeerQA, etc.) and our synthesized data. Left: token count per sample. Right: tool-call rounds per sample.",
+      "page": 10,
+      "index": 3,
+      "width": 968,
+      "height": 280
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28376v1/fig-004.webp",
+      "caption": "Figure 2. Overall framework of our verification-center design for Marco DeepResearch agents.",
+      "page": 4,
+      "index": 4,
+      "width": 981,
+      "height": 375
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28376v1/fig-005.webp",
+      "caption": "Table 1. Performance on deep search benchmarks. Best open-source results are bolded and the second-best are underlined. Results marked with ★ are evaluated using our implementation.",
+      "page": 9,
+      "index": 5,
+      "width": 946,
+      "height": 832
+    }
+  ]
+}

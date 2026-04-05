@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.00917v1/fig-001.webp",
+      "caption": "Figure 3: The plot at the top shows the median PR change size for each agent, while the bottom one shows the median fraction of changes that are additions. Bootstrapped 95% CIs shown.",
+      "page": 7,
+      "index": 1,
+      "width": 438,
+      "height": 402
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00917v1/fig-002.webp",
+      "caption": "Figure 9: Per-agent distribution of commit churn rates measured over 3-day, 1-week, and 3-week intervals.",
+      "page": 10,
+      "index": 2,
+      "width": 506,
+      "height": 337
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00917v1/fig-003.webp",
+      "caption": "Figure 10: Per-agent distribution of commit deletion rates measured over 3-day, 1-week, and 3-week intervals.",
+      "page": 10,
+      "index": 3,
+      "width": 506,
+      "height": 338
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00917v1/fig-004.webp",
+      "caption": "Figure 4: Percentage of pull requests containing the corresponding file type. The five most common types are shown (related types grouped, e.g., TS/JS, YAML/TOML); less common types are grouped as “Other” with right-margin annotations listing the next four most frequent types. Wilson 95% confidence intervals are shown.",
+      "page": 8,
+      "index": 4,
+      "width": 920,
+      "height": 284
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00917v1/fig-005.webp",
+      "caption": "Table 2: Search signals for distinguishing agent- and humangenerated PRs.",
+      "page": 4,
+      "index": 5,
+      "width": 498,
+      "height": 413
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00917v1/fig-006.webp",
+      "caption": "Figure 5: Percentage of pull requests merged per agent, grouped by repository star count (Wilson 95% CIs shown). Lower panel shows each agent’s PR fraction within star categories (p33 and p66 of human data). Some agents show an “inverted-u” trend across star counts.",
+      "page": 9,
+      "index": 6,
+      "width": 935,
+      "height": 277
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00917v1/fig-007.webp",
+      "caption": "Figure 6: Distribution of merge times across agents (log scale) as boxplots with p10–p90 whiskers. Cliff’s 𝛿 and Mann-Whitney U test p-values comparing to humans are labeled. Merge times generally increase with repository star count; Codex and Jules PRs merge faster, while shorter times may reflect prior human interaction. Star boundaries are based on human PR tertiles of merged PRs.",
+      "page": 9,
+      "index": 7,
+      "width": 935,
+      "height": 268
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00917v1/fig-008.webp",
+      "caption": "Table 3: Dataset summary of pull requests and related contributions. The first three columns indicate the number of PRs created by each author, along with their base and head repositories (hence the large number), while the other four reflect activity associated with those PRs.",
+      "page": 5,
+      "index": 8,
+      "width": 1052,
+      "height": 186
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00917v1/fig-009.webp",
+      "caption": "Figure 1: Overview of dataset structure. Solid lines indicate relationships between entities. Dotted lines denote nested objects.",
+      "page": 5,
+      "index": 9,
+      "width": 1002,
+      "height": 479
+    }
+  ]
+}

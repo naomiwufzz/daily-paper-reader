@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.00043v1/fig-001.webp",
+      "caption": "Table 7: NAL coverage. All entries marked “Covered” have compiler test cases and produce correct Narsese output.",
+      "page": 10,
+      "index": 1,
+      "width": 725,
+      "height": 535
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00043v1/fig-002.webp",
+      "caption": "Table 9: DriftScript to Narsese translation examples",
+      "page": 14,
+      "index": 2,
+      "width": 931,
+      "height": 508
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00043v1/fig-003.webp",
+      "caption": "Table 1: Narsese copulas",
+      "page": 3,
+      "index": 3,
+      "width": 633,
+      "height": 198
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00043v1/fig-004.webp",
+      "caption": "Table 2: Narsese connectors",
+      "page": 3,
+      "index": 4,
+      "width": 654,
+      "height": 252
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00043v1/fig-005.webp",
+      "caption": "Figure 1: Integration of DriftScript with DriftNARS in a sense–reason–act loop.",
+      "page": 8,
+      "index": 5,
+      "width": 613,
+      "height": 431
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00043v1/fig-006.webp",
+      "caption": "Table 6: Compiler test suite summary",
+      "page": 9,
+      "index": 6,
+      "width": 798,
+      "height": 466
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00043v1/fig-007.webp",
+      "caption": "Table 3: DriftScript copulas and their Narsese equivalents",
+      "page": 5,
+      "index": 7,
+      "width": 762,
+      "height": 290
+    }
+  ]
+}

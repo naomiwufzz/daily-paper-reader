@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.01151v1/fig-001.webp",
+      "caption": "Figure 1: NARCBENCH-STEGO: four LLM agents play blackjack. The Counter tracks the card count and encodes it in natural table talk; the Big Player decodes the signal and bets accordingly. Honest agents are unaware of the scheme. Each shoe uses a unique encoding negotiated in a private channel.",
+      "page": 4,
+      "index": 1,
+      "width": 648,
+      "height": 304
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01151v1/fig-002.webp",
+      "caption": "Table 1: AUROC (↑) across NARCBENCH tiers. Deception probe trained on CORE, evaluated zero-shot on TRANSFER and STEGO. Results are means across layers 26–30. Bold = best per row.",
+      "page": 6,
+      "index": 2,
+      "width": 830,
+      "height": 253
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01151v1/fig-003.webp",
+      "caption": "Figure 2: AUROC for five probing techniques across NARCBENCH tiers. Deception probe trained on Core, evaluated zero-shot on Transfer and Stego. Error bars show standard deviation across layers 26–30.",
+      "page": 7,
+      "index": 3,
+      "width": 826,
+      "height": 406
+    },
+    {
+      "url": "assets/figures/arxiv/2604.01151v1/fig-004.webp",
+      "caption": "Figure 3: Token-level analysis of NARCBENCH-STEGO. (a) Mean deception-direction projection for the big player (+0.29) vs. honest agents (−1.41) reading the same counter message, across 39 matched examples. (b) Schematic per-token heatmap: the big player’s activations are elevated at signal words while the honest agent’s remain flat.",
+      "page": 8,
+      "index": 4,
+      "width": 777,
+      "height": 271
+    }
+  ]
+}

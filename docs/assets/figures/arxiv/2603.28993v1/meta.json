@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.28993v1/fig-001.webp",
+      "caption": "Fig. 1. Two cars navigate around obstacles to their final destinations. Notice they are careful to narrowly avoid colliding at time 2.",
+      "page": 5,
+      "index": 1,
+      "width": 512,
+      "height": 423
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28993v1/fig-002.webp",
+      "caption": "Fig. 3. Four quadcopter drones navigate around obstacles and each other to their final destinations. Here the obstacles are the yellow cylinders. Notice that the drones on the left in the initial picture (green and pink lines) allow themselves to drop a bit at the beginning, so that they can then fly unobstructed between the obstacles. This is to avoid collisions which are harder to prevent in a dynamic model compared to a kinematic model, and hence need to be considered long in advance.",
+      "page": 6,
+      "index": 2,
+      "width": 1069,
+      "height": 842
+    }
+  ]
+}

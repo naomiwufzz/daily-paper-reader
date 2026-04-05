@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.27299v1/fig-001.webp",
+      "caption": "Figure 3 The tuning loop. Each iteration changes one DSL parameter, recompiles (with full re-verification), deploys, and observes. Causal tracing (Chen et al., 2026a) localizes the parameter responsible for misrouting.",
+      "page": 11,
+      "index": 1,
+      "width": 687,
+      "height": 672
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27299v1/fig-002.webp",
+      "caption": "Table 2 DSL construct → orchestration target mapping for graph-based (LangGraph) and gateway-based (OpenClaw) architectures.",
+      "page": 7,
+      "index": 2,
+      "width": 918,
+      "height": 300
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27299v1/fig-003.webp",
+      "caption": "Figure 1 End-to-end compilation targets from a single DSL source. Inference routing is the established deployment; this paper extends the same language to agent orchestration, protocol boundaries, and infrastructure artifacts. Signal definitions, thresholds, and verification guarantees are shared across all targets; a change in one DSL parameter propagates to every layer on recompilation.",
+      "page": 3,
+      "index": 3,
+      "width": 907,
+      "height": 366
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27299v1/fig-004.webp",
+      "caption": "Table 1 Complementary checks performed by orchestration compilers and the DSL compiler. Each focuses on its own concern.",
+      "page": 4,
+      "index": 4,
+      "width": 918,
+      "height": 351
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27299v1/fig-005.webp",
+      "caption": "Figure 4 Three DSL-compiled gates add a policy layer between agent orchestration, inference, and tool calling. All three are compiled from the same DSL source, ensuring consistent policy across the workflow.",
+      "page": 12,
+      "index": 5,
+      "width": 907,
+      "height": 236
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27299v1/fig-006.webp",
+      "caption": "Figure 5 Policy drift without vs. with the DSL. Left: three teams maintain gateway config, LangGraph gate, and MCP middleware independently; a threshold update reaches two artifacts but not the third. Right: one .sr source compiles to all three; consistency is a compiler invariant.",
+      "page": 12,
+      "index": 6,
+      "width": 916,
+      "height": 210
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27299v1/fig-007.webp",
+      "caption": "Figure 2 Multi-target compilation. A single DSL source emits artifacts for four target classes. Cross-target consistency (same thresholds, same source hash) is enforced by the compiler.",
+      "page": 5,
+      "index": 7,
+      "width": 916,
+      "height": 182
+    }
+  ]
+}

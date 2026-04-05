@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.27766v1/fig-001.webp",
+      "caption": "Table 8: Complete trajectory, Bundesliga 2024/25. No oracle NLPD (real data).",
+      "page": 15,
+      "index": 1,
+      "width": 744,
+      "height": 375
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27766v1/fig-002.webp",
+      "caption": "Figure 3: Bundesliga model parameters (iteration 9). (a) Dortmund (0.39), Freiburg (0.33), Bayern (0.32) benefit most from playing at home; Heidenheim (−0.01) and St. Pauli (0.00) show no home advantage. (b) Attack vs. defense with 90% credible intervals; Bayern’s dominance is clearly visible.",
+      "page": 15,
+      "index": 2,
+      "width": 976,
+      "height": 447
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27766v1/fig-003.webp",
+      "caption": "Table 7: Complete trajectory, varying slopes (J=15). Oracle NLPD = 1.2627.",
+      "page": 14,
+      "index": 3,
+      "width": 980,
+      "height": 478
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27766v1/fig-004.webp",
+      "caption": "Table 6: Complete trajectory, hierarchical large (nj=40). Oracle NLPD = 1.4039.",
+      "page": 14,
+      "index": 4,
+      "width": 760,
+      "height": 252
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27766v1/fig-005.webp",
+      "caption": "Table 4: Complete trajectory, 1D regression large (n=500). Oracle NLPD = 1.1442. TabPFN NLPD = 1.2501.",
+      "page": 13,
+      "index": 5,
+      "width": 722,
+      "height": 426
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27766v1/fig-006.webp",
+      "caption": "Table 3: Complete trajectory, 1D regression small (n=68). Oracle NLPD = 0.9443. TabPFN NLPD = 1.1202.",
+      "page": 13,
+      "index": 6,
+      "width": 764,
+      "height": 278
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27766v1/fig-007.webp",
+      "caption": "Figure 1: AutoStan on the large 1D regression dataset (n=500 train, 200 test; DGP defined in Section 3.1). In panels (b)–(d), the fitted mean f̂(x) is plotted with ±2σ̂(x) shaded; the faint grey overlay marks the oracle ground truth f(x)± 2σ(x). Training points outside the plot range [−5, 7] are shown as edge-pinned triangles (▲/▼) at the panel boundary. (a) NLPD trajectory over 15 iterations; colored markers identify the three model-fit panels. The dashed oracle line (NLPD = 1.14) is a lower bound that cannot be reached (see Section 3.1). (b) Baseline (iter 0): Gaussian linear model; predictive bands are dominated by the ≈30 extreme training outliers (NLPD = 2.16). (c) Iter 1: cubic polynomial mean + Student-t likelihood; one step eliminates most band inflation (NLPD = 1.32). (d) Iter 11 (best): sinusoidal mean with learned frequency ω, heteroscedastic log-linear variance, and a contamination-mixture likelihood; tight, locally calibrated bands closely follow the oracle noise envelope (NLPD = 1.23). (e) TabPFN (90% predictive interval, NLPD = 1.25): mean tracking is accurate but intervals are uniformly too wide—the model has absorbed the training outliers, inflating uncertainty across the full input range.",
+      "page": 4,
+      "index": 7,
+      "width": 971,
+      "height": 548
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27766v1/fig-008.webp",
+      "caption": "Figure 2: AutoStan on the 1D regression small dataset (n=68). (a) NLPD trajectory over 9 iterations. (b) Baseline: linear + Gaussian, enormous bands from 4 extreme outliers. (c) Iter 1: quadratic mean + Student-t, the largest gain (∆=0.75). (d) Iter 5 (best): cubic + log-linear σ(x) + contamination mixture; NLPD 1.1244, matching TabPFN (1.1202) while remaining fully interpretable.",
+      "page": 12,
+      "index": 8,
+      "width": 979,
+      "height": 742
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27766v1/fig-009.webp",
+      "caption": "Table 1: NLPD trajectory, 1D regression large (n=500). Oracle NLPD = 1.1442. Full trajectory including rejected iterations in Table 4.",
+      "page": 5,
+      "index": 9,
+      "width": 602,
+      "height": 255
+    },
+    {
+      "url": "assets/figures/arxiv/2603.27766v1/fig-010.webp",
+      "caption": "Figure 4: TabPFN predictions. On the large dataset, the intervals widen globally near outliers instead of isolating them, explaining TabPFN’s higher NLPD (1.2501 vs. AutoStan’s 1.2256).",
+      "page": 16,
+      "index": 10,
+      "width": 976,
+      "height": 270
+    }
+  ]
+}

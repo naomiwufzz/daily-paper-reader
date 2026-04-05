@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.28986v1/fig-001.webp",
+      "caption": "Figure 2: Iterative workflow refinement via single-incumbent search. (1) Mutate Incumbent Workflow — at each iteration, the meta-orchestrator takes the bestperforming workflow observed so far (the incumbent) together with its evaluation feedback and proposes a single local modification to generate a mutated workflow. (2) Execute Workflow — each node in the workflow is executed by a SmolAgent CodeAgent instance. (3) Evaluate Workflow — the judge evaluates the resulting execution trace across goal alignment, collaboration efficiency, output quality, and answer plausibility, and returns structured feedback with an overall score. (4) Archive and Select Incumbent — the evaluated workflow is archived, and the highest-scoring workflow observed so far is retained as the incumbent for the next iteration. If the new workflow does not improve the score, the previous incumbent is kept. The cycle repeats for a predefined number of iterations or until the judge score exceeds 0.9.",
+      "page": 15,
+      "index": 1,
+      "width": 720,
+      "height": 598
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28986v1/fig-002.webp",
+      "caption": "Figure 3: Reward gains from successive evolution iterations. Average change in reward relative to the previous iteration with SEM error bars. Data is pooled across runs from all evaluated models (GPT-4o, DeepSeek-V3.2, Claude Haiku 4.5); per-model breakdowns are discussed in the text.",
+      "page": 21,
+      "index": 2,
+      "width": 720,
+      "height": 433
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28986v1/fig-003.webp",
+      "caption": "Figure 4: Statistical validation of evolution efficacy. (a) Mean gain by cohort with 95% bootstrap confidence intervals. All cohorts (2–9) except cohort 10 show significant positive gains (green bars). (b) Probability of improvement (green) versus regression (red) at each transition. Early transitions show improvement rates >50%, while transitions 8→9 and 9→10 favor regression. (c) Permutation test distribution vs observed mean gain (red line). The observed gain significantly exceeds the null distribution (p < 0.0001), confirming improvement is not due to random chance. (d) Effect size (Cohen’s d) by cohort. Cohorts 2–9 achieve large effect sizes (d > 0.8), with cohort 4 showing the strongest effect (d = 2.75). All statistical tests are computed on pooled data across models; per-model analyses are deferred to a future revision.",
+      "page": 36,
+      "index": 3,
+      "width": 1079,
+      "height": 747
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28986v1/fig-004.webp",
+      "caption": "Figure 1: The Mimosa Framework. The system operates through five sequential layers: (0) Divide into sub-tasks — the planner divides the user objective into sub-tasks; (1) Discover Tools — available MCP servers are scanned and enumerated via Toolomics; (2) Initialize Workflow — the archive is queried for a similar prior task, and the best matching workflow is retrieved or synthesized from scratch; (3) Execute Workflow — specialized agents execute the task using discovered relevant tools; (4) Evaluate Workflow — a judge scores the execution and the meta-orchestrator mutates the workflow for the next iteration; the evaluated workflow is archived, and the loop repeats until the judge score exceeds 0.9 or the predefined number of iterations is reached.",
+      "page": 12,
+      "index": 4,
+      "width": 936,
+      "height": 768
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28986v1/fig-005.webp",
+      "caption": "Table 1: Performance comparison of Mimosa using different models on ScienceAgentBench.",
+      "page": 20,
+      "index": 5,
+      "width": 727,
+      "height": 399
+    }
+  ]
+}
